@@ -1,0 +1,555 @@
+\hypertarget{utility_8h}{}\section{utility.\+h File Reference}
+\label{utility_8h}\index{utility.\+h@{utility.\+h}}
+
+
+Header file for utility functions.  
+
+
+{\ttfamily \#include \char`\"{}wallet/boattypes.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{utility_8h_a053a80d6a9bd04d42c4d2785c7f382aa}{Boat\+Log}}(level,  format, ...)
+\begin{DoxyCompactList}\small\item\em Log Output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{utility_8h_af9febeab1e3ac089acb130ff8257183a}{R\+O\+U\+N\+D\+UP}}(value,  step)~((((value) -\/ 1)/(step) + 1) $\ast$ (step))
+\begin{DoxyCompactList}\small\item\em Round value up to the nearest multiple of step. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66a5bdb72e8c5da139ce7b7d5805779b0cf}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO}}, 
+\mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66a8a8f3293ebf94048d89bbb1c8aa1c93f}{T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM}}
+ \}
+\begin{DoxyCompactList}\small\item\em Argument type for \mbox{\hyperlink{utility_8h_ac728ab918934cb209ceec70e4be64940}{Utility\+Trim\+Bin()}}, \mbox{\hyperlink{utility_8h_a5e324a119ad6207ad8eed1dd2ac9858b}{Utility\+Hex2\+Bin()}} and \mbox{\hyperlink{utility_8h_af10137d642f5eaff08986377e97dda33}{Utility\+Uint32\+To\+Bigend()}} \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518}{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518a855974118eb363fbfb488acf76a55f07}{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+NO}} = 0, 
+\mbox{\hyperlink{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518af388d33ebe066bbd2e9d7a30587d639b}{B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+Q\+U\+A\+N\+T\+I\+TY}}, 
+\mbox{\hyperlink{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518a7d472b8922cd49cdc809c2ad82ea8de8}{B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+U\+F\+M\+T\+D\+A\+TA}}
+ \}
+\begin{DoxyCompactList}\small\item\em Argument type for \mbox{\hyperlink{utility_8h_a5e324a119ad6207ad8eed1dd2ac9858b}{Utility\+Hex2\+Bin()}} \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{utility_8h_a66da4f24ba8c7dd83aea3102435b8890}{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{utility_8h_a66da4f24ba8c7dd83aea3102435b8890a594ce868567a0f852ac89035d22e1841}{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+NO}} = 0, 
+\mbox{\hyperlink{utility_8h_a66da4f24ba8c7dd83aea3102435b8890ae01bc5afa8de25c110cabc74b717dec1}{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+Y\+ES}}
+ \}
+\begin{DoxyCompactList}\small\item\em Argument type for \mbox{\hyperlink{utility_8h_a6e6972b2d492a3c131d693af08797bad}{Utility\+Bin2\+Hex()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{utility_8h_ac728ab918934cb209ceec70e4be64940}{Utility\+Trim\+Bin}} (\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$to\+\_\+ptr, const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$from\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} from\+\_\+len, \mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}} trim\+\_\+mode, \mbox{\hyperlink{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}{B\+O\+A\+T\+B\+O\+OL}} zero\+\_\+as\+\_\+null)
+\begin{DoxyCompactList}\small\item\em Trim zeros of a binary stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{utility_8h_a6e6972b2d492a3c131d693af08797bad}{Utility\+Bin2\+Hex}} (\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$to\+\_\+str, const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$from\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} from\+\_\+len, \mbox{\hyperlink{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518}{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}} trim\+\_\+mode, \mbox{\hyperlink{utility_8h_a66da4f24ba8c7dd83aea3102435b8890}{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+M\+O\+DE}} prefix\+\_\+0x\+\_\+mode, \mbox{\hyperlink{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}{B\+O\+A\+T\+B\+O\+OL}} zero\+\_\+as\+\_\+null)
+\begin{DoxyCompactList}\small\item\em Convert a binary stream to H\+EX string with optional leading zeros trimming and \char`\"{}0x\char`\"{} prefix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{utility_8h_a5e324a119ad6207ad8eed1dd2ac9858b}{Utility\+Hex2\+Bin}} (\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$to\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} to\+\_\+size, const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$from\+\_\+str, \mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}} trim\+\_\+mode, \mbox{\hyperlink{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}{B\+O\+A\+T\+B\+O\+OL}} zero\+\_\+as\+\_\+null)
+\begin{DoxyCompactList}\small\item\em Convert a H\+EX string to binary stream with optional leading zeros trimming. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} \mbox{\hyperlink{utility_8h_af10137d642f5eaff08986377e97dda33}{Utility\+Uint32\+To\+Bigend}} (\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$to\+\_\+big\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} from\+\_\+host\+\_\+integer, \mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}} trim\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Convert a host endian U\+I\+N\+T32 to bigendian with optional M\+SB zeros trimming. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} \mbox{\hyperlink{utility_8h_a85f531e479f439a97431b1e68a72e180}{Utility\+Uint64\+To\+Bigend}} (\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$to\+\_\+big\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_aaaeacfdfbfc1dcaae18cf20e63015e71}{U\+I\+N\+T64}} from\+\_\+host\+\_\+integer, \mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}} trim\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Convert a host endian U\+I\+N\+T64 to bigendian with optional M\+SB zeros trimming. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{utility_8h_a8c8a759a3b33396ff9fe10f602d6f37f}{Utilityhtonl}} (\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} from\+\_\+host\+\_\+integer)
+\begin{DoxyCompactList}\small\item\em Convert a host endian U\+I\+N\+T32 to bigendian. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{utility_8h_a9ef1cad4856fe51b87c8db6614240645}{Utilityntohl}} (\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} from\+\_\+host\+\_\+integer)
+\begin{DoxyCompactList}\small\item\em Convert a bigendian U\+I\+N\+T32 to host endian. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{utility_8h_a745b81eca690ac3838e3da2fa8c8fe72}{Boat\+Malloc}} (\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} size)
+\begin{DoxyCompactList}\small\item\em Wrapper function for memory allocation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utility_8h_af01dd2ee3605f424e09b826ca7322b3d}{Boat\+Free}} (void $\ast$mem\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Wrapper function for memory allocation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$const \mbox{\hyperlink{utility_8h_a11c3ffc59501c83f037a2327d847b0fe}{g\+\_\+log\+\_\+level\+\_\+name\+\_\+str}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Literal representation of log level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for utility functions. 
+
+\mbox{\hyperlink{utility_8h}{utility.\+h}} is header file for boatwallet utility functions. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{utility_8h_a053a80d6a9bd04d42c4d2785c7f382aa}\label{utility_8h_a053a80d6a9bd04d42c4d2785c7f382aa}} 
+\index{utility.\+h@{utility.\+h}!Boat\+Log@{Boat\+Log}}
+\index{Boat\+Log@{Boat\+Log}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Log}{BoatLog}}
+{\footnotesize\ttfamily \#define Boat\+Log(\begin{DoxyParamCaption}\item[{}]{level,  }\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Log Output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Log priority level. One of B\+O\+A\+T\+\_\+\+L\+O\+G\+\_\+\+C\+R\+I\+T\+I\+C\+AL, B\+O\+A\+T\+\_\+\+L\+O\+G\+\_\+\+N\+O\+R\+M\+AL or B\+O\+A\+T\+\_\+\+L\+O\+G\+\_\+\+V\+E\+R\+B\+O\+SE.\\
+\hline
+{\em format} & Similar to that in printf(). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8h_af9febeab1e3ac089acb130ff8257183a}\label{utility_8h_af9febeab1e3ac089acb130ff8257183a}} 
+\index{utility.\+h@{utility.\+h}!R\+O\+U\+N\+D\+UP@{R\+O\+U\+N\+D\+UP}}
+\index{R\+O\+U\+N\+D\+UP@{R\+O\+U\+N\+D\+UP}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+U\+N\+D\+UP}{ROUNDUP}}
+{\footnotesize\ttfamily \#define R\+O\+U\+N\+D\+UP(\begin{DoxyParamCaption}\item[{}]{value,  }\item[{}]{step }\end{DoxyParamCaption})~((((value) -\/ 1)/(step) + 1) $\ast$ (step))}
+
+
+
+Round value up to the nearest multiple of step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to round up\\
+\hline
+{\em step} & The step of round \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{utility_8h_a66da4f24ba8c7dd83aea3102435b8890}\label{utility_8h_a66da4f24ba8c7dd83aea3102435b8890}} 
+\index{utility.\+h@{utility.\+h}!B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+M\+O\+DE@{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+M\+O\+DE}}
+\index{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+M\+O\+DE@{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+M\+O\+DE}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+M\+O\+DE}{BIN2HEX\_PREFIX\_0x\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{utility_8h_a66da4f24ba8c7dd83aea3102435b8890}{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+M\+O\+DE}}}
+
+
+
+Argument type for \mbox{\hyperlink{utility_8h_a6e6972b2d492a3c131d693af08797bad}{Utility\+Bin2\+Hex()}} 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+NO@{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+NO}!utility.\+h@{utility.\+h}}\index{utility.\+h@{utility.\+h}!B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+NO@{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+NO}}}\mbox{\Hypertarget{utility_8h_a66da4f24ba8c7dd83aea3102435b8890a594ce868567a0f852ac89035d22e1841}\label{utility_8h_a66da4f24ba8c7dd83aea3102435b8890a594ce868567a0f852ac89035d22e1841}} 
+B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+NO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+Y\+ES@{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+Y\+ES}!utility.\+h@{utility.\+h}}\index{utility.\+h@{utility.\+h}!B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+Y\+ES@{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+Y\+ES}}}\mbox{\Hypertarget{utility_8h_a66da4f24ba8c7dd83aea3102435b8890ae01bc5afa8de25c110cabc74b717dec1}\label{utility_8h_a66da4f24ba8c7dd83aea3102435b8890ae01bc5afa8de25c110cabc74b717dec1}} 
+B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+Y\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518}\label{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518}} 
+\index{utility.\+h@{utility.\+h}!B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE@{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}}
+\index{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE@{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}{BIN2HEX\_TRIM\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518}{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}}}
+
+
+
+Argument type for \mbox{\hyperlink{utility_8h_a5e324a119ad6207ad8eed1dd2ac9858b}{Utility\+Hex2\+Bin()}} 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+NO@{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+NO}!utility.\+h@{utility.\+h}}\index{utility.\+h@{utility.\+h}!B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+NO@{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+NO}}}\mbox{\Hypertarget{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518a855974118eb363fbfb488acf76a55f07}\label{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518a855974118eb363fbfb488acf76a55f07}} 
+B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+NO&Don\textquotesingle{}t trim zeros. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+Q\+U\+A\+N\+T\+I\+TY@{B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+Q\+U\+A\+N\+T\+I\+TY}!utility.\+h@{utility.\+h}}\index{utility.\+h@{utility.\+h}!B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+Q\+U\+A\+N\+T\+I\+TY@{B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+Q\+U\+A\+N\+T\+I\+TY}}}\mbox{\Hypertarget{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518af388d33ebe066bbd2e9d7a30587d639b}\label{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518af388d33ebe066bbd2e9d7a30587d639b}} 
+B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+Q\+U\+A\+N\+T\+I\+TY&Trim \{0x00, 0x01, 0x00 0x\+AB\} =$>$ \char`\"{}0x100\+A\+B\char`\"{} or \char`\"{}100\+A\+B\char`\"{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+U\+F\+M\+T\+D\+A\+TA@{B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+U\+F\+M\+T\+D\+A\+TA}!utility.\+h@{utility.\+h}}\index{utility.\+h@{utility.\+h}!B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+U\+F\+M\+T\+D\+A\+TA@{B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+U\+F\+M\+T\+D\+A\+TA}}}\mbox{\Hypertarget{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518a7d472b8922cd49cdc809c2ad82ea8de8}\label{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518a7d472b8922cd49cdc809c2ad82ea8de8}} 
+B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+U\+F\+M\+T\+D\+A\+TA&Trim \{0x00, 0x01, 0x00 0x\+AB\} =$>$ \char`\"{}0x0100\+A\+B\char`\"{} or \char`\"{}0100\+A\+B\char`\"{}. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{utility_8h_a470174e9056509fec2fa7646d62ccb66}\label{utility_8h_a470174e9056509fec2fa7646d62ccb66}} 
+\index{utility.\+h@{utility.\+h}!T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE@{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}}
+\index{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE@{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}{TRIMBIN\_TRIM\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}}}
+
+
+
+Argument type for \mbox{\hyperlink{utility_8h_ac728ab918934cb209ceec70e4be64940}{Utility\+Trim\+Bin()}}, \mbox{\hyperlink{utility_8h_a5e324a119ad6207ad8eed1dd2ac9858b}{Utility\+Hex2\+Bin()}} and \mbox{\hyperlink{utility_8h_af10137d642f5eaff08986377e97dda33}{Utility\+Uint32\+To\+Bigend()}} 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO@{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO}!utility.\+h@{utility.\+h}}\index{utility.\+h@{utility.\+h}!T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO@{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO}}}\mbox{\Hypertarget{utility_8h_a470174e9056509fec2fa7646d62ccb66a5bdb72e8c5da139ce7b7d5805779b0cf}\label{utility_8h_a470174e9056509fec2fa7646d62ccb66a5bdb72e8c5da139ce7b7d5805779b0cf}} 
+T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO&Don\textquotesingle{}t trim zeros. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM@{T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM}!utility.\+h@{utility.\+h}}\index{utility.\+h@{utility.\+h}!T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM@{T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM}}}\mbox{\Hypertarget{utility_8h_a470174e9056509fec2fa7646d62ccb66a8a8f3293ebf94048d89bbb1c8aa1c93f}\label{utility_8h_a470174e9056509fec2fa7646d62ccb66a8a8f3293ebf94048d89bbb1c8aa1c93f}} 
+T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM&Trim leading or M\+SB zeros. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{utility_8h_af01dd2ee3605f424e09b826ca7322b3d}\label{utility_8h_af01dd2ee3605f424e09b826ca7322b3d}} 
+\index{utility.\+h@{utility.\+h}!Boat\+Free@{Boat\+Free}}
+\index{Boat\+Free@{Boat\+Free}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Free()}{BoatFree()}}
+{\footnotesize\ttfamily void Boat\+Free (\begin{DoxyParamCaption}\item[{void $\ast$}]{mem\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Wrapper function for memory allocation. 
+
+
+
+ Function\+: \mbox{\hyperlink{utility_8c_af01dd2ee3605f424e09b826ca7322b3d}{Boat\+Free()}} \begin{DoxyVerb}This function is a wrapper for dynamic memory de-allocation.
+
+It typically wraps free() in a linux or Windows system.
+For RTOS it depends on the specification of the RTOS.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{utility_8c_a745b81eca690ac3838e3da2fa8c8fe72}{Boat\+Malloc()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function doesn\textquotesingle{}t return anything.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mem\+\_\+ptr} & The address to free. The address must be the one returned by \mbox{\hyperlink{utility_8c_a745b81eca690ac3838e3da2fa8c8fe72}{Boat\+Malloc()}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8h_a745b81eca690ac3838e3da2fa8c8fe72}\label{utility_8h_a745b81eca690ac3838e3da2fa8c8fe72}} 
+\index{utility.\+h@{utility.\+h}!Boat\+Malloc@{Boat\+Malloc}}
+\index{Boat\+Malloc@{Boat\+Malloc}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Malloc()}{BoatMalloc()}}
+{\footnotesize\ttfamily void$\ast$ Boat\+Malloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Wrapper function for memory allocation. 
+
+
+
+ Function\+: \mbox{\hyperlink{utility_8c_a745b81eca690ac3838e3da2fa8c8fe72}{Boat\+Malloc()}} \begin{DoxyVerb}This function is a wrapper for dynamic memory allocation.
+
+It typically wraps malloc() in a linux or Windows system.
+For RTOS it depends on the specification of the RTOS.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns the address of the allocated memory. If allocation~\newline
+ fails, it returns N\+U\+LL.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em size} & How many bytes to allocate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8h_a6e6972b2d492a3c131d693af08797bad}\label{utility_8h_a6e6972b2d492a3c131d693af08797bad}} 
+\index{utility.\+h@{utility.\+h}!Utility\+Bin2\+Hex@{Utility\+Bin2\+Hex}}
+\index{Utility\+Bin2\+Hex@{Utility\+Bin2\+Hex}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{Utility\+Bin2\+Hex()}{UtilityBin2Hex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} Utility\+Bin2\+Hex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$}]{to\+\_\+str,  }\item[{const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{from\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{from\+\_\+len,  }\item[{\mbox{\hyperlink{utility_8h_a12a5a3456f47bcce11eda67ca3f9d518}{B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}}}]{trim\+\_\+mode,  }\item[{\mbox{\hyperlink{utility_8h_a66da4f24ba8c7dd83aea3102435b8890}{B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+M\+O\+DE}}}]{prefix\+\_\+0x\+\_\+mode,  }\item[{\mbox{\hyperlink{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}{B\+O\+A\+T\+B\+O\+OL}}}]{zero\+\_\+as\+\_\+null }\end{DoxyParamCaption})}
+
+
+
+Convert a binary stream to H\+EX string with optional leading zeros trimming and \char`\"{}0x\char`\"{} prefix. 
+
+
+
+ Function\+: \mbox{\hyperlink{utility_8c_a6e6972b2d492a3c131d693af08797bad}{Utility\+Bin2\+Hex()}} \begin{DoxyVerb}This function converts a binary stream to a null-terminated HEX string.
+Optionally leading zeros can be trimmed during conversion.
+Optionally "0x" prefix can be prepended to the HEX string.
+
+There is no space to delimit every HEX code.
+The case of "a" through "f" is always lower case.
+
+There are 3 ways to trim leading zeros. For example, a binary stream
+{0x00, 0x01, 0x00, 0xAB} will be converted to string:
+
+"000100ab": if <trim_mode> = BIN2HEX_TRIM_NO
+"100ab"   : if <trim_mode> = BIN2HEX_LEFTTRIM_QUANTITY
+"0100ab"  : if <trim_mode> = BIN2HEX_LEFTTRIM_UFMTDATA
+
+Note that this function doesn't treat the binary stream as an integer and thus
+it doens't make any endian conversion.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns the length of the converted H\+EX string excluding N\+U\+LL~\newline
+ terminator. It equals to strlen of the string.~\newline
+ If $<$to\+\_\+str$>$ is N\+U\+LL, this function does nothing and returns 0.~\newline
+ If $<$from\+\_\+len$>$ is 0 or $<$from\+\_\+ptr$>$ is N\+U\+LL, and $<$to\+\_\+str$>$ is N\+OT N\+U\+LL, this~\newline
+ function writes a \textquotesingle{}\textbackslash{}0\textquotesingle{} to $<$to\+\_\+str$>$, i.\+e. a N\+U\+LL string and returns 1.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em to\+\_\+str} & The buffer to hold the converted H\+EX string.~\newline
+ Its size should be least $<$from\+\_\+len$>$$\ast$2+1 bytes if $<$prefix\+\_\+0x\+\_\+mode$>$=B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+NO,~\newline
+ or $<$from\+\_\+len$>$$\ast$2+3 bytes if $<$prefix\+\_\+0x\+\_\+mode$>$=B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+Y\+ES.~\newline
+ If $<$to\+\_\+str$>$ is N\+U\+LL, this function does nothing and returns 0.\\
+\hline
+\mbox{\tt in}  & {\em from\+\_\+ptr} & The binary stream to convert from.~\newline
+ If $<$from\+\_\+ptr$>$ is N\+U\+LL and $<$to\+\_\+str$>$ is N\+OT N\+U\+LL, this function writes a~\newline
+ \textquotesingle{}\textbackslash{}0\textquotesingle{} to $<$to\+\_\+str$>$, i.\+e. a N\+U\+LL string and returns 1.\\
+\hline
+\mbox{\tt in}  & {\em from\+\_\+len} & The length of $<$from\+\_\+ptr$>$ in byte.~\newline
+ If $<$from\+\_\+len$>$ is 0 and $<$to\+\_\+str$>$ is N\+OT N\+U\+LL, this function writes a~\newline
+ \textquotesingle{}\textbackslash{}0\textquotesingle{} to $<$to\+\_\+str$>$, i.\+e. a N\+U\+LL string and returns 1.\\
+\hline
+\end{DoxyParams}
+\mbox{[}in\mbox{]} trim\+\_\+mode B\+I\+N2\+H\+E\+X\+\_\+\+T\+R\+I\+M\+\_\+\+NO if no trimming is required;~\newline
+ B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+Q\+U\+A\+N\+T\+I\+TY to trim as a quantity;~\newline
+ B\+I\+N2\+H\+E\+X\+\_\+\+L\+E\+F\+T\+T\+R\+I\+M\+\_\+\+U\+F\+M\+T\+D\+A\+TA to trim as unformatted data
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em prefix\+\_\+0x\+\_\+mode} & B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+Y\+ES\+: Prepend a \char`\"{}0x\char`\"{} prefix at the beginning of the H\+EX string;~\newline
+ B\+I\+N2\+H\+E\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+0x\+\_\+\+NO\+: Don\textquotesingle{}t prepend \char`\"{}0x\char`\"{} prefix.\\
+\hline
+ & {\em zero\+\_\+as\+\_\+null} & In case the binary stream contains only one or multiple 0x00, if~\newline
+ $<$zero\+\_\+as\+\_\+null$>$ is B\+O\+A\+T\+\_\+\+T\+R\+UE, it will be converted to a null sting and~\newline
+ returns 0.~\newline
+ If $<$zero\+\_\+as\+\_\+null$>$ is B\+O\+A\+T\+\_\+\+F\+A\+L\+SE, it will be converted to \char`\"{}0\char`\"{} or \char`\"{}00\char`\"{}~\newline
+ according to $<$trim\+\_\+mode$>$.~\newline
+ $<$zero\+\_\+as\+\_\+null$>$ should be B\+O\+A\+T\+\_\+\+T\+R\+UE for R\+L\+P-\/\+Encoding purpose. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8h_a5e324a119ad6207ad8eed1dd2ac9858b}\label{utility_8h_a5e324a119ad6207ad8eed1dd2ac9858b}} 
+\index{utility.\+h@{utility.\+h}!Utility\+Hex2\+Bin@{Utility\+Hex2\+Bin}}
+\index{Utility\+Hex2\+Bin@{Utility\+Hex2\+Bin}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{Utility\+Hex2\+Bin()}{UtilityHex2Bin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} Utility\+Hex2\+Bin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{to\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{to\+\_\+size,  }\item[{const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$}]{from\+\_\+str,  }\item[{\mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}}}]{trim\+\_\+mode,  }\item[{\mbox{\hyperlink{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}{B\+O\+A\+T\+B\+O\+OL}}}]{zero\+\_\+as\+\_\+null }\end{DoxyParamCaption})}
+
+
+
+Convert a H\+EX string to binary stream with optional leading zeros trimming. 
+
+
+
+ Function\+: \mbox{\hyperlink{utility_8c_a5e324a119ad6207ad8eed1dd2ac9858b}{Utility\+Hex2\+Bin()}}
+
+Description\+: This function converts a H\+EX string to a binary stream.
+
+Optionally leading zeros can be trimmed during conversion.
+
+If there is \char`\"{}0x\char`\"{} prefix at the beginning of the H\+EX string, it\textquotesingle{}s ignored.
+
+There should be no space between H\+EX codes.
+
+If $<$to\+\_\+size$>$ is too small to hold the converted binary stream, only the beginning $<$to\+\_\+size$>$ bytes are converted and written to $<$to\+\_\+ptr$>$.
+
+The trim\+\_\+mode is the same as \mbox{\hyperlink{utility_8c_ac728ab918934cb209ceec70e4be64940}{Utility\+Trim\+Bin()}}. Odd length of H\+EX string is allowed as if it were left filled with a \char`\"{}0\char`\"{}. For example, a H\+EX string \char`\"{}0x00123ab\char`\"{} is treated as \char`\"{}0x000123ab\char`\"{} and converted to\+: \{0x01, 0x23, 0xab\}\+: if $<$trim\+\_\+mode$>$ = T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM; \{0x00, 0x01, 0x23, 0xab\}\+: if $<$trim\+\_\+mode$>$ = T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO
+
+Note that this function doesn\textquotesingle{}t treat the H\+EX string as an integer and thus it doens\textquotesingle{}t make any endian conversion.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{utility_8c_ac728ab918934cb209ceec70e4be64940}{Utility\+Trim\+Bin()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns how many bytes the converted binary stream is if the~\newline
+ conversion completes successfully. If the output buffer is too small to~\newline
+ hold the converted binary stream, it returns $<$to\+\_\+size$>$.~\newline
+ If any non-\/\+H\+EX character is encountered, or $<$from\+\_\+str$>$ is an all-\/zero H\+EX~\newline
+ string and $<$trim\+\_\+mode$>$ is T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM, it returns 0.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em to\+\_\+ptr} & The buffer to hold the converted binary stream.\\
+\hline
+\mbox{\tt in}  & {\em to\+\_\+size} & The size of $<$to\+\_\+ptr$>$ in bytes.~\newline
+ It\textquotesingle{}s safe to ensure $<$to\+\_\+size$>$ $>$= (strlen(from\+\_\+str)+1)/2 bytes.~\newline
+ \\
+\hline
+\mbox{\tt in}  & {\em from\+\_\+str} & The null-\/terminated H\+EX string to convert from. \char`\"{}0x\char`\"{} prefix is optional~\newline
+ and ignored. There should be no space between H\+EX codes.\\
+\hline
+\mbox{\tt in}  & {\em trim\+\_\+mode} & T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM\+: Trim leading zeros;~\newline
+ T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO\+: Don\textquotesingle{}t trim.\\
+\hline
+\mbox{\tt in}  & {\em zero\+\_\+as\+\_\+null} & In case the H\+EX string contains only one or multiple \char`\"{}00\char`\"{} and $<$trim\+\_\+mode$>$~\newline
+ is T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM, if $<$zero\+\_\+as\+\_\+null$>$ is B\+O\+A\+T\+\_\+\+T\+R\+UE, nothing will be~\newline
+ written to $<$to\+\_\+ptr$>$ and it returns 0.~\newline
+ If $<$zero\+\_\+as\+\_\+null$>$ is B\+O\+A\+T\+\_\+\+F\+A\+L\+SE, it will be converted to a single 0x00~\newline
+ and returns 1.~\newline
+ $<$zero\+\_\+as\+\_\+null$>$ should be B\+O\+A\+T\+\_\+\+T\+R\+UE for R\+L\+P-\/\+Encoding purpose. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8h_a8c8a759a3b33396ff9fe10f602d6f37f}\label{utility_8h_a8c8a759a3b33396ff9fe10f602d6f37f}} 
+\index{utility.\+h@{utility.\+h}!Utilityhtonl@{Utilityhtonl}}
+\index{Utilityhtonl@{Utilityhtonl}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{Utilityhtonl()}{Utilityhtonl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} Utilityhtonl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{from\+\_\+host\+\_\+integer }\end{DoxyParamCaption})}
+
+
+
+Convert a host endian U\+I\+N\+T32 to bigendian. 
+
+
+
+ Function\+: \mbox{\hyperlink{utility_8c_a8c8a759a3b33396ff9fe10f602d6f37f}{Utilityhtonl()}} \begin{DoxyVerb}This function converts a host endian (typically littleendian) UINT32 integer
+to bigendian.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{utility_8c_af10137d642f5eaff08986377e97dda33}{Utility\+Uint32\+To\+Bigend()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns the converted bigendian U\+I\+N\+T32 integer.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em from\+\_\+host\+\_\+integer} & The host endian U\+I\+N\+T32 integer to convert. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8h_a9ef1cad4856fe51b87c8db6614240645}\label{utility_8h_a9ef1cad4856fe51b87c8db6614240645}} 
+\index{utility.\+h@{utility.\+h}!Utilityntohl@{Utilityntohl}}
+\index{Utilityntohl@{Utilityntohl}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{Utilityntohl()}{Utilityntohl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} Utilityntohl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{from\+\_\+big\+\_\+integer }\end{DoxyParamCaption})}
+
+
+
+Convert a bigendian U\+I\+N\+T32 to host endian. 
+
+
+
+ Function\+: \mbox{\hyperlink{utility_8c_a8c8a759a3b33396ff9fe10f602d6f37f}{Utilityhtonl()}} \begin{DoxyVerb}This function converts a bigendian UINT32 integer to host endian (typically
+littleendian).
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{utility_8c_a8c8a759a3b33396ff9fe10f602d6f37f}{Utilityhtonl()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns the converted host endian U\+I\+N\+T32 integer.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em from\+\_\+big\+\_\+integer} & The big endian U\+I\+N\+T32 integer to convert. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8h_ac728ab918934cb209ceec70e4be64940}\label{utility_8h_ac728ab918934cb209ceec70e4be64940}} 
+\index{utility.\+h@{utility.\+h}!Utility\+Trim\+Bin@{Utility\+Trim\+Bin}}
+\index{Utility\+Trim\+Bin@{Utility\+Trim\+Bin}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{Utility\+Trim\+Bin()}{UtilityTrimBin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} Utility\+Trim\+Bin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{to\+\_\+ptr,  }\item[{const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{from\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{from\+\_\+len,  }\item[{\mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}}}]{trim\+\_\+mode,  }\item[{\mbox{\hyperlink{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}{B\+O\+A\+T\+B\+O\+OL}}}]{zero\+\_\+as\+\_\+null }\end{DoxyParamCaption})}
+
+
+
+Trim zeros of a binary stream. 
+
+
+
+ Function\+: \mbox{\hyperlink{utility_8c_ac728ab918934cb209ceec70e4be64940}{Utility\+Trim\+Bin()}} \begin{DoxyVerb}This function trims zeros of a binary stream and returns the length after
+trimming. Currently only left trimming (i.e. trimming leading zeros) is
+supported.
+
+This function simply ignores leading zeros and copy the first non-zero byte
+til the end of the stream to the target buffer. It doesn't treat the data
+in buffer as integer, i.e. it doesn't care about the endian.
+
+The source and target buffer may be overlapped.
+
+For example, {0x00, 0x01, 0x02, 0x00} is trimed to {0x01, 0x02, 0x00} and
+returns 3.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns how many bytes the trimmed binary stream is.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em to\+\_\+ptr} & A buffer to contain the trimmed binary stream. Its size must be at least $<$from\+\_\+len$>$ bytes. $<$to\+\_\+ptr$>$ and $<$from\+\_\+ptr$>$ may be overlapped.\\
+\hline
+{\em from\+\_\+ptr} & The binary stream to trim. $<$to\+\_\+ptr$>$ and $<$from\+\_\+ptr$>$ may be overlapped.\\
+\hline
+{\em from\+\_\+len} & Length of $<$from\+\_\+ptr$>$.\\
+\hline
+{\em trim\+\_\+mode} & Only T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM is supported, i.\+e. trim leading zeros.~\newline
+ If T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO is specified, this function acts like memmove().\\
+\hline
+{\em zero\+\_\+as\+\_\+null} & In case the binary stream contains only one or multiple 0x00, if~\newline
+ $<$zero\+\_\+as\+\_\+null$>$ is B\+O\+A\+T\+\_\+\+T\+R\+UE, it will be treated as a null stream and~\newline
+ returns 0.~\newline
+ If $<$zero\+\_\+as\+\_\+null$>$ is B\+O\+A\+T\+\_\+\+F\+A\+L\+SE, it will be trimed to a single 0x00 and~\newline
+ returns 1.~\newline
+ $<$zero\+\_\+as\+\_\+null$>$ should be B\+O\+A\+T\+\_\+\+T\+R\+UE for R\+L\+P-\/\+Encoding purpose. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8h_af10137d642f5eaff08986377e97dda33}\label{utility_8h_af10137d642f5eaff08986377e97dda33}} 
+\index{utility.\+h@{utility.\+h}!Utility\+Uint32\+To\+Bigend@{Utility\+Uint32\+To\+Bigend}}
+\index{Utility\+Uint32\+To\+Bigend@{Utility\+Uint32\+To\+Bigend}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{Utility\+Uint32\+To\+Bigend()}{UtilityUint32ToBigend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} Utility\+Uint32\+To\+Bigend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{to\+\_\+big\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{from\+\_\+host\+\_\+integer,  }\item[{\mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}}}]{trim\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Convert a host endian U\+I\+N\+T32 to bigendian with optional M\+SB zeros trimming. 
+
+
+
+ Function\+: \mbox{\hyperlink{utility_8c_af10137d642f5eaff08986377e97dda33}{Utility\+Uint32\+To\+Bigend()}} \begin{DoxyVerb}This function converts a host endian (typically littleendian) UINT32 integer
+to bigendian.
+
+Optionally most siganificant zeros can be trimmed during conversion.
+
+The trim_mode is the same as UtilityTrimBin(). For example, a UINT32 integer
+0x000123ab is converted to:
+{0x01, 0x23, 0xab}: if <trim_mode> = TRIMBIN_LEFTTRIM;
+{0x00, 0x01, 0x23, 0xab}: if <trim_mode> = TRIMBIN_TRIM_NO
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{utility_8c_ac728ab918934cb209ceec70e4be64940}{Utility\+Trim\+Bin()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns how many bytes the converted bigendian integer is.~\newline
+ If $<$trim\+\_\+mode$>$ = T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO, it always returns 4.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em to\+\_\+big\+\_\+ptr} & The buffer to hold the converted binary stream.\\
+\hline
+\mbox{\tt in}  & {\em from\+\_\+host\+\_\+integer} & The host endian U\+I\+N\+T32 integer to convert.\\
+\hline
+\mbox{\tt in}  & {\em trim\+\_\+mode} & T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM\+: Trim M\+SB zeros;~\newline
+ T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO\+: Don\textquotesingle{}t trim. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8h_a85f531e479f439a97431b1e68a72e180}\label{utility_8h_a85f531e479f439a97431b1e68a72e180}} 
+\index{utility.\+h@{utility.\+h}!Utility\+Uint64\+To\+Bigend@{Utility\+Uint64\+To\+Bigend}}
+\index{Utility\+Uint64\+To\+Bigend@{Utility\+Uint64\+To\+Bigend}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{Utility\+Uint64\+To\+Bigend()}{UtilityUint64ToBigend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} Utility\+Uint64\+To\+Bigend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{to\+\_\+big\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_aaaeacfdfbfc1dcaae18cf20e63015e71}{U\+I\+N\+T64}}}]{from\+\_\+host\+\_\+integer,  }\item[{\mbox{\hyperlink{utility_8h_a470174e9056509fec2fa7646d62ccb66}{T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+M\+O\+DE}}}]{trim\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Convert a host endian U\+I\+N\+T64 to bigendian with optional M\+SB zeros trimming. 
+
+
+
+ Function\+: \mbox{\hyperlink{utility_8c_a85f531e479f439a97431b1e68a72e180}{Utility\+Uint64\+To\+Bigend()}} \begin{DoxyVerb}This function converts a host endian (typical littleendian) UINT64 integer
+to bigendian.
+
+Optionally most siganificant zeros can be trimmed during conversion.
+
+It's a 64-bit version of UtilityUint32ToBigend(). 
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{utility_8c_af10137d642f5eaff08986377e97dda33}{Utility\+Uint32\+To\+Bigend()}} \mbox{\hyperlink{utility_8c_ac728ab918934cb209ceec70e4be64940}{Utility\+Trim\+Bin()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns how many bytes the converted bigendian integer is.~\newline
+ If $<$trim\+\_\+mode$>$ = T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO, it always returns 8.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em to\+\_\+big\+\_\+ptr} & The buffer to hold the converted binary stream.\\
+\hline
+\mbox{\tt in}  & {\em from\+\_\+host\+\_\+integer} & The host endian U\+I\+N\+T64 integer to convert.\\
+\hline
+\mbox{\tt in}  & {\em trim\+\_\+mode} & T\+R\+I\+M\+B\+I\+N\+\_\+\+L\+E\+F\+T\+T\+R\+IM\+: Trim M\+SB zeros;~\newline
+ T\+R\+I\+M\+B\+I\+N\+\_\+\+T\+R\+I\+M\+\_\+\+NO\+: Don\textquotesingle{}t trim. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{utility_8h_a11c3ffc59501c83f037a2327d847b0fe}\label{utility_8h_a11c3ffc59501c83f037a2327d847b0fe}} 
+\index{utility.\+h@{utility.\+h}!g\+\_\+log\+\_\+level\+\_\+name\+\_\+str@{g\+\_\+log\+\_\+level\+\_\+name\+\_\+str}}
+\index{g\+\_\+log\+\_\+level\+\_\+name\+\_\+str@{g\+\_\+log\+\_\+level\+\_\+name\+\_\+str}!utility.\+h@{utility.\+h}}
+\subsubsection{\texorpdfstring{g\+\_\+log\+\_\+level\+\_\+name\+\_\+str}{g\_log\_level\_name\_str}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}}$\ast$ const g\+\_\+log\+\_\+level\+\_\+name\+\_\+str\mbox{[}$\,$\mbox{]}}
+
+
+
+Literal representation of log level. 
+

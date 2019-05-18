@@ -1,0 +1,7 @@
+# Dummy Makefile
+
+all:
+
+clean:	
+
+

@@ -1,0 +1,148 @@
+\hypertarget{curlport_8h}{}\section{curlport.\+h File Reference}
+\label{curlport_8h}\index{curlport.\+h@{curlport.\+h}}
+
+
+libcurl porting header file  
+
+
+{\ttfamily \#include \char`\"{}wallet/boattypes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/boatoptions.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{curlport_8h_ae0aa976d68e3476fd63551623b7f70fc}{Curl\+Port\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize libcurl. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{curlport_8h_a253c2cdb6cd93bceeb43e8d6b57c8606}{Curl\+Port\+Deinit}} (void)
+\begin{DoxyCompactList}\small\item\em Deinitialize libcurl. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{curlport_8h_aa7bd9dc819d6c99b352f86394522fe70}{Curl\+Port\+Set\+Opt}} (const \mbox{\hyperlink{rpcintf_8h_abbd5560789698de6dfacb26c9539bc6e}{Rpc\+Option}} $\ast$rpc\+\_\+option\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Set options for use with libcurl. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{curlport_8h_a7c8639f78ad3657938ba510e9da1b72a}{Curl\+Port\+Request\+Sync}} (const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$request\+\_\+str, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} request\+\_\+len, \mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$$\ast$response\+\_\+str\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} $\ast$response\+\_\+len\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Perform a synchronous H\+T\+TP P\+O\+ST and wait for its response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+libcurl porting header file 
+
+\mbox{\hyperlink{curlport_8h}{curlport.\+h}} is the header file of libcurl porting of R\+PC.
+
+DO N\+OT call functions in this file directly. Instead call wrapper functions provided by rpcport.
+
+To use libcurl porting, R\+P\+C\+\_\+\+U\+S\+E\+\_\+\+L\+I\+B\+C\+U\+RL in \mbox{\hyperlink{boatoptions_8h}{boatoptions.\+h}} must set to 1. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{curlport_8h_a253c2cdb6cd93bceeb43e8d6b57c8606}\label{curlport_8h_a253c2cdb6cd93bceeb43e8d6b57c8606}} 
+\index{curlport.\+h@{curlport.\+h}!Curl\+Port\+Deinit@{Curl\+Port\+Deinit}}
+\index{Curl\+Port\+Deinit@{Curl\+Port\+Deinit}!curlport.\+h@{curlport.\+h}}
+\subsubsection{\texorpdfstring{Curl\+Port\+Deinit()}{CurlPortDeinit()}}
+{\footnotesize\ttfamily void Curl\+Port\+Deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Deinitialize libcurl. 
+
+
+
+ Function\+: \mbox{\hyperlink{curlport_8c_a253c2cdb6cd93bceeb43e8d6b57c8606}{Curl\+Port\+Deinit()}} \begin{DoxyVerb}This function de-initializes libcurl. It also frees the dynamically
+allocated storage to receive response from the peer.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function doesn\textquotesingle{}t return any value.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em This} & function doesn\textquotesingle{}t take any argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{curlport_8h_ae0aa976d68e3476fd63551623b7f70fc}\label{curlport_8h_ae0aa976d68e3476fd63551623b7f70fc}} 
+\index{curlport.\+h@{curlport.\+h}!Curl\+Port\+Init@{Curl\+Port\+Init}}
+\index{Curl\+Port\+Init@{Curl\+Port\+Init}!curlport.\+h@{curlport.\+h}}
+\subsubsection{\texorpdfstring{Curl\+Port\+Init()}{CurlPortInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Curl\+Port\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize libcurl. 
+
+
+
+ Function\+: \mbox{\hyperlink{curlport_8c_ae0aa976d68e3476fd63551623b7f70fc}{Curl\+Port\+Init()}} \begin{DoxyVerb}This function initializes libcurl. It also dynamically allocates storage to
+receive response from the peer.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if successful. Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em This} & function doesn\textquotesingle{}t take any argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{curlport_8h_a7c8639f78ad3657938ba510e9da1b72a}\label{curlport_8h_a7c8639f78ad3657938ba510e9da1b72a}} 
+\index{curlport.\+h@{curlport.\+h}!Curl\+Port\+Request\+Sync@{Curl\+Port\+Request\+Sync}}
+\index{Curl\+Port\+Request\+Sync@{Curl\+Port\+Request\+Sync}!curlport.\+h@{curlport.\+h}}
+\subsubsection{\texorpdfstring{Curl\+Port\+Request\+Sync()}{CurlPortRequestSync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Curl\+Port\+Request\+Sync (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$}]{request\+\_\+str,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{request\+\_\+len,  }\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$$\ast$}]{response\+\_\+str\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} $\ast$}]{response\+\_\+len\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Perform a synchronous H\+T\+TP P\+O\+ST and wait for its response. 
+
+
+
+ Function\+: \mbox{\hyperlink{curlport_8c_a7c8639f78ad3657938ba510e9da1b72a}{Curl\+Port\+Request\+Sync()}} \begin{DoxyVerb}This function initiates a curl session, performs a synchronous HTTP POST
+and waits for its response.
+
+is a callback function as per libcurl CURLOPT_WRITEFUNCTION option.
+libcurl will call this function (possibly) multiple times to write received
+data from peer to the buffer specified by this function. The received data
+are typically some RESPONSE from the HTTP server.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\href{https://curl.haxx.se/libcurl/c/CURLOPT_WRITEFUNCTION.html}{\tt https\+://curl.\+haxx.\+se/libcurl/c/\+C\+U\+R\+L\+O\+P\+T\+\_\+\+W\+R\+I\+T\+E\+F\+U\+N\+C\+T\+I\+O\+N.\+html}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns how many bytes are written into the user buffer. If the returned size differs from $<$size$>$$\ast$$<$nmemb$>$, libcurl will treat it as a failure.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em request\+\_\+str} & A pointer to the request string to P\+O\+ST.\\
+\hline
+\mbox{\tt in}  & {\em request\+\_\+len} & The length of $<$request\+\_\+str$>$ excluding N\+U\+LL terminator. This function is wrapped by \mbox{\hyperlink{rpcintf_8c_ae3f4335d3f5ecc6f22457cfc3d18874d}{Rpc\+Request\+Sync()}} and thus takes this argument for compatibility with the wrapper function. Typically it equals to strlen(request\+\_\+str).\\
+\hline
+\mbox{\tt out}  & {\em response\+\_\+str\+\_\+ptr} & The address of a C\+H\+A\+R$\ast$ pointer (i.\+e. a double pointer) to hold the address of the receiving buffer.~\newline
+ The receiving buffer is internally maintained by curlport and the caller shall only read from the buffer. DO N\+OT modify the buffer or save the address for later use.\\
+\hline
+\mbox{\tt out}  & {\em response\+\_\+len\+\_\+ptr} & The address of a U\+I\+N\+T32 integer to hold the effective length of $<$response\+\_\+str\+\_\+ptr$>$ excluding N\+U\+LL terminator. This function is wrapped by \mbox{\hyperlink{rpcintf_8c_ae3f4335d3f5ecc6f22457cfc3d18874d}{Rpc\+Request\+Sync()}} and thus takes this argument for compatibility with the wrapper function. Typically it equals to strlen(response\+\_\+str\+\_\+ptr). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{curlport_8h_aa7bd9dc819d6c99b352f86394522fe70}\label{curlport_8h_aa7bd9dc819d6c99b352f86394522fe70}} 
+\index{curlport.\+h@{curlport.\+h}!Curl\+Port\+Set\+Opt@{Curl\+Port\+Set\+Opt}}
+\index{Curl\+Port\+Set\+Opt@{Curl\+Port\+Set\+Opt}!curlport.\+h@{curlport.\+h}}
+\subsubsection{\texorpdfstring{Curl\+Port\+Set\+Opt()}{CurlPortSetOpt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Curl\+Port\+Set\+Opt (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{rpcintf_8h_abbd5560789698de6dfacb26c9539bc6e}{Rpc\+Option}} $\ast$}]{rpc\+\_\+option\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Set options for use with libcurl. 
+
+
+
+ Function\+: \mbox{\hyperlink{curlport_8c_aa7bd9dc819d6c99b352f86394522fe70}{Curl\+Port\+Set\+Opt()}} \begin{DoxyVerb}This function is a dummy function for compatible with RPC Port skeleton.
+curl_easy_setopt() is actually called in CurlPortRequestSync() because some
+options are per-session effective.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function always returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em rpc\+\_\+option\+\_\+ptr} & A pointer to the option struct of Rpc\+Option. \\
+\hline
+\end{DoxyParams}

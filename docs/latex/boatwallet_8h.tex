@@ -1,0 +1,874 @@
+\hypertarget{boatwallet_8h}{}\section{boatwallet.\+h File Reference}
+\label{boatwallet_8h}\index{boatwallet.\+h@{boatwallet.\+h}}
+
+
+Boatwallet S\+DK header file.  
+
+
+{\ttfamily \#include \char`\"{}wallet/boattypes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}web3/web3intf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utilities/utility.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/rawtx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/rpcintf.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a300836e4dbdd8f2f1095eb81c3c5df8a}{Boat\+Wallet\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Boat\+Wallet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{boatwallet_8h_ab64cef2f05546127127c0748fe1bb8db}{Boat\+Wallet\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em De-\/initialize Boat\+Wallet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a4caa11f4b964aacf89cd53e2f7dff891}{Boat\+Wallet\+Set\+Node\+Url}} (const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$node\+\_\+url\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Set Boat\+Wallet\+: U\+RL of blockchain node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a6b381a2a9c7c021c4814f19dfea127e5}{Boat\+Wallet\+Set\+E\+I\+P155\+Comp}} (\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} eip155\+\_\+compatibility)
+\begin{DoxyCompactList}\small\item\em Set Boat\+Wallet\+: E\+I\+P-\/155 Compatibility. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a4e76584cd317e8f0c2079026ef972909}{Boat\+Wallet\+Set\+Chain\+Id}} (\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} chain\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Set Boat\+Wallet\+: Chain ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a0501afc444bd260f2d733159750dc1e9}{Boat\+Wallet\+Set\+Privkey}} (const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} priv\+\_\+key\+\_\+array\mbox{[}32\mbox{]})
+\begin{DoxyCompactList}\small\item\em Set Boat\+Wallet\+: Private Key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a0fa905e6ed835414803b0bafa9c70a7f}{Boat\+Wallet\+Generate\+Privkey}} (\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} priv\+\_\+key\+\_\+array\mbox{[}32\mbox{]})
+\begin{DoxyCompactList}\small\item\em Generate Private Key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a94e1701018d7c436e8e7c94f513ad71d}{Boat\+Wallet\+Check\+Privkey}} (const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} priv\+\_\+key\+\_\+array\mbox{[}32\mbox{]})
+\begin{DoxyCompactList}\small\item\em Check validity of given private key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_ab8abfc551f5336818b5165c7d873ba72}{Boat\+Wallet\+Save\+Wallet\+Ex}} (const \mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} $\ast$wallet\+\_\+info\+\_\+ptr, const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$passwd\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} passwd\+\_\+len, const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$file\+\_\+path\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Save specified wallet information to keystore file with A\+ES encryption. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_aed72da36dfd21eef62b3db5c60c74b72}{Boat\+Wallet\+Save\+Wallet}} (const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$passwd\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} passwd\+\_\+len, const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$file\+\_\+path\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Save wallet information to keystore file with A\+ES encryption. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_aefce86dec7e8105d27a2e77d3e8e03fd}{Boat\+Wallet\+Load\+Wallet\+Ex}} (\mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} $\ast$wallet\+\_\+info\+\_\+ptr, const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$passwd\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} passwd\+\_\+len, const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$file\+\_\+path\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Load wallet information from keystore file with A\+ES encryption to the specified wallet account. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_aa6c26cfba6f4d24e38886b8c97caf953}{Boat\+Wallet\+Load\+Wallet}} (const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$passwd\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} passwd\+\_\+len, const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$file\+\_\+path\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Load wallet information from keystore file with A\+ES encryption. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_af3cb89d9c8632c22095bfa082fb03990}{Boat\+Tx\+Set\+Nonce}} (void)
+\begin{DoxyCompactList}\small\item\em Set Transaction Parameter\+: Transaction Nonce. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_ae9e94feaa3e9e0010578bf023bdc7ded}{Boat\+Tx\+Set\+Gas\+Price}} (\mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} $\ast$gas\+\_\+price\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Set Transaction Parameter\+: Gas\+Price. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a8c5b8961ad2b49c40be30994fbce457d}{Boat\+Tx\+Set\+Gas\+Limit}} (\mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} $\ast$gas\+\_\+limit\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Set Transaction Parameter\+: Gas\+Limit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_aae7aa9632c310402ee379fb189482288}{Boat\+Tx\+Set\+Recipient}} (\mbox{\hyperlink{boattypes_8h_a18be901fd00e05c6acdbdbab722c6c58}{Boat\+Address}} address)
+\begin{DoxyCompactList}\small\item\em Set Transaction Parameter\+: Recipient Address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a813e7e70bcfa7a321111f90c2a5614ba}{Boat\+Tx\+Set\+Value}} (\mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} $\ast$value\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Set Transaction Parameter\+: Value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_ae7600512ae72dedac23b07200bcbf2d1}{Boat\+Tx\+Set\+Data}} (\mbox{\hyperlink{boattypes_8h_a3d1c482c13f3489376022445ceb3007e}{Tx\+Field\+Variable}} $\ast$data\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Set Transaction Parameter\+: Data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a9fd35c5a12ccef5e007389283310b861}{Boat\+Tx\+Send}} (void)
+\begin{DoxyCompactList}\small\item\em Sign and send a transaction. Also call a stateful contract function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$ \mbox{\hyperlink{boatwallet_8h_a4fe6d7d468a050646a050646f20c1d14}{Boat\+Call\+Contract\+Func}} (\mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$contract\+\_\+addr\+\_\+str, \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$func\+\_\+proto\+\_\+str, \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$func\+\_\+param\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} func\+\_\+param\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Call a state-\/less contract function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} \mbox{\hyperlink{boatwallet_8h_a0cced96844faf3ca6f759714a5e336df}{g\+\_\+boat\+\_\+wallet\+\_\+info}}
+\item 
+\mbox{\hyperlink{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}{Tx\+Info}} \mbox{\hyperlink{boatwallet_8h_a573ae5e87e4d9aa0f7fae8c7289708e1}{g\+\_\+tx\+\_\+info}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Boatwallet S\+DK header file. 
+
+\mbox{\hyperlink{boatwallet_8h}{boatwallet.\+h}} is the S\+DK header file. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{boatwallet_8h_a4fe6d7d468a050646a050646f20c1d14}\label{boatwallet_8h_a4fe6d7d468a050646a050646f20c1d14}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Call\+Contract\+Func@{Boat\+Call\+Contract\+Func}}
+\index{Boat\+Call\+Contract\+Func@{Boat\+Call\+Contract\+Func}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Call\+Contract\+Func()}{BoatCallContractFunc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}}$\ast$ Boat\+Call\+Contract\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$}]{contract\+\_\+addr\+\_\+str,  }\item[{\mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$}]{func\+\_\+proto\+\_\+str,  }\item[{\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{func\+\_\+param\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{func\+\_\+param\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Call a state-\/less contract function. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a4fe6d7d468a050646a050646f20c1d14}{Boat\+Call\+Contract\+Func()}} \begin{DoxyVerb}This function calls contract function that doesn't change the state of the
+contract. "state" is the "global variable" used in a contract.
+
+This function invokes the eth_call RPC method. eth_call method requests the
+blockchain node to execute the function without affecting the block chain.
+The execution runs only on the requested node thus it can return immediately
+after the execution. This function synchronously return the return value
+of the eth_call method, which is the return value of the contract function.
+
+To call contract function that may change the state, use BoatTxSend()
+instead.
+
+If call a contract function that may change the state with
+BoatCallContractFunc(), the function will be executed and return a value,
+but none of the states will change.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{boatwallet_8c_a9fd35c5a12ccef5e007389283310b861}{Boat\+Tx\+Send()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns a H\+EX string representing the return value of the~\newline
+ called contract function.~\newline
+ If any error occurs, it returns N\+U\+LL.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em contract\+\_\+addr\+\_\+str} & A H\+EX string representing the address of th called contract.\\
+\hline
+\mbox{\tt in}  & {\em func\+\_\+proto\+\_\+str} & A string representing the prototype of the called function.~\newline
+ Note\+: uint is treated as uint256.~\newline
+ e.\+g.\+: for the contract function\+:~\newline
+ function read\+List\+By\+Index(uint index) public view returns (bytes32 event\+\_\+)~\newline
+ its prototype is \char`\"{}read\+List\+By\+Index(uint256)\char`\"{}\\
+\hline
+\mbox{\tt in}  & {\em func\+\_\+param\+\_\+ptr} & A byte stream containing the parameters to pass to the function.~\newline
+ The layout conforms to Ethereum A\+BI\+: \href{https://solidity.readthedocs.io/en/develop/abi-spec.html}{\tt https\+://solidity.\+readthedocs.\+io/en/develop/abi-\/spec.\+html}~\newline
+ If $<$func\+\_\+param\+\_\+ptr$>$ is N\+U\+LL, this function doesn\textquotesingle{}t take any parameter.\\
+\hline
+\mbox{\tt in}  & {\em func\+\_\+param\+\_\+len} & Length of $<$func\+\_\+param\+\_\+ptr$>$ in byte. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a9fd35c5a12ccef5e007389283310b861}\label{boatwallet_8h_a9fd35c5a12ccef5e007389283310b861}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Tx\+Send@{Boat\+Tx\+Send}}
+\index{Boat\+Tx\+Send@{Boat\+Tx\+Send}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Tx\+Send()}{BoatTxSend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Tx\+Send (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Sign and send a transaction. Also call a stateful contract function. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a9fd35c5a12ccef5e007389283310b861}{Boat\+Tx\+Send()}} \begin{DoxyVerb}This function sign and set a transaction.
+
+BoatWalletSetXXX() and BoatTxSetXXX() functions must be properly called
+before call this function.
+
+A transaction whose recipient may be an EOA address or a contract address.
+In latter case it's usually a contract function call.
+
+This function invokes the eth_sendRawTransaction RPC method.
+eth_sendRawTransaction method only applies the transaction and returns a
+transaction hash. The transaction is not verified (got mined) until the
+nodes in the network get into consensus about the transaction. This
+function will invoke eth_getTransactionReceipt method to wait for the
+transaction being mined or timeout.
+
+If the transaction is a contract function call, the caller cannot get its
+return value because the transaction is asynchronously executed. It's a
+good practice to save the return value in a state variable and use
+BoatCallContractFunc() to call a "read" contract function that could read
+and return the state variable.
+
+
+NOTE:
+
+Any contract function that may change the state of the contract shall
+be called in a transaction way. "state" is the "global variable" used in a
+contract.
+
+Any contract function that doesn't change the state of the contract can
+be called either in a transaction way or by BoatCallContractFunc(), which
+invokes the eth_call RPC method. However the former will consume gas and
+latter doesn't consume gas.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{boatwallet_8c_a4fe6d7d468a050646a050646f20c1d14}{Boat\+Call\+Contract\+Func()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em This} & function doesn\textquotesingle{}t take any argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_ae7600512ae72dedac23b07200bcbf2d1}\label{boatwallet_8h_ae7600512ae72dedac23b07200bcbf2d1}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Tx\+Set\+Data@{Boat\+Tx\+Set\+Data}}
+\index{Boat\+Tx\+Set\+Data@{Boat\+Tx\+Set\+Data}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Tx\+Set\+Data()}{BoatTxSetData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Tx\+Set\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a3d1c482c13f3489376022445ceb3007e}{Tx\+Field\+Variable}} $\ast$}]{data\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Set Transaction Parameter\+: Data. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_ae7600512ae72dedac23b07200bcbf2d1}{Boat\+Tx\+Set\+Data()}} \begin{DoxyVerb}This function sets the data of the transaction.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+ptr\mbox{[}in\mbox{]}} & The data of the transaction. Note that data\+\_\+ptr-\/$>$field\+\_\+ptr itself is only~\newline
+ a pointer without any associated storage by default. The caller must~\newline
+ allocate appropriate memory for it.~\newline
+ If $<$data\+\_\+ptr$>$ is N\+U\+LL, it\textquotesingle{}s treated as no data being transfered. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a8c5b8961ad2b49c40be30994fbce457d}\label{boatwallet_8h_a8c5b8961ad2b49c40be30994fbce457d}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Tx\+Set\+Gas\+Limit@{Boat\+Tx\+Set\+Gas\+Limit}}
+\index{Boat\+Tx\+Set\+Gas\+Limit@{Boat\+Tx\+Set\+Gas\+Limit}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Tx\+Set\+Gas\+Limit()}{BoatTxSetGasLimit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Tx\+Set\+Gas\+Limit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} $\ast$}]{gas\+\_\+limit\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Set Transaction Parameter\+: Gas\+Limit. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a8c5b8961ad2b49c40be30994fbce457d}{Boat\+Tx\+Set\+Gas\+Limit()}} \begin{DoxyVerb}This function sets the gas limit of the transaction.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em gas\+\_\+limit\+\_\+ptr} & The gas limit \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_ae9e94feaa3e9e0010578bf023bdc7ded}\label{boatwallet_8h_ae9e94feaa3e9e0010578bf023bdc7ded}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Tx\+Set\+Gas\+Price@{Boat\+Tx\+Set\+Gas\+Price}}
+\index{Boat\+Tx\+Set\+Gas\+Price@{Boat\+Tx\+Set\+Gas\+Price}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Tx\+Set\+Gas\+Price()}{BoatTxSetGasPrice()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Tx\+Set\+Gas\+Price (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} $\ast$}]{gas\+\_\+price\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Set Transaction Parameter\+: Gas\+Price. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_ae9e94feaa3e9e0010578bf023bdc7ded}{Boat\+Tx\+Set\+Gas\+Price()}} \begin{DoxyVerb}This function sets the gas price of the transaction.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em gas\+\_\+price\+\_\+ptr} & The gas price in wei.~\newline
+ If $<$gas\+\_\+price\+\_\+ptr$>$ is N\+U\+LL, the gas price obtained from network is used. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_af3cb89d9c8632c22095bfa082fb03990}\label{boatwallet_8h_af3cb89d9c8632c22095bfa082fb03990}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Tx\+Set\+Nonce@{Boat\+Tx\+Set\+Nonce}}
+\index{Boat\+Tx\+Set\+Nonce@{Boat\+Tx\+Set\+Nonce}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Tx\+Set\+Nonce()}{BoatTxSetNonce()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Tx\+Set\+Nonce (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Set Transaction Parameter\+: Transaction Nonce. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_af3cb89d9c8632c22095bfa082fb03990}{Boat\+Tx\+Set\+Nonce()}} \begin{DoxyVerb}This function sets the nonce to the transaction count of the account
+obtained from network.
+
+This function can be called after BoatWalletSetPrivkey() has been called.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em This} & function doesn\textquotesingle{}t take any argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_aae7aa9632c310402ee379fb189482288}\label{boatwallet_8h_aae7aa9632c310402ee379fb189482288}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Tx\+Set\+Recipient@{Boat\+Tx\+Set\+Recipient}}
+\index{Boat\+Tx\+Set\+Recipient@{Boat\+Tx\+Set\+Recipient}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Tx\+Set\+Recipient()}{BoatTxSetRecipient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Tx\+Set\+Recipient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a18be901fd00e05c6acdbdbab722c6c58}{Boat\+Address}}}]{address }\end{DoxyParamCaption})}
+
+
+
+Set Transaction Parameter\+: Recipient Address. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_aae7aa9632c310402ee379fb189482288}{Boat\+Tx\+Set\+Recipient()}} \begin{DoxyVerb}This function sets the address of the transaction recipient.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em address} & The address of the recipient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a813e7e70bcfa7a321111f90c2a5614ba}\label{boatwallet_8h_a813e7e70bcfa7a321111f90c2a5614ba}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Tx\+Set\+Value@{Boat\+Tx\+Set\+Value}}
+\index{Boat\+Tx\+Set\+Value@{Boat\+Tx\+Set\+Value}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Tx\+Set\+Value()}{BoatTxSetValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Tx\+Set\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} $\ast$}]{value\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Set Transaction Parameter\+: Value. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a813e7e70bcfa7a321111f90c2a5614ba}{Boat\+Tx\+Set\+Value()}} \begin{DoxyVerb}This function sets the value of the transaction.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value\+\_\+ptr} & The value of the transaction.~\newline
+ If $<$value\+\_\+ptr$>$ is N\+U\+LL, it\textquotesingle{}s treated as no value being transfered. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a94e1701018d7c436e8e7c94f513ad71d}\label{boatwallet_8h_a94e1701018d7c436e8e7c94f513ad71d}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Check\+Privkey@{Boat\+Wallet\+Check\+Privkey}}
+\index{Boat\+Wallet\+Check\+Privkey@{Boat\+Wallet\+Check\+Privkey}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Check\+Privkey()}{BoatWalletCheckPrivkey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Check\+Privkey (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}}}]{priv\+\_\+key\+\_\+array\mbox{[}32\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Check validity of given private key. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a94e1701018d7c436e8e7c94f513ad71d}{Boat\+Wallet\+Check\+Privkey()}} \begin{DoxyVerb}This function checks the validity of the private key.
+
+A private key is 256 bit. If it's treated as a UINT256 in bigendian, the
+valid private key value for Ethereum is [1, n-1], where n is
+0xFFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE BAAEDCE6 AF48A03B BFD25E8C D0364141
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if the key is valid.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em priv\+\_\+key\+\_\+array} & Private key to check. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_ab64cef2f05546127127c0748fe1bb8db}\label{boatwallet_8h_ab64cef2f05546127127c0748fe1bb8db}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+De\+Init@{Boat\+Wallet\+De\+Init}}
+\index{Boat\+Wallet\+De\+Init@{Boat\+Wallet\+De\+Init}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+De\+Init()}{BoatWalletDeInit()}}
+{\footnotesize\ttfamily void Boat\+Wallet\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+De-\/initialize Boat\+Wallet. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_ab64cef2f05546127127c0748fe1bb8db}{Boat\+Wallet\+De\+Init()}} \begin{DoxyVerb}This function de-initialize context of BoatWallet.
+
+BoatWalletInit() MUST be called before any use of BoatWallet.
+BoatWalletDeInit() MUST be called after use of BoatWallet.
+
+NOTE: BoatWalelt is NOT thread-safe.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{boatwallet_8c_a300836e4dbdd8f2f1095eb81c3c5df8a}{Boat\+Wallet\+Init()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function doesn\textquotesingle{}t return any thing.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em This} & function doesn\textquotesingle{}t take any argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a0fa905e6ed835414803b0bafa9c70a7f}\label{boatwallet_8h_a0fa905e6ed835414803b0bafa9c70a7f}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Generate\+Privkey@{Boat\+Wallet\+Generate\+Privkey}}
+\index{Boat\+Wallet\+Generate\+Privkey@{Boat\+Wallet\+Generate\+Privkey}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Generate\+Privkey()}{BoatWalletGeneratePrivkey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Generate\+Privkey (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}}}]{priv\+\_\+key\+\_\+array\mbox{[}32\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Generate Private Key. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a0fa905e6ed835414803b0bafa9c70a7f}{Boat\+Wallet\+Generate\+Privkey()}} \begin{DoxyVerb}This function generates the private key of the wallet account and calls
+BoatWalletSetPrivkey() to save it into wallet account.
+
+A private key is a 256 bit random number up to a value slightly smaller than
+all bits being 1. See BoatWalletCheckPrivkey() for the details.
+
+In case co-sign is used, this is the half key shard.
+
+NOTE: Be very careful to PROTECT the private key.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{boatwallet_8c_a0501afc444bd260f2d733159750dc1e9}{Boat\+Wallet\+Set\+Privkey()}} \mbox{\hyperlink{boatwallet_8c_a94e1701018d7c436e8e7c94f513ad71d}{Boat\+Wallet\+Check\+Privkey()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if private key is successfully generated.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em priv\+\_\+key\+\_\+array} & A 32-\/byte buffer to hold the generated private key. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a300836e4dbdd8f2f1095eb81c3c5df8a}\label{boatwallet_8h_a300836e4dbdd8f2f1095eb81c3c5df8a}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Init@{Boat\+Wallet\+Init}}
+\index{Boat\+Wallet\+Init@{Boat\+Wallet\+Init}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Init()}{BoatWalletInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize Boat\+Wallet. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a300836e4dbdd8f2f1095eb81c3c5df8a}{Boat\+Wallet\+Init()}} \begin{DoxyVerb}This function initialize context of BoatWallet.
+
+BoatWalletInit() MUST be called before any use of BoatWallet.
+BoatWalletDeInit() MUST be called after use of BoatWallet.
+
+NOTE: BoatWalelt is NOT thread-safe.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{boatwallet_8c_ab64cef2f05546127127c0748fe1bb8db}{Boat\+Wallet\+De\+Init()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if initialization is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em This} & function doesn\textquotesingle{}t take any argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_aa6c26cfba6f4d24e38886b8c97caf953}\label{boatwallet_8h_aa6c26cfba6f4d24e38886b8c97caf953}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Load\+Wallet@{Boat\+Wallet\+Load\+Wallet}}
+\index{Boat\+Wallet\+Load\+Wallet@{Boat\+Wallet\+Load\+Wallet}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Load\+Wallet()}{BoatWalletLoadWallet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Load\+Wallet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{passwd\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{passwd\+\_\+len,  }\item[{const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$}]{file\+\_\+path\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Load wallet information from keystore file with A\+ES encryption. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_aa6c26cfba6f4d24e38886b8c97caf953}{Boat\+Wallet\+Load\+Wallet()}} \begin{DoxyVerb}This function loads wallet information from specified keystore file to
+g_boat_wallet_info.
+
+This function is a derived version of BoatWalletLoadWalletEx().
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{boatwallet_8c_aefce86dec7e8105d27a2e77d3e8e03fd}{Boat\+Wallet\+Load\+Wallet\+Ex()}} \mbox{\hyperlink{boatwallet_8c_ab8abfc551f5336818b5165c7d873ba72}{Boat\+Wallet\+Save\+Wallet\+Ex()}} \mbox{\hyperlink{boatwallet_8c_aed72da36dfd21eef62b3db5c60c74b72}{Boat\+Wallet\+Save\+Wallet()}} \mbox{\hyperlink{boatwallet_8c_a94e1701018d7c436e8e7c94f513ad71d}{Boat\+Wallet\+Check\+Privkey()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if loading keystore is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em passwd\+\_\+ptr} & Password to decrypt the keystore.\\
+\hline
+\mbox{\tt in}  & {\em passwd\+\_\+len} & Length of $<$passwd\+\_\+ptr$>$ in byte.~\newline
+ Note that if $<$passwd\+\_\+ptr$>$ is a string, either $<$passwd\+\_\+len$>$ includes~\newline
+ null-\/terminator or not is OK. But it must be the same as \mbox{\hyperlink{boatwallet_8c_aed72da36dfd21eef62b3db5c60c74b72}{Boat\+Wallet\+Save\+Wallet()}}.\\
+\hline
+\mbox{\tt in}  & {\em file\+\_\+path\+\_\+str} & Keystore file\textquotesingle{}s path. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_aefce86dec7e8105d27a2e77d3e8e03fd}\label{boatwallet_8h_aefce86dec7e8105d27a2e77d3e8e03fd}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Load\+Wallet\+Ex@{Boat\+Wallet\+Load\+Wallet\+Ex}}
+\index{Boat\+Wallet\+Load\+Wallet\+Ex@{Boat\+Wallet\+Load\+Wallet\+Ex}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Load\+Wallet\+Ex()}{BoatWalletLoadWalletEx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Load\+Wallet\+Ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} $\ast$}]{wallet\+\_\+info\+\_\+ptr,  }\item[{const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{passwd\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{passwd\+\_\+len,  }\item[{const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$}]{file\+\_\+path\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Load wallet information from keystore file with A\+ES encryption to the specified wallet account. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_aefce86dec7e8105d27a2e77d3e8e03fd}{Boat\+Wallet\+Load\+Wallet\+Ex()}} \begin{DoxyVerb}This function loads wallet information from specified keystore file to the
+specified wallet account. The wallet account must be a structure of type
+BoatWalletInfo.
+
+BoatWalletLoadWallet() is a derived version of this function that specifies
+g_boat_wallet_info as the wallet account. g_boat_wallet_info is the wallet
+account internally used by BoatWallet.
+
+BoatWalletLoadWalletEx() is typically used to load wallet information from
+a keystore file without affecting g_boat_wallet_info.
+
+The keystore file is protected with an AES password. See BoatWalletSaveWalletEx()
+for its format.
+
+This function will call BoatWalletCheckPrivkey() to check the validity of
+the private key saved in keystore file.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{boatwallet_8c_aefce86dec7e8105d27a2e77d3e8e03fd}{Boat\+Wallet\+Load\+Wallet\+Ex}} \mbox{\hyperlink{boatwallet_8c_ab8abfc551f5336818b5165c7d873ba72}{Boat\+Wallet\+Save\+Wallet\+Ex()}} \mbox{\hyperlink{boatwallet_8c_aed72da36dfd21eef62b3db5c60c74b72}{Boat\+Wallet\+Save\+Wallet()}} \mbox{\hyperlink{boatwallet_8c_a94e1701018d7c436e8e7c94f513ad71d}{Boat\+Wallet\+Check\+Privkey()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if loading keystore is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em wallet\+\_\+info\+\_\+ptr} & Pointer to the wallet account structure to load wallet information.\\
+\hline
+\mbox{\tt in}  & {\em passwd\+\_\+ptr} & Password to decrypt the keystore.\\
+\hline
+\mbox{\tt in}  & {\em passwd\+\_\+len} & Length of $<$passwd\+\_\+ptr$>$ in byte.~\newline
+ Note that if $<$passwd\+\_\+ptr$>$ is a string, either $<$passwd\+\_\+len$>$ includes~\newline
+ null-\/terminator or not is OK. But it must be the same as \mbox{\hyperlink{boatwallet_8c_aed72da36dfd21eef62b3db5c60c74b72}{Boat\+Wallet\+Save\+Wallet()}}.\\
+\hline
+\mbox{\tt in}  & {\em file\+\_\+path\+\_\+str} & Keystore file\textquotesingle{}s path. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_aed72da36dfd21eef62b3db5c60c74b72}\label{boatwallet_8h_aed72da36dfd21eef62b3db5c60c74b72}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Save\+Wallet@{Boat\+Wallet\+Save\+Wallet}}
+\index{Boat\+Wallet\+Save\+Wallet@{Boat\+Wallet\+Save\+Wallet}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Save\+Wallet()}{BoatWalletSaveWallet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Save\+Wallet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{passwd\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{passwd\+\_\+len,  }\item[{const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$}]{file\+\_\+path\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Save wallet information to keystore file with A\+ES encryption. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_aed72da36dfd21eef62b3db5c60c74b72}{Boat\+Wallet\+Save\+Wallet()}} \begin{DoxyVerb}This function saves the wallet account of g_boat_wallet_info into a keystore
+file with password protected.
+
+This function is a derived version of BoatWalletSaveWalletEx()
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{boatwallet_8c_ab8abfc551f5336818b5165c7d873ba72}{Boat\+Wallet\+Save\+Wallet\+Ex()}} \mbox{\hyperlink{boatwallet_8c_aefce86dec7e8105d27a2e77d3e8e03fd}{Boat\+Wallet\+Load\+Wallet\+Ex()}} \mbox{\hyperlink{boatwallet_8c_aa6c26cfba6f4d24e38886b8c97caf953}{Boat\+Wallet\+Load\+Wallet()}} \mbox{\hyperlink{boatwallet_8c_a94e1701018d7c436e8e7c94f513ad71d}{Boat\+Wallet\+Check\+Privkey()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if the keystore file is saved successfully.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em passwd\+\_\+ptr} & Password to encrypt the wallet info.\\
+\hline
+\mbox{\tt in}  & {\em passwd\+\_\+len} & Length of $<$passwd\+\_\+ptr$>$ in byte.~\newline
+ Note that if $<$passwd\+\_\+ptr$>$ is a string, either $<$passwd\+\_\+len$>$ includes~\newline
+ null-\/terminator or not is OK. But it must be the same as \mbox{\hyperlink{boatwallet_8c_aa6c26cfba6f4d24e38886b8c97caf953}{Boat\+Wallet\+Load\+Wallet()}}.\\
+\hline
+\mbox{\tt in}  & {\em file\+\_\+path\+\_\+str} & Keystore file\textquotesingle{}s path. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_ab8abfc551f5336818b5165c7d873ba72}\label{boatwallet_8h_ab8abfc551f5336818b5165c7d873ba72}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Save\+Wallet\+Ex@{Boat\+Wallet\+Save\+Wallet\+Ex}}
+\index{Boat\+Wallet\+Save\+Wallet\+Ex@{Boat\+Wallet\+Save\+Wallet\+Ex}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Save\+Wallet\+Ex()}{BoatWalletSaveWalletEx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Save\+Wallet\+Ex (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} $\ast$}]{wallet\+\_\+info\+\_\+ptr,  }\item[{const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{passwd\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{passwd\+\_\+len,  }\item[{const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$}]{file\+\_\+path\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Save specified wallet information to keystore file with A\+ES encryption. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_ab8abfc551f5336818b5165c7d873ba72}{Boat\+Wallet\+Save\+Wallet\+Ex()}} \begin{DoxyVerb}This function saves the specified wallet account into a keystore file with
+password protected. The wallet account must be a structure of type BoatWalletInfo.
+
+BoatWalletSaveWallet() is a derived version of this function that specifies
+g_boat_wallet_info as the wallet account. g_boat_wallet_info is the wallet
+account internally used by BoatWallet.
+
+BoatWalletSaveWalletEx() is typically used to create a keystore file of a
+given wallet account other than g_boat_wallet_info.
+
+The fields in the wallet account are saved. Especially the node url pointer
+field is extracted as the node url string.
+
+The keystore file is in following format:
+
+---------------------------------
+|  IH  | IL | D |     I     | P |
+---------------------------------
+|<--Plane-->|<--- Encrypted --->|
+
+IH: 32 bytes keccak_256 hash of "I"
+IL: Length of "I" in byte
+D:  16 bytes dummy block for IV-independent decryption
+I:  Wallet Information
+P:  Padding for AES Block alignment, 0~15 bytes
+
+I field consists of following sub-fields in sequence:
+
+1. 32 bytes private key
+2. 64 bytes public key
+3. 20 bytes address
+4. 4 bytes chain ID, in BigEndian
+5. 1 byte EIP-155 compatibility indicator
+6. 4 bytes length of Node URL (no null-terminator following), in BigEndian
+7. Node URL string (without null-terminator)
+
+The D, I and P parts are encrypted by AES256-CBC before being saved to
+keystore file with a user specified password. Actual AES key is the keccak_256
+hash of the user specified password, and thus no matter how long the password
+is, the key is always 256 bit.
+
+AES is a block cipher algorithm with a block size of 16 bytes. To encrypt
+plain text of any size, some block cipher mode of operation is performed.
+AES-CBC is one of the most popular modes. It XORs every plain text block
+with the previous encrypted text block and encrypts the XORed block. For
+the first plain text block, an extra 16-byte Initial Vector (IV) is XORed.
+
+To decrypt an encrypted block, first decrypt the block with the same AES
+key and then XOR the decrypted text with the encrypted text of the previous
+block. This recovers the plain text block.
+
+To decrypt the first encrypted block (whose corresponding plain text block
+was XORed with IV before being encrypted), the same IV as the one at
+encryption time must be specified.
+
+Note that the IV only affects the decryption of the first encrypted block.
+All blocks following the first can be decrypted correctly even if IV is not
+the same as the one at encryption time.
+
+Thus by simply prefixing a 16-byte dummy block to the beginning of the plain
+text, which plays the role of "first block", the decryption side could
+simply omit the first block and doesn't have to know the IV at encryption
+time. That's what field D does.
+
+Field P is a padding of 0 to 15 bytes to meet the alignment requirement of
+AES-CBC. AES-CBC could only process the text in a manner of 16-byte blocks.
+Thus length of I + P MUST be multiple of 16 bytes.
+
+See the URL for details about block cipher mode of operation:
+https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
+
+Note that if OpenSSL is used as the cipher implementation, its default
+padding rule MUST be disabled. Instead, add correct size of padding
+mannually.
+
+OpenSSL uses PKCS padding rule for AES by default. The rule adds 1-to-16-
+byte padding with every byte's value equal to how many bytes the padding is.
+For example, if 6 bytes are added as padding, the value of every byte is
+0x06. Especally if no padding is required, this rule always adds a 16-byte
+padding.
+
+When decrypting, OpenSSL will check the padding value against PKCS rule as
+a simple validition and automatically removes PKCS padding by default.
+However PKCS rule can't strictly tell whether a byte is a padding byte or
+a user data byte of the same value as a padding byte. For example, the final
+decrypted block ended with 0x03 0x03 0x03 0x03 may either be treated as a
+correct block with 3-byte padding, or an incorrect block because 4 bytes of
+0x04 are expected regarding PKCS padding rule.
+
+Another concern not using default PKCS padding rule is for cross-platform
+compatibility. It's possible to export the keystore from a linux based
+device to an RTOS based device which can't run OpenSSL.
+
+Thus OpenSSL should be configured with automatic padding disabled.
+
+This function will call BoatWalletCheckPrivkey() to check the validity of
+the private key.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{boatwallet_8c_aed72da36dfd21eef62b3db5c60c74b72}{Boat\+Wallet\+Save\+Wallet()}} Boat\+Wallet\+Load\+Wallet\+E\+X() \mbox{\hyperlink{boatwallet_8c_aa6c26cfba6f4d24e38886b8c97caf953}{Boat\+Wallet\+Load\+Wallet()}} \mbox{\hyperlink{boatwallet_8c_a94e1701018d7c436e8e7c94f513ad71d}{Boat\+Wallet\+Check\+Privkey()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if the keystore file is saved successfully.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em wallet\+\_\+info\+\_\+ptr} & Pointer to the wallet account structure to save to keystore file.\\
+\hline
+\mbox{\tt in}  & {\em passwd\+\_\+ptr} & Password to encrypt the wallet info.\\
+\hline
+\mbox{\tt in}  & {\em passwd\+\_\+len} & Length of $<$passwd\+\_\+ptr$>$ in byte.~\newline
+ Note that if $<$passwd\+\_\+ptr$>$ is a string, either $<$passwd\+\_\+len$>$ includes~\newline
+ null-\/terminator or not is OK. But it must be the same as \mbox{\hyperlink{boatwallet_8c_aefce86dec7e8105d27a2e77d3e8e03fd}{Boat\+Wallet\+Load\+Wallet\+Ex()}}.\\
+\hline
+\mbox{\tt in}  & {\em file\+\_\+path\+\_\+str} & Keystore file\textquotesingle{}s path. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a4e76584cd317e8f0c2079026ef972909}\label{boatwallet_8h_a4e76584cd317e8f0c2079026ef972909}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Set\+Chain\+Id@{Boat\+Wallet\+Set\+Chain\+Id}}
+\index{Boat\+Wallet\+Set\+Chain\+Id@{Boat\+Wallet\+Set\+Chain\+Id}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Set\+Chain\+Id()}{BoatWalletSetChainId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Set\+Chain\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{chain\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Set Boat\+Wallet\+: Chain ID. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a4e76584cd317e8f0c2079026ef972909}{Boat\+Wallet\+Set\+Chain\+Id()}} \begin{DoxyVerb}This function sets the chain ID of the network.
+
+If the network supports EIP-155, chain ID is part of the transaction
+message to sign.
+
+If the network doesn't support EIP-155, chain ID is ignored.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em chain\+\_\+id} & Chain ID of the blockchain network to use. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a6b381a2a9c7c021c4814f19dfea127e5}\label{boatwallet_8h_a6b381a2a9c7c021c4814f19dfea127e5}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Set\+E\+I\+P155\+Comp@{Boat\+Wallet\+Set\+E\+I\+P155\+Comp}}
+\index{Boat\+Wallet\+Set\+E\+I\+P155\+Comp@{Boat\+Wallet\+Set\+E\+I\+P155\+Comp}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Set\+E\+I\+P155\+Comp()}{BoatWalletSetEIP155Comp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Set\+E\+I\+P155\+Comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}}}]{eip155\+\_\+compatibility }\end{DoxyParamCaption})}
+
+
+
+Set Boat\+Wallet\+: E\+I\+P-\/155 Compatibility. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a6b381a2a9c7c021c4814f19dfea127e5}{Boat\+Wallet\+Set\+E\+I\+P155\+Comp()}} \begin{DoxyVerb}This function sets if the network supports EIP-155.
+
+If the network supports EIP-155, set it to BOAT_TRUE.
+Otherwise set it to BOAT_FALSE.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em eip155\+\_\+compatibility} & B\+O\+A\+T\+\_\+\+T\+R\+UE if the network supports E\+I\+P-\/155. Otherwise B\+O\+A\+T\+\_\+\+F\+A\+L\+SE. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a4caa11f4b964aacf89cd53e2f7dff891}\label{boatwallet_8h_a4caa11f4b964aacf89cd53e2f7dff891}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Set\+Node\+Url@{Boat\+Wallet\+Set\+Node\+Url}}
+\index{Boat\+Wallet\+Set\+Node\+Url@{Boat\+Wallet\+Set\+Node\+Url}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Set\+Node\+Url()}{BoatWalletSetNodeUrl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Set\+Node\+Url (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$}]{node\+\_\+url\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Set Boat\+Wallet\+: U\+RL of blockchain node. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a4caa11f4b964aacf89cd53e2f7dff891}{Boat\+Wallet\+Set\+Node\+Url()}} \begin{DoxyVerb}This function sets the URL of the blockchain node to connect to.
+
+A URL is composed of protocol, IP address/name and port, in a form:
+http://a.b.com:8545
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node\+\_\+url\+\_\+ptr} & A string indicating the U\+RL of blockchain node to connect to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a0501afc444bd260f2d733159750dc1e9}\label{boatwallet_8h_a0501afc444bd260f2d733159750dc1e9}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Set\+Privkey@{Boat\+Wallet\+Set\+Privkey}}
+\index{Boat\+Wallet\+Set\+Privkey@{Boat\+Wallet\+Set\+Privkey}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Set\+Privkey()}{BoatWalletSetPrivkey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Boat\+Wallet\+Set\+Privkey (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}}}]{priv\+\_\+key\+\_\+array\mbox{[}32\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Set Boat\+Wallet\+: Private Key. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a0501afc444bd260f2d733159750dc1e9}{Boat\+Wallet\+Set\+Privkey()}} \begin{DoxyVerb}This function sets the private key of the wallet account.
+
+A private key is 256 bit. If it's treated as a UINT256 in bigendian, the
+valid private key value for Ethereum is [1, n-1], where n is
+0xFFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE BAAEDCE6 AF48A03B BFD25E8C D0364141.
+
+This function will call BoatWalletCheckPrivkey() to check the validity of
+the private key.
+
+The public key is automatically derived from the private key and the
+address of the account is calculated from the public key.
+
+In case co-sign is used, this function set the half key shard of the
+private key. The public key is calculated by co-sign algorithm with the
+co-sign server.
+
+NOTE: Be very careful to PROTECT the private key.
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{boatwallet_8c_a94e1701018d7c436e8e7c94f513ad71d}{Boat\+Wallet\+Check\+Privkey()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if setting is successful.~\newline
+ Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em priv\+\_\+key\+\_\+array} & Private key to use. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{boatwallet_8h_a0cced96844faf3ca6f759714a5e336df}\label{boatwallet_8h_a0cced96844faf3ca6f759714a5e336df}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!g\+\_\+boat\+\_\+wallet\+\_\+info@{g\+\_\+boat\+\_\+wallet\+\_\+info}}
+\index{g\+\_\+boat\+\_\+wallet\+\_\+info@{g\+\_\+boat\+\_\+wallet\+\_\+info}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{g\+\_\+boat\+\_\+wallet\+\_\+info}{g\_boat\_wallet\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} g\+\_\+boat\+\_\+wallet\+\_\+info}
+
+\mbox{\Hypertarget{boatwallet_8h_a573ae5e87e4d9aa0f7fae8c7289708e1}\label{boatwallet_8h_a573ae5e87e4d9aa0f7fae8c7289708e1}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!g\+\_\+tx\+\_\+info@{g\+\_\+tx\+\_\+info}}
+\index{g\+\_\+tx\+\_\+info@{g\+\_\+tx\+\_\+info}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{g\+\_\+tx\+\_\+info}{g\_tx\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}{Tx\+Info}} g\+\_\+tx\+\_\+info}
+

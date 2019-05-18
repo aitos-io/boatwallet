@@ -1,0 +1,138 @@
+\hypertarget{rawtx_8h}{}\section{rawtx.\+h File Reference}
+\label{rawtx_8h}\index{rawtx.\+h@{rawtx.\+h}}
+
+
+Header file for performing R\+AW transaction.  
+
+
+{\ttfamily \#include \char`\"{}wallet/boattypes.\+h\char`\"{}}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{rawtx_8h_a1561215e29be84d582feeddb230df672}{Rlp\+Field\+Type}} \{ \mbox{\hyperlink{rawtx_8h_a1561215e29be84d582feeddb230df672a638c8bfe29f8f0d2cdfe2aa2dde8761e}{R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG}} = 0, 
+\mbox{\hyperlink{rawtx_8h_a1561215e29be84d582feeddb230df672a94a6ad5f51fe31fe10882914cc376bb9}{R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+ST}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{rawtx_8h_a165bcf01e2d217ae91827066e28c1ccc}{Rawtx\+Perform}} (\mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} $\ast$boat\+\_\+wallet\+\_\+info\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_aba881d3fd2f4a3f7d23235a353716879}{B\+O\+A\+T\+\_\+\+I\+N\+O\+UT}} \mbox{\hyperlink{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}{Tx\+Info}} $\ast$tx\+\_\+info\+\_\+ctx\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Construct a raw transacton and encodes it as per R\+LP rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for performing R\+AW transaction. 
+
+\mbox{\hyperlink{rawtx_8h}{rawtx.\+h}} is header file for R\+AW transaction construction and performing. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{rawtx_8h_a1561215e29be84d582feeddb230df672}\label{rawtx_8h_a1561215e29be84d582feeddb230df672}} 
+\index{rawtx.\+h@{rawtx.\+h}!Rlp\+Field\+Type@{Rlp\+Field\+Type}}
+\index{Rlp\+Field\+Type@{Rlp\+Field\+Type}!rawtx.\+h@{rawtx.\+h}}
+\subsubsection{\texorpdfstring{Rlp\+Field\+Type}{RlpFieldType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{rawtx_8h_a1561215e29be84d582feeddb230df672}{Rlp\+Field\+Type}}}
+
+Enum Type Rlp\+Field\+Type \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG@{R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG}!rawtx.\+h@{rawtx.\+h}}\index{rawtx.\+h@{rawtx.\+h}!R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG@{R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG}}}\mbox{\Hypertarget{rawtx_8h_a1561215e29be84d582feeddb230df672a638c8bfe29f8f0d2cdfe2aa2dde8761e}\label{rawtx_8h_a1561215e29be84d582feeddb230df672a638c8bfe29f8f0d2cdfe2aa2dde8761e}} 
+R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+ST@{R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+ST}!rawtx.\+h@{rawtx.\+h}}\index{rawtx.\+h@{rawtx.\+h}!R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+ST@{R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+ST}}}\mbox{\Hypertarget{rawtx_8h_a1561215e29be84d582feeddb230df672a94a6ad5f51fe31fe10882914cc376bb9}\label{rawtx_8h_a1561215e29be84d582feeddb230df672a94a6ad5f51fe31fe10882914cc376bb9}} 
+R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+ST&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rawtx_8h_a165bcf01e2d217ae91827066e28c1ccc}\label{rawtx_8h_a165bcf01e2d217ae91827066e28c1ccc}} 
+\index{rawtx.\+h@{rawtx.\+h}!Rawtx\+Perform@{Rawtx\+Perform}}
+\index{Rawtx\+Perform@{Rawtx\+Perform}!rawtx.\+h@{rawtx.\+h}}
+\subsubsection{\texorpdfstring{Rawtx\+Perform()}{RawtxPerform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Rawtx\+Perform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} $\ast$}]{boat\+\_\+wallet\+\_\+info\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_aba881d3fd2f4a3f7d23235a353716879}{B\+O\+A\+T\+\_\+\+I\+N\+O\+UT}} \mbox{\hyperlink{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}{Tx\+Info}} $\ast$}]{tx\+\_\+info\+\_\+ctx\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Construct a raw transacton and encodes it as per R\+LP rules. 
+
+
+
+ Function\+: \mbox{\hyperlink{rawtx_8c_a165bcf01e2d217ae91827066e28c1ccc}{Rawtx\+Perform()}} \begin{DoxyVerb}This function constructs a raw transacton and encodes it as per RLP rules.
+
+AN INTRODUCTION OF HOW RAW TRANSACTION IS CONSTRUCTED
+
+[FIELDS IN A RAW TRANSACTION]
+
+A RAW transaction consists of following 9 fields:
+    1. nonce;
+    2. gasprice;
+    3. gaslimit;
+    4. recipient;
+    5. value(optional);
+    6. data(optional);
+    7. v;
+    8. signature.r;
+    9. signature.s;
+
+These transaction fields are encoded as elements of a LIST in above order
+as per RLP encoding rules. "LIST" is a type of RLP field.
+
+
+EXCEPTION:
+
+For Ethereum any fields (except <recipient>) having a value of zero are
+treated as NULL stream in RLP encoding instead of 1-byte-size stream whose
+value is 0. For example, nonce = 0 is encoded as 0x80 which represents NULL
+instead of 0x00 which represents a 1-byte-size stream whose value is 0.
+
+
+[HOW TO CONSTRUCT A RAW TRANSACTION]
+
+A RAW transaction is constructed in 4 steps in different ways according to
+the blockchain network's EIP-155 compatibility. 
+
+See following article for details about EIP-155: 
+https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md
+
+
+CASE 1: If the blockchain network does NOT support EIP-155:
+
+    Step 1: Encode a LIST containing only the first 6 fields.
+    Step 2: Calculate SHA3 hash of the encoded stream in Step 1.
+    Step 3: Sign the hash in Step 2. This generates r, s and parity (0 or 1) for recovery identifier.
+    Step 4: Encode a LIST containing all 9 fields, where
+            First 6 fields are same as what they are;
+            v = parity + 27, where parity is given in Step 3;
+            r and s are given in Step 3.
+
+
+CASE 2: If the blockchain network DOES support EIP-155:
+
+    Step 1: Encode all 9 fields (a LIST containing all 9 fields), where
+            First 6 fields are same as what they are;
+            v = Chain ID;
+            r = 0;
+            s = 0;
+
+            NOTE: zero value fields other than <recipient> are encoded as NULL stream.
+
+    Step 2: Same as CASE 1.
+    Step 3: Same as CASE 1.
+
+    Step 4: Encode a LIST containing all 9 fields, where
+            First 6 fields are same as what they are;
+            v = Chain ID * 2 + parity + 35, where parity is given in Step 3;
+            r and s are given in Step 3.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if successful. Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em boat\+\_\+wallet\+\_\+info\+\_\+ptr} & A pointer to wallet infor structure.\\
+\hline
+\mbox{\tt in}  & {\em tx\+\_\+info\+\_\+ctx\+\_\+ptr} & A pointer to the context of the transaction. \\
+\hline
+\end{DoxyParams}

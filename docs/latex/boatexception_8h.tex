@@ -1,0 +1,150 @@
+\hypertarget{boatexception_8h}{}\section{boatexception.\+h File Reference}
+\label{boatexception_8h}\index{boatexception.\+h@{boatexception.\+h}}
+
+
+Error catching macros and error codes.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_a58ee722cb1d666675b379462a10b6489}{B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS}}~0
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_a5b0859a1900dc85051ec1af2bd104541}{B\+O\+A\+T\+\_\+\+E\+R\+R\+OR}}~(-\/1)
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_a0a7c5a87a832ccdeeeaa32ba1f1afd06}{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+O\+I\+N\+T\+ER}}~(-\/100)
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_aaedd08c8a772396ce92ffadd47f21ba0}{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}}~(-\/101)
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_abb6debfe4ddbf5aa77421919c7cffb3c}{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+N\+G\+TH}}~(-\/102)
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_a2a546227625b4d0b1a596709a094c17f}{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS}}~(-\/103)
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_ad918f5c9e1d8fcf45d3a90351a35ec39}{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+L\+P\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+F\+A\+IL}}~(-\/104)
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_a275651619a53a06afad266de24bc50d3}{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+X\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL}}~(-\/105)
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_a5a882386519db51ebae529a15ab7d735}{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+J\+S\+O\+N\+\_\+\+P\+A\+R\+S\+E\+\_\+\+F\+A\+IL}}~(-\/106)
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_a1a05e6032d31363dbc2d294200766a9f}{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+P\+C\+\_\+\+F\+A\+IL}}~(-\/107)
+\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{boatexception_8h_a297e1f3b8d3ef9ac3215e5e8bb340128}{boat\+\_\+try\+\_\+declare}}~\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} boat\+\_\+exception = \mbox{\hyperlink{boatexception_8h_a58ee722cb1d666675b379462a10b6489}{B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS}}
+\begin{DoxyCompactList}\small\item\em Declare variables used for throw...catch. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{boatexception_8h_aaae5d3338288803223b3dfccc42198a9}{boat\+\_\+throw}}(e,  func\+\_\+catch\+\_\+point)~\{boat\+\_\+exception = e; goto func\+\_\+catch\+\_\+point;\}
+\begin{DoxyCompactList}\small\item\em Throw an exception. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{boatexception_8h_a957ec0efae724684c9838f07df06638c}{boat\+\_\+catch}}(func\+\_\+catch\+\_\+point)~func\+\_\+catch\+\_\+point\+: if( boat\+\_\+exception != \mbox{\hyperlink{boatexception_8h_a58ee722cb1d666675b379462a10b6489}{B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS}} )
+\begin{DoxyCompactList}\small\item\em Catch an exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+Error catching macros and error codes. 
+
+\mbox{\hyperlink{boatexception_8h}{boatexception.\+h}} defines error catching mechanism and error codes. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{boatexception_8h_a957ec0efae724684c9838f07df06638c}\label{boatexception_8h_a957ec0efae724684c9838f07df06638c}} 
+\index{boatexception.\+h@{boatexception.\+h}!boat\+\_\+catch@{boat\+\_\+catch}}
+\index{boat\+\_\+catch@{boat\+\_\+catch}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{boat\+\_\+catch}{boat\_catch}}
+{\footnotesize\ttfamily \#define boat\+\_\+catch(\begin{DoxyParamCaption}\item[{}]{func\+\_\+catch\+\_\+point }\end{DoxyParamCaption})~func\+\_\+catch\+\_\+point\+: if( boat\+\_\+exception != \mbox{\hyperlink{boatexception_8h_a58ee722cb1d666675b379462a10b6489}{B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS}} )}
+
+
+
+Catch an exception. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func\+\_\+catch\+\_\+point} & The catch block name matching the one passed to \mbox{\hyperlink{boatexception_8h_aaae5d3338288803223b3dfccc42198a9}{boat\+\_\+throw()}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatexception_8h_a5b0859a1900dc85051ec1af2bd104541}\label{boatexception_8h_a5b0859a1900dc85051ec1af2bd104541}} 
+\index{boatexception.\+h@{boatexception.\+h}!B\+O\+A\+T\+\_\+\+E\+R\+R\+OR@{B\+O\+A\+T\+\_\+\+E\+R\+R\+OR}}
+\index{B\+O\+A\+T\+\_\+\+E\+R\+R\+OR@{B\+O\+A\+T\+\_\+\+E\+R\+R\+OR}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+E\+R\+R\+OR}{BOAT\_ERROR}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+E\+R\+R\+OR~(-\/1)}
+
+\mbox{\Hypertarget{boatexception_8h_a275651619a53a06afad266de24bc50d3}\label{boatexception_8h_a275651619a53a06afad266de24bc50d3}} 
+\index{boatexception.\+h@{boatexception.\+h}!B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+X\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+X\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL}}
+\index{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+X\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+X\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+X\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL}{BOAT\_ERROR\_EXT\_MODULE\_OPERATION\_FAIL}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+X\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL~(-\/105)}
+
+\mbox{\Hypertarget{boatexception_8h_a2a546227625b4d0b1a596709a094c17f}\label{boatexception_8h_a2a546227625b4d0b1a596709a094c17f}} 
+\index{boatexception.\+h@{boatexception.\+h}!B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS}}
+\index{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS}{BOAT\_ERROR\_INCOMPATIBLE\_ARGUMENTS}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS~(-\/103)}
+
+\mbox{\Hypertarget{boatexception_8h_abb6debfe4ddbf5aa77421919c7cffb3c}\label{boatexception_8h_abb6debfe4ddbf5aa77421919c7cffb3c}} 
+\index{boatexception.\+h@{boatexception.\+h}!B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+N\+G\+TH@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+N\+G\+TH}}
+\index{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+N\+G\+TH@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+N\+G\+TH}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+N\+G\+TH}{BOAT\_ERROR\_INVALID\_LENGTH}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+N\+G\+TH~(-\/102)}
+
+\mbox{\Hypertarget{boatexception_8h_a5a882386519db51ebae529a15ab7d735}\label{boatexception_8h_a5a882386519db51ebae529a15ab7d735}} 
+\index{boatexception.\+h@{boatexception.\+h}!B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+J\+S\+O\+N\+\_\+\+P\+A\+R\+S\+E\+\_\+\+F\+A\+IL@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+J\+S\+O\+N\+\_\+\+P\+A\+R\+S\+E\+\_\+\+F\+A\+IL}}
+\index{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+J\+S\+O\+N\+\_\+\+P\+A\+R\+S\+E\+\_\+\+F\+A\+IL@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+J\+S\+O\+N\+\_\+\+P\+A\+R\+S\+E\+\_\+\+F\+A\+IL}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+J\+S\+O\+N\+\_\+\+P\+A\+R\+S\+E\+\_\+\+F\+A\+IL}{BOAT\_ERROR\_JSON\_PARSE\_FAIL}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+J\+S\+O\+N\+\_\+\+P\+A\+R\+S\+E\+\_\+\+F\+A\+IL~(-\/106)}
+
+\mbox{\Hypertarget{boatexception_8h_a0a7c5a87a832ccdeeeaa32ba1f1afd06}\label{boatexception_8h_a0a7c5a87a832ccdeeeaa32ba1f1afd06}} 
+\index{boatexception.\+h@{boatexception.\+h}!B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+O\+I\+N\+T\+ER@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+O\+I\+N\+T\+ER}}
+\index{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+O\+I\+N\+T\+ER@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+O\+I\+N\+T\+ER}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+O\+I\+N\+T\+ER}{BOAT\_ERROR\_NULL\_POINTER}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+O\+I\+N\+T\+ER~(-\/100)}
+
+\mbox{\Hypertarget{boatexception_8h_aaedd08c8a772396ce92ffadd47f21ba0}\label{boatexception_8h_aaedd08c8a772396ce92ffadd47f21ba0}} 
+\index{boatexception.\+h@{boatexception.\+h}!B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}}
+\index{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}{BOAT\_ERROR\_OUT\_OF\_MEMORY}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY~(-\/101)}
+
+\mbox{\Hypertarget{boatexception_8h_ad918f5c9e1d8fcf45d3a90351a35ec39}\label{boatexception_8h_ad918f5c9e1d8fcf45d3a90351a35ec39}} 
+\index{boatexception.\+h@{boatexception.\+h}!B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+L\+P\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+F\+A\+IL@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+L\+P\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+F\+A\+IL}}
+\index{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+L\+P\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+F\+A\+IL@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+L\+P\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+F\+A\+IL}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+L\+P\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+F\+A\+IL}{BOAT\_ERROR\_RLP\_ENCODING\_FAIL}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+L\+P\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+F\+A\+IL~(-\/104)}
+
+\mbox{\Hypertarget{boatexception_8h_a1a05e6032d31363dbc2d294200766a9f}\label{boatexception_8h_a1a05e6032d31363dbc2d294200766a9f}} 
+\index{boatexception.\+h@{boatexception.\+h}!B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+P\+C\+\_\+\+F\+A\+IL@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+P\+C\+\_\+\+F\+A\+IL}}
+\index{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+P\+C\+\_\+\+F\+A\+IL@{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+P\+C\+\_\+\+F\+A\+IL}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+P\+C\+\_\+\+F\+A\+IL}{BOAT\_ERROR\_RPC\_FAIL}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+P\+C\+\_\+\+F\+A\+IL~(-\/107)}
+
+\mbox{\Hypertarget{boatexception_8h_a58ee722cb1d666675b379462a10b6489}\label{boatexception_8h_a58ee722cb1d666675b379462a10b6489}} 
+\index{boatexception.\+h@{boatexception.\+h}!B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS@{B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS}}
+\index{B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS@{B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS}{BOAT\_SUCCESS}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS~0}
+
+\mbox{\Hypertarget{boatexception_8h_aaae5d3338288803223b3dfccc42198a9}\label{boatexception_8h_aaae5d3338288803223b3dfccc42198a9}} 
+\index{boatexception.\+h@{boatexception.\+h}!boat\+\_\+throw@{boat\+\_\+throw}}
+\index{boat\+\_\+throw@{boat\+\_\+throw}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{boat\+\_\+throw}{boat\_throw}}
+{\footnotesize\ttfamily \#define boat\+\_\+throw(\begin{DoxyParamCaption}\item[{}]{e,  }\item[{}]{func\+\_\+catch\+\_\+point }\end{DoxyParamCaption})~\{boat\+\_\+exception = e; goto func\+\_\+catch\+\_\+point;\}}
+
+
+
+Throw an exception. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Error code. \\
+\hline
+{\em func\+\_\+catch\+\_\+point} & The catch block name to catch the exception. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatexception_8h_a297e1f3b8d3ef9ac3215e5e8bb340128}\label{boatexception_8h_a297e1f3b8d3ef9ac3215e5e8bb340128}} 
+\index{boatexception.\+h@{boatexception.\+h}!boat\+\_\+try\+\_\+declare@{boat\+\_\+try\+\_\+declare}}
+\index{boat\+\_\+try\+\_\+declare@{boat\+\_\+try\+\_\+declare}!boatexception.\+h@{boatexception.\+h}}
+\subsubsection{\texorpdfstring{boat\+\_\+try\+\_\+declare}{boat\_try\_declare}}
+{\footnotesize\ttfamily \#define boat\+\_\+try\+\_\+declare~\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} boat\+\_\+exception = \mbox{\hyperlink{boatexception_8h_a58ee722cb1d666675b379462a10b6489}{B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS}}}
+
+
+
+Declare variables used for throw...catch. 
+

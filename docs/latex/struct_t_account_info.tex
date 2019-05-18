@@ -1,0 +1,63 @@
+\hypertarget{struct_t_account_info}{}\section{T\+Account\+Info Struct Reference}
+\label{struct_t_account_info}\index{T\+Account\+Info@{T\+Account\+Info}}
+
+
+Account information.  
+
+
+
+
+{\ttfamily \#include $<$boattypes.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} \mbox{\hyperlink{struct_t_account_info_a716d4ef9a25584b692e9f09f82bc3985}{priv\+\_\+key\+\_\+array}} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em Private key of the account. In case co-\/sign is used, it\textquotesingle{}s the half key shard. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} \mbox{\hyperlink{struct_t_account_info_aae6e4c3cacff03b34c4165e79679d68b}{pub\+\_\+key\+\_\+array}} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Public key of the account. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a18be901fd00e05c6acdbdbab722c6c58}{Boat\+Address}} \mbox{\hyperlink{struct_t_account_info_a991241987348c45a080e1dff42dccc6c}{address}}
+\begin{DoxyCompactList}\small\item\em Account address calculated from prublic key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Account information. 
+
+An account\textquotesingle{}s only identifier is its private key. An address is calculated from the public key and the public key is calculated from the private key. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_t_account_info_a991241987348c45a080e1dff42dccc6c}\label{struct_t_account_info_a991241987348c45a080e1dff42dccc6c}} 
+\index{T\+Account\+Info@{T\+Account\+Info}!address@{address}}
+\index{address@{address}!T\+Account\+Info@{T\+Account\+Info}}
+\subsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a18be901fd00e05c6acdbdbab722c6c58}{Boat\+Address}} address}
+
+
+
+Account address calculated from prublic key. 
+
+\mbox{\Hypertarget{struct_t_account_info_a716d4ef9a25584b692e9f09f82bc3985}\label{struct_t_account_info_a716d4ef9a25584b692e9f09f82bc3985}} 
+\index{T\+Account\+Info@{T\+Account\+Info}!priv\+\_\+key\+\_\+array@{priv\+\_\+key\+\_\+array}}
+\index{priv\+\_\+key\+\_\+array@{priv\+\_\+key\+\_\+array}!T\+Account\+Info@{T\+Account\+Info}}
+\subsubsection{\texorpdfstring{priv\+\_\+key\+\_\+array}{priv\_key\_array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} priv\+\_\+key\+\_\+array\mbox{[}32\mbox{]}}
+
+
+
+Private key of the account. In case co-\/sign is used, it\textquotesingle{}s the half key shard. 
+
+\mbox{\Hypertarget{struct_t_account_info_aae6e4c3cacff03b34c4165e79679d68b}\label{struct_t_account_info_aae6e4c3cacff03b34c4165e79679d68b}} 
+\index{T\+Account\+Info@{T\+Account\+Info}!pub\+\_\+key\+\_\+array@{pub\+\_\+key\+\_\+array}}
+\index{pub\+\_\+key\+\_\+array@{pub\+\_\+key\+\_\+array}!T\+Account\+Info@{T\+Account\+Info}}
+\subsubsection{\texorpdfstring{pub\+\_\+key\+\_\+array}{pub\_key\_array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} pub\+\_\+key\+\_\+array\mbox{[}64\mbox{]}}
+
+
+
+Public key of the account. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h}{boattypes.\+h}}\end{DoxyCompactItemize}

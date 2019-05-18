@@ -1,0 +1,25 @@
+var boatwallet_8h =
+[
+    [ "BoatCallContractFunc", "boatwallet_8h.html#a4fe6d7d468a050646a050646f20c1d14", null ],
+    [ "BoatTxSend", "boatwallet_8h.html#a9fd35c5a12ccef5e007389283310b861", null ],
+    [ "BoatTxSetData", "boatwallet_8h.html#ae7600512ae72dedac23b07200bcbf2d1", null ],
+    [ "BoatTxSetGasLimit", "boatwallet_8h.html#a8c5b8961ad2b49c40be30994fbce457d", null ],
+    [ "BoatTxSetGasPrice", "boatwallet_8h.html#ae9e94feaa3e9e0010578bf023bdc7ded", null ],
+    [ "BoatTxSetNonce", "boatwallet_8h.html#af3cb89d9c8632c22095bfa082fb03990", null ],
+    [ "BoatTxSetRecipient", "boatwallet_8h.html#aae7aa9632c310402ee379fb189482288", null ],
+    [ "BoatTxSetValue", "boatwallet_8h.html#a813e7e70bcfa7a321111f90c2a5614ba", null ],
+    [ "BoatWalletCheckPrivkey", "boatwallet_8h.html#a94e1701018d7c436e8e7c94f513ad71d", null ],
+    [ "BoatWalletDeInit", "boatwallet_8h.html#ab64cef2f05546127127c0748fe1bb8db", null ],
+    [ "BoatWalletGeneratePrivkey", "boatwallet_8h.html#a0fa905e6ed835414803b0bafa9c70a7f", null ],
+    [ "BoatWalletInit", "boatwallet_8h.html#a300836e4dbdd8f2f1095eb81c3c5df8a", null ],
+    [ "BoatWalletLoadWallet", "boatwallet_8h.html#aa6c26cfba6f4d24e38886b8c97caf953", null ],
+    [ "BoatWalletLoadWalletEx", "boatwallet_8h.html#aefce86dec7e8105d27a2e77d3e8e03fd", null ],
+    [ "BoatWalletSaveWallet", "boatwallet_8h.html#aed72da36dfd21eef62b3db5c60c74b72", null ],
+    [ "BoatWalletSaveWalletEx", "boatwallet_8h.html#ab8abfc551f5336818b5165c7d873ba72", null ],
+    [ "BoatWalletSetChainId", "boatwallet_8h.html#a4e76584cd317e8f0c2079026ef972909", null ],
+    [ "BoatWalletSetEIP155Comp", "boatwallet_8h.html#a6b381a2a9c7c021c4814f19dfea127e5", null ],
+    [ "BoatWalletSetNodeUrl", "boatwallet_8h.html#a4caa11f4b964aacf89cd53e2f7dff891", null ],
+    [ "BoatWalletSetPrivkey", "boatwallet_8h.html#a0501afc444bd260f2d733159750dc1e9", null ],
+    [ "g_boat_wallet_info", "boatwallet_8h.html#a0cced96844faf3ca6f759714a5e336df", null ],
+    [ "g_tx_info", "boatwallet_8h.html#a573ae5e87e4d9aa0f7fae8c7289708e1", null ]
+];

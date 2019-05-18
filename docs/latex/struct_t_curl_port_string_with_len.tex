@@ -1,0 +1,57 @@
+\hypertarget{struct_t_curl_port_string_with_len}{}\section{T\+Curl\+Port\+String\+With\+Len Struct Reference}
+\label{struct_t_curl_port_string_with_len}\index{T\+Curl\+Port\+String\+With\+Len@{T\+Curl\+Port\+String\+With\+Len}}
+
+
+A struct to maintain a dynamic length string.  
+
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$ \mbox{\hyperlink{struct_t_curl_port_string_with_len_ac2b26a2487af8ce48217b0b1f3890710}{string\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em address of the string storage \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{struct_t_curl_port_string_with_len_af6320afbf95a767066abeb2119778072}{string\+\_\+len}}
+\begin{DoxyCompactList}\small\item\em string length in byte excluding N\+U\+LL terminator, equal to strlen(string\+\_\+ptr) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{struct_t_curl_port_string_with_len_ad0ed73766a322bfb92ce6f8cedc29bf8}{string\+\_\+space}}
+\begin{DoxyCompactList}\small\item\em size of the space $<$string\+\_\+ptr$>$ pointing to, including null terminator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A struct to maintain a dynamic length string. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_t_curl_port_string_with_len_af6320afbf95a767066abeb2119778072}\label{struct_t_curl_port_string_with_len_af6320afbf95a767066abeb2119778072}} 
+\index{T\+Curl\+Port\+String\+With\+Len@{T\+Curl\+Port\+String\+With\+Len}!string\+\_\+len@{string\+\_\+len}}
+\index{string\+\_\+len@{string\+\_\+len}!T\+Curl\+Port\+String\+With\+Len@{T\+Curl\+Port\+String\+With\+Len}}
+\subsubsection{\texorpdfstring{string\+\_\+len}{string\_len}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} string\+\_\+len}
+
+
+
+string length in byte excluding N\+U\+LL terminator, equal to strlen(string\+\_\+ptr) 
+
+\mbox{\Hypertarget{struct_t_curl_port_string_with_len_ac2b26a2487af8ce48217b0b1f3890710}\label{struct_t_curl_port_string_with_len_ac2b26a2487af8ce48217b0b1f3890710}} 
+\index{T\+Curl\+Port\+String\+With\+Len@{T\+Curl\+Port\+String\+With\+Len}!string\+\_\+ptr@{string\+\_\+ptr}}
+\index{string\+\_\+ptr@{string\+\_\+ptr}!T\+Curl\+Port\+String\+With\+Len@{T\+Curl\+Port\+String\+With\+Len}}
+\subsubsection{\texorpdfstring{string\+\_\+ptr}{string\_ptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}}$\ast$ string\+\_\+ptr}
+
+
+
+address of the string storage 
+
+\mbox{\Hypertarget{struct_t_curl_port_string_with_len_ad0ed73766a322bfb92ce6f8cedc29bf8}\label{struct_t_curl_port_string_with_len_ad0ed73766a322bfb92ce6f8cedc29bf8}} 
+\index{T\+Curl\+Port\+String\+With\+Len@{T\+Curl\+Port\+String\+With\+Len}!string\+\_\+space@{string\+\_\+space}}
+\index{string\+\_\+space@{string\+\_\+space}!T\+Curl\+Port\+String\+With\+Len@{T\+Curl\+Port\+String\+With\+Len}}
+\subsubsection{\texorpdfstring{string\+\_\+space}{string\_space}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} string\+\_\+space}
+
+
+
+size of the space $<$string\+\_\+ptr$>$ pointing to, including null terminator 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{curlport_8c}{curlport.\+c}}\end{DoxyCompactItemize}

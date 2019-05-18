@@ -1,0 +1,180 @@
+\hypertarget{rpcintf_8c}{}\section{rpcintf.\+c File Reference}
+\label{rpcintf_8c}\index{rpcintf.\+c@{rpcintf.\+c}}
+
+
+R\+PC wrapper.  
+
+
+{\ttfamily \#include \char`\"{}wallet/boattypes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/rpcport.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{rpcintf_8c_a8f5acd68885a26f71efee9f1589e450e}{Rpc\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Wrapper function to initialize R\+PC mechanism. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rpcintf_8c_a6d0bca983c12cd57e901ab14544c544b}{Rpc\+Deinit}} (void)
+\begin{DoxyCompactList}\small\item\em Wrapper function to de-\/initialize R\+PC mechanism. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{rpcintf_8c_a46616267dc880c1ce8b660d4b477e6f2}{Rpc\+Set\+Opt}} (const \mbox{\hyperlink{rpcintf_8h_abbd5560789698de6dfacb26c9539bc6e}{Rpc\+Option}} $\ast$rpc\+\_\+option\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Wrapper function to set options for R\+PC mechanism. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{rpcintf_8c_ae3f4335d3f5ecc6f22457cfc3d18874d}{Rpc\+Request\+Sync}} (const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$request\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} request\+\_\+len, \mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$$\ast$response\+\_\+pptr, \mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} $\ast$response\+\_\+len\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Wrapper function to perform R\+PC request and receive its response synchronously. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rpcintf_8h_a0ce849d2b2c0537dffa48d093589267d}{Rpc\+Ctx}} \mbox{\hyperlink{rpcintf_8c_aaad46a45ae62b6c9cfbb56fbd915b4b2}{g\+\_\+rpc\+\_\+ctx}}
+\begin{DoxyCompactList}\small\item\em Context for R\+PC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{rpcintf_8h_abbd5560789698de6dfacb26c9539bc6e}{Rpc\+Option}} \mbox{\hyperlink{rpcintf_8c_adf05415362cb98aec36d770c1621d616}{g\+\_\+rpc\+\_\+option}}
+\begin{DoxyCompactList}\small\item\em Options struct for R\+PC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+PC wrapper. 
+
+\mbox{\hyperlink{rpcintf_8c}{rpcintf.\+c}} contains wrapper functions for R\+PC. The exact implementation of the actual R\+PC mechanism is controlled by R\+P\+C\+\_\+\+U\+S\+E\+\_\+\+X\+XX macros. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rpcintf_8c_a6d0bca983c12cd57e901ab14544c544b}\label{rpcintf_8c_a6d0bca983c12cd57e901ab14544c544b}} 
+\index{rpcintf.\+c@{rpcintf.\+c}!Rpc\+Deinit@{Rpc\+Deinit}}
+\index{Rpc\+Deinit@{Rpc\+Deinit}!rpcintf.\+c@{rpcintf.\+c}}
+\subsubsection{\texorpdfstring{Rpc\+Deinit()}{RpcDeinit()}}
+{\footnotesize\ttfamily void Rpc\+Deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Wrapper function to de-\/initialize R\+PC mechanism. 
+
+
+
+ Function\+: \mbox{\hyperlink{rpcintf_8c_a6d0bca983c12cd57e901ab14544c544b}{Rpc\+Deinit()}} \begin{DoxyVerb}This function de-initializes RPC mechanism.
+The exact implementation of the actual RPC mechanism is controlled by
+RPC_USE_XXX macros.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function doesn\textquotesingle{}t return any value.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em This} & function doesn\textquotesingle{}t take any argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rpcintf_8c_a8f5acd68885a26f71efee9f1589e450e}\label{rpcintf_8c_a8f5acd68885a26f71efee9f1589e450e}} 
+\index{rpcintf.\+c@{rpcintf.\+c}!Rpc\+Init@{Rpc\+Init}}
+\index{Rpc\+Init@{Rpc\+Init}!rpcintf.\+c@{rpcintf.\+c}}
+\subsubsection{\texorpdfstring{Rpc\+Init()}{RpcInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Rpc\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Wrapper function to initialize R\+PC mechanism. 
+
+
+
+ Function\+: \mbox{\hyperlink{rpcintf_8c_a8f5acd68885a26f71efee9f1589e450e}{Rpc\+Init()}} \begin{DoxyVerb}This function wrapper to initialize RPC mechanism.
+The exact implementation of the actual RPC mechanism is controlled by
+RPC_USE_XXX macros.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if successful. Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em This} & function doesn\textquotesingle{}t take any argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rpcintf_8c_ae3f4335d3f5ecc6f22457cfc3d18874d}\label{rpcintf_8c_ae3f4335d3f5ecc6f22457cfc3d18874d}} 
+\index{rpcintf.\+c@{rpcintf.\+c}!Rpc\+Request\+Sync@{Rpc\+Request\+Sync}}
+\index{Rpc\+Request\+Sync@{Rpc\+Request\+Sync}!rpcintf.\+c@{rpcintf.\+c}}
+\subsubsection{\texorpdfstring{Rpc\+Request\+Sync()}{RpcRequestSync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Rpc\+Request\+Sync (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{request\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{request\+\_\+len,  }\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$$\ast$}]{response\+\_\+pptr,  }\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} $\ast$}]{response\+\_\+len\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Wrapper function to perform R\+PC request and receive its response synchronously. 
+
+
+
+ Function\+: \mbox{\hyperlink{rpcintf_8c_ae3f4335d3f5ecc6f22457cfc3d18874d}{Rpc\+Request\+Sync()}} \begin{DoxyVerb}This function is a wrapper for performing RPC calls synchronously.
+
+This function takes the REQUEST to transmit as input argument and outputs
+the address of the buffer containing received RPC RESPONSE. The function
+will be suspended until it receives RESPONSE or timeouts.
+
+The exact format and meaning of the request and response is defined by the
+wrapped function.
+
+The caller could only read from the response buffer and copy to its own
+buffer. The caller MUST NOT modify, free the response buffer or save the
+address of the response buffer for later use.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if the R\+PC call is successful.~\newline
+ If any error occurs or R\+PC R\+E\+Q\+U\+E\+ST timeouts, it transfers the error code returned by the wrapped function.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em request\+\_\+ptr} & A pointer to the buffer containing R\+PC R\+E\+Q\+U\+E\+ST.\\
+\hline
+\mbox{\tt in}  & {\em request\+\_\+len} & The length of the R\+PC R\+E\+Q\+U\+E\+ST in bytes.\\
+\hline
+\mbox{\tt out}  & {\em response\+\_\+pptr} & The address of a (U\+I\+N\+T8 $\ast$) pointer to hold the address of the R\+E\+S\+P\+O\+N\+SE buffer. Note that whether the content in the buffer is binary stream or string is defined by the wrapped function. DO N\+OT assume it\textquotesingle{}s N\+U\+LL terminated even if it were string.~\newline
+ If any error occurs or R\+PC R\+E\+Q\+U\+E\+ST timeouts, the address is N\+U\+LL.\\
+\hline
+\mbox{\tt out}  & {\em response\+\_\+len\+\_\+ptr} & The address of a U\+I\+N\+T32 to hold the length of the received R\+E\+S\+P\+O\+N\+SE. Note that this doesn\textquotesingle{}t imply a N\+U\+LL terminator being counted even if the response is a string.~\newline
+ If any error occurs or R\+PC R\+E\+Q\+U\+E\+ST timeouts, the length is 0. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rpcintf_8c_a46616267dc880c1ce8b660d4b477e6f2}\label{rpcintf_8c_a46616267dc880c1ce8b660d4b477e6f2}} 
+\index{rpcintf.\+c@{rpcintf.\+c}!Rpc\+Set\+Opt@{Rpc\+Set\+Opt}}
+\index{Rpc\+Set\+Opt@{Rpc\+Set\+Opt}!rpcintf.\+c@{rpcintf.\+c}}
+\subsubsection{\texorpdfstring{Rpc\+Set\+Opt()}{RpcSetOpt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Rpc\+Set\+Opt (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{rpcintf_8h_abbd5560789698de6dfacb26c9539bc6e}{Rpc\+Option}} $\ast$}]{rpc\+\_\+option\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Wrapper function to set options for R\+PC mechanism. 
+
+
+
+ Function\+: \mbox{\hyperlink{rpcintf_8c_a46616267dc880c1ce8b660d4b477e6f2}{Rpc\+Set\+Opt()}} \begin{DoxyVerb}This function set options for use with RPC mechanism.
+The exact implementation of the actual RPC mechanism is controlled by
+RPC_USE_XXX macros.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if successful. Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em rpc\+\_\+option\+\_\+ptr} & A pointer to the option struct of Rpc\+Option. The exact struct of R\+PC implementation is controlled by R\+P\+C\+\_\+\+U\+S\+E\+\_\+\+X\+XX macros. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{rpcintf_8c_aaad46a45ae62b6c9cfbb56fbd915b4b2}\label{rpcintf_8c_aaad46a45ae62b6c9cfbb56fbd915b4b2}} 
+\index{rpcintf.\+c@{rpcintf.\+c}!g\+\_\+rpc\+\_\+ctx@{g\+\_\+rpc\+\_\+ctx}}
+\index{g\+\_\+rpc\+\_\+ctx@{g\+\_\+rpc\+\_\+ctx}!rpcintf.\+c@{rpcintf.\+c}}
+\subsubsection{\texorpdfstring{g\+\_\+rpc\+\_\+ctx}{g\_rpc\_ctx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rpcintf_8h_a0ce849d2b2c0537dffa48d093589267d}{Rpc\+Ctx}} g\+\_\+rpc\+\_\+ctx}
+
+
+
+Context for R\+PC. 
+
+\mbox{\Hypertarget{rpcintf_8c_adf05415362cb98aec36d770c1621d616}\label{rpcintf_8c_adf05415362cb98aec36d770c1621d616}} 
+\index{rpcintf.\+c@{rpcintf.\+c}!g\+\_\+rpc\+\_\+option@{g\+\_\+rpc\+\_\+option}}
+\index{g\+\_\+rpc\+\_\+option@{g\+\_\+rpc\+\_\+option}!rpcintf.\+c@{rpcintf.\+c}}
+\subsubsection{\texorpdfstring{g\+\_\+rpc\+\_\+option}{g\_rpc\_option}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rpcintf_8h_abbd5560789698de6dfacb26c9539bc6e}{Rpc\+Option}} g\+\_\+rpc\+\_\+option}
+
+
+
+Options struct for R\+PC. 
+

@@ -1,0 +1,124 @@
+\hypertarget{struct_t_rawtx_fields}{}\section{T\+Rawtx\+Fields Struct Reference}
+\label{struct_t_rawtx_fields}\index{T\+Rawtx\+Fields@{T\+Rawtx\+Fields}}
+
+
+R\+AW transaction fields.  
+
+
+
+
+{\ttfamily \#include $<$boattypes.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} \mbox{\hyperlink{struct_t_rawtx_fields_ad1d39f55c87a8c8c7ffa505466e4e5b7}{nonce}}
+\begin{DoxyCompactList}\small\item\em nonce, uint256 in bigendian, equal to the transaction count of the sender\textquotesingle{}s account address \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} \mbox{\hyperlink{struct_t_rawtx_fields_aa1618d84e9c13b48f6724f547039f6e2}{gasprice}}
+\begin{DoxyCompactList}\small\item\em gasprice in wei, uint256 in bigendian \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} \mbox{\hyperlink{struct_t_rawtx_fields_a95792a919f98aadb60695a2b6b900b41}{gaslimit}}
+\begin{DoxyCompactList}\small\item\em gaslimit, uint256 in bigendian \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a18be901fd00e05c6acdbdbab722c6c58}{Boat\+Address}} \mbox{\hyperlink{struct_t_rawtx_fields_ab59fdcc512bfe81db16707e037dbab5b}{recipient}}
+\begin{DoxyCompactList}\small\item\em recipient\textquotesingle{}s address, 160 bits \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} \mbox{\hyperlink{struct_t_rawtx_fields_a80bfe94443e25fd06909bad18d97cee5}{value}}
+\begin{DoxyCompactList}\small\item\em value to transfer, uint256 in bigendian \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a3d1c482c13f3489376022445ceb3007e}{Tx\+Field\+Variable}} \mbox{\hyperlink{struct_t_rawtx_fields_a0357afaa18340675ab3f7914afc39a11}{data}}
+\begin{DoxyCompactList}\small\item\em data to transfer, unformatted stream \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ab7fd9a1499bdebac4af3d80e7f7e64d5}{Tx\+Field\+Max4B}} \mbox{\hyperlink{struct_t_rawtx_fields_a163dd89c06c387b2ef1e0c58ff588539}{v}}
+\begin{DoxyCompactList}\small\item\em chain id or recovery identifier, \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a23685ecc8096f312ef5572783b8cb8f0}{Tx\+Field\+Sig}} \mbox{\hyperlink{struct_t_rawtx_fields_a5fe389af52b068fe72f2f4554a6b8d42}{sig}}
+\begin{DoxyCompactList}\small\item\em E\+C\+D\+SA signature, including r and s parts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+AW transaction fields. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_t_rawtx_fields_a0357afaa18340675ab3f7914afc39a11}\label{struct_t_rawtx_fields_a0357afaa18340675ab3f7914afc39a11}} 
+\index{T\+Rawtx\+Fields@{T\+Rawtx\+Fields}!data@{data}}
+\index{data@{data}!T\+Rawtx\+Fields@{T\+Rawtx\+Fields}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a3d1c482c13f3489376022445ceb3007e}{Tx\+Field\+Variable}} data}
+
+
+
+data to transfer, unformatted stream 
+
+\mbox{\Hypertarget{struct_t_rawtx_fields_a95792a919f98aadb60695a2b6b900b41}\label{struct_t_rawtx_fields_a95792a919f98aadb60695a2b6b900b41}} 
+\index{T\+Rawtx\+Fields@{T\+Rawtx\+Fields}!gaslimit@{gaslimit}}
+\index{gaslimit@{gaslimit}!T\+Rawtx\+Fields@{T\+Rawtx\+Fields}}
+\subsubsection{\texorpdfstring{gaslimit}{gaslimit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} gaslimit}
+
+
+
+gaslimit, uint256 in bigendian 
+
+\mbox{\Hypertarget{struct_t_rawtx_fields_aa1618d84e9c13b48f6724f547039f6e2}\label{struct_t_rawtx_fields_aa1618d84e9c13b48f6724f547039f6e2}} 
+\index{T\+Rawtx\+Fields@{T\+Rawtx\+Fields}!gasprice@{gasprice}}
+\index{gasprice@{gasprice}!T\+Rawtx\+Fields@{T\+Rawtx\+Fields}}
+\subsubsection{\texorpdfstring{gasprice}{gasprice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} gasprice}
+
+
+
+gasprice in wei, uint256 in bigendian 
+
+\mbox{\Hypertarget{struct_t_rawtx_fields_ad1d39f55c87a8c8c7ffa505466e4e5b7}\label{struct_t_rawtx_fields_ad1d39f55c87a8c8c7ffa505466e4e5b7}} 
+\index{T\+Rawtx\+Fields@{T\+Rawtx\+Fields}!nonce@{nonce}}
+\index{nonce@{nonce}!T\+Rawtx\+Fields@{T\+Rawtx\+Fields}}
+\subsubsection{\texorpdfstring{nonce}{nonce}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} nonce}
+
+
+
+nonce, uint256 in bigendian, equal to the transaction count of the sender\textquotesingle{}s account address 
+
+\mbox{\Hypertarget{struct_t_rawtx_fields_ab59fdcc512bfe81db16707e037dbab5b}\label{struct_t_rawtx_fields_ab59fdcc512bfe81db16707e037dbab5b}} 
+\index{T\+Rawtx\+Fields@{T\+Rawtx\+Fields}!recipient@{recipient}}
+\index{recipient@{recipient}!T\+Rawtx\+Fields@{T\+Rawtx\+Fields}}
+\subsubsection{\texorpdfstring{recipient}{recipient}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a18be901fd00e05c6acdbdbab722c6c58}{Boat\+Address}} recipient}
+
+
+
+recipient\textquotesingle{}s address, 160 bits 
+
+\mbox{\Hypertarget{struct_t_rawtx_fields_a5fe389af52b068fe72f2f4554a6b8d42}\label{struct_t_rawtx_fields_a5fe389af52b068fe72f2f4554a6b8d42}} 
+\index{T\+Rawtx\+Fields@{T\+Rawtx\+Fields}!sig@{sig}}
+\index{sig@{sig}!T\+Rawtx\+Fields@{T\+Rawtx\+Fields}}
+\subsubsection{\texorpdfstring{sig}{sig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a23685ecc8096f312ef5572783b8cb8f0}{Tx\+Field\+Sig}} sig}
+
+
+
+E\+C\+D\+SA signature, including r and s parts. 
+
+\mbox{\Hypertarget{struct_t_rawtx_fields_a163dd89c06c387b2ef1e0c58ff588539}\label{struct_t_rawtx_fields_a163dd89c06c387b2ef1e0c58ff588539}} 
+\index{T\+Rawtx\+Fields@{T\+Rawtx\+Fields}!v@{v}}
+\index{v@{v}!T\+Rawtx\+Fields@{T\+Rawtx\+Fields}}
+\subsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab7fd9a1499bdebac4af3d80e7f7e64d5}{Tx\+Field\+Max4B}} v}
+
+
+
+chain id or recovery identifier, 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{rawtx_8c_a165bcf01e2d217ae91827066e28c1ccc}{Rawtx\+Perform()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{struct_t_rawtx_fields_a80bfe94443e25fd06909bad18d97cee5}\label{struct_t_rawtx_fields_a80bfe94443e25fd06909bad18d97cee5}} 
+\index{T\+Rawtx\+Fields@{T\+Rawtx\+Fields}!value@{value}}
+\index{value@{value}!T\+Rawtx\+Fields@{T\+Rawtx\+Fields}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}} value}
+
+
+
+value to transfer, uint256 in bigendian 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h}{boattypes.\+h}}\end{DoxyCompactItemize}

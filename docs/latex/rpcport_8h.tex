@@ -1,0 +1,47 @@
+\hypertarget{rpcport_8h}{}\section{rpcport.\+h File Reference}
+\label{rpcport_8h}\index{rpcport.\+h@{rpcport.\+h}}
+
+
+R\+PC wrapper header file internally used by R\+PC porting.  
+
+
+{\ttfamily \#include \char`\"{}wallet/boattypes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/boatoptions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/rpcintf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/curlport.\+h\char`\"{}}\newline
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rpcintf_8h_a0ce849d2b2c0537dffa48d093589267d}{Rpc\+Ctx}} \mbox{\hyperlink{rpcport_8h_aaad46a45ae62b6c9cfbb56fbd915b4b2}{g\+\_\+rpc\+\_\+ctx}}
+\begin{DoxyCompactList}\small\item\em Context for R\+PC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{rpcintf_8h_abbd5560789698de6dfacb26c9539bc6e}{Rpc\+Option}} \mbox{\hyperlink{rpcport_8h_adf05415362cb98aec36d770c1621d616}{g\+\_\+rpc\+\_\+option}}
+\begin{DoxyCompactList}\small\item\em Options struct for R\+PC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+PC wrapper header file internally used by R\+PC porting. 
+
+\mbox{\hyperlink{rpcport_8h}{rpcport.\+h}} is header file to be included by R\+PC Porting such as curlport. Upper layer calling R\+PC wrapper functions should include \mbox{\hyperlink{rpcintf_8h}{rpcintf.\+h}} instead.~\newline
+The exact implementation of the actual R\+PC mechanism is controlled by R\+P\+C\+\_\+\+U\+S\+E\+\_\+\+X\+XX macros. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{rpcport_8h_aaad46a45ae62b6c9cfbb56fbd915b4b2}\label{rpcport_8h_aaad46a45ae62b6c9cfbb56fbd915b4b2}} 
+\index{rpcport.\+h@{rpcport.\+h}!g\+\_\+rpc\+\_\+ctx@{g\+\_\+rpc\+\_\+ctx}}
+\index{g\+\_\+rpc\+\_\+ctx@{g\+\_\+rpc\+\_\+ctx}!rpcport.\+h@{rpcport.\+h}}
+\subsubsection{\texorpdfstring{g\+\_\+rpc\+\_\+ctx}{g\_rpc\_ctx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rpcintf_8h_a0ce849d2b2c0537dffa48d093589267d}{Rpc\+Ctx}} g\+\_\+rpc\+\_\+ctx}
+
+
+
+Context for R\+PC. 
+
+\mbox{\Hypertarget{rpcport_8h_adf05415362cb98aec36d770c1621d616}\label{rpcport_8h_adf05415362cb98aec36d770c1621d616}} 
+\index{rpcport.\+h@{rpcport.\+h}!g\+\_\+rpc\+\_\+option@{g\+\_\+rpc\+\_\+option}}
+\index{g\+\_\+rpc\+\_\+option@{g\+\_\+rpc\+\_\+option}!rpcport.\+h@{rpcport.\+h}}
+\subsubsection{\texorpdfstring{g\+\_\+rpc\+\_\+option}{g\_rpc\_option}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rpcintf_8h_abbd5560789698de6dfacb26c9539bc6e}{Rpc\+Option}} g\+\_\+rpc\+\_\+option}
+
+
+
+Options struct for R\+PC. 
+

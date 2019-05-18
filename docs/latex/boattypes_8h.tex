@@ -1,0 +1,317 @@
+\hypertarget{boattypes_8h}{}\section{boattypes.\+h File Reference}
+\label{boattypes_8h}\index{boattypes.\+h@{boattypes.\+h}}
+
+
+Define Basic Boatwallet types and include external header files.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sha3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}secp256k1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/boatoptions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/boatexception.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_account_info}{T\+Account\+Info}}
+\begin{DoxyCompactList}\small\item\em Account information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_network_info}{T\+Network\+Info}}
+\begin{DoxyCompactList}\small\item\em Blockchain network information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_boat_wallet_info}{T\+Boat\+Wallet\+Info}}
+\begin{DoxyCompactList}\small\item\em Wallet information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_tx_field_variable}{T\+Tx\+Field\+Variable}}
+\begin{DoxyCompactList}\small\item\em common struct for variable length transaction fields \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_tx_field_max4_b}{T\+Tx\+Field\+Max4B}}
+\begin{DoxyCompactList}\small\item\em common struct for 4-\/byte (32-\/bit) length transaction fields \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_tx_field_max32_b}{T\+Tx\+Field\+Max32B}}
+\begin{DoxyCompactList}\small\item\em common struct for 32-\/byte (256-\/bit) length transaction fields \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_tx_field_sig}{T\+Tx\+Field\+Sig}}
+\begin{DoxyCompactList}\small\item\em E\+C\+D\+SA signature struct. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_rawtx_fields}{T\+Rawtx\+Fields}}
+\begin{DoxyCompactList}\small\item\em R\+AW transaction fields. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_tx_info}{T\+Tx\+Info}}
+\begin{DoxyCompactList}\small\item\em Transaction information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}}
+\item 
+\#define \mbox{\hyperlink{boattypes_8h_ad9e91b0209ffb1e542a550b611a9b1c5}{B\+O\+A\+T\+\_\+\+IN}}
+\item 
+\#define \mbox{\hyperlink{boattypes_8h_aba881d3fd2f4a3f7d23235a353716879}{B\+O\+A\+T\+\_\+\+I\+N\+O\+UT}}
+\item 
+\#define \mbox{\hyperlink{boattypes_8h_aa1fe139ad2e159bf904e207eccd5fdaf}{B\+O\+A\+T\+\_\+\+T\+R\+UE}}~1
+\item 
+\#define \mbox{\hyperlink{boattypes_8h_a9d0c3b27e61a3ba2f28d739d7096dd37}{B\+O\+A\+T\+\_\+\+F\+A\+L\+SE}}~0
+\item 
+\#define \mbox{\hyperlink{boattypes_8h_a6828cf24d37e8eb064952cfffe2cd7ab}{B\+O\+A\+T\+\_\+\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN}}~8192u
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef bool \mbox{\hyperlink{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}{B\+O\+A\+T\+B\+O\+OL}}
+\item 
+typedef char \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}}
+\item 
+typedef unsigned char \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}}
+\item 
+typedef unsigned short \mbox{\hyperlink{boattypes_8h_a09f1a1fb2293e33483cc8d44aefb1eb1}{U\+I\+N\+T16}}
+\item 
+typedef unsigned int \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}
+\item 
+typedef unsigned long long int \mbox{\hyperlink{boattypes_8h_aaaeacfdfbfc1dcaae18cf20e63015e71}{U\+I\+N\+T64}}
+\item 
+typedef signed char \mbox{\hyperlink{boattypes_8h_a94d2d807f400cd04e10fa0ec0269947b}{S\+I\+N\+T8}}
+\item 
+typedef signed short \mbox{\hyperlink{boattypes_8h_a431347dac407b6445c36d8bca5348a50}{S\+I\+N\+T16}}
+\item 
+typedef signed int \mbox{\hyperlink{boattypes_8h_a5df4393f4806ad434ebdccdecd6fc697}{S\+I\+N\+T32}}
+\item 
+typedef signed long long int \mbox{\hyperlink{boattypes_8h_a08273c58d4fe92cc22f95b7b50baf47d}{S\+I\+N\+T64}}
+\item 
+typedef \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} \mbox{\hyperlink{boattypes_8h_a4b048871701f41c0adde96f5dd74fbb5}{U\+I\+N\+T256\+A\+R\+R\+AY}}\mbox{[}32\mbox{]}
+\item 
+typedef \mbox{\hyperlink{boattypes_8h_a5df4393f4806ad434ebdccdecd6fc697}{S\+I\+N\+T32}} \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}}
+\item 
+typedef \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} \mbox{\hyperlink{boattypes_8h_a18be901fd00e05c6acdbdbab722c6c58}{Boat\+Address}}\mbox{[}20\mbox{]}
+\item 
+typedef struct \mbox{\hyperlink{struct_t_account_info}{T\+Account\+Info}} \mbox{\hyperlink{boattypes_8h_a88968c7beb093674f9b4da03f30b1c21}{Account\+Info}}
+\begin{DoxyCompactList}\small\item\em Account information. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_t_network_info}{T\+Network\+Info}} \mbox{\hyperlink{boattypes_8h_ab4d27316866d80cf2c913e1369f45729}{Network\+Info}}
+\begin{DoxyCompactList}\small\item\em Blockchain network information. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_t_boat_wallet_info}{T\+Boat\+Wallet\+Info}} \mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}}
+\begin{DoxyCompactList}\small\item\em Wallet information. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_t_tx_field_variable}{T\+Tx\+Field\+Variable}} \mbox{\hyperlink{boattypes_8h_a3d1c482c13f3489376022445ceb3007e}{Tx\+Field\+Variable}}
+\begin{DoxyCompactList}\small\item\em common struct for variable length transaction fields \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_t_tx_field_max4_b}{T\+Tx\+Field\+Max4B}} \mbox{\hyperlink{boattypes_8h_ab7fd9a1499bdebac4af3d80e7f7e64d5}{Tx\+Field\+Max4B}}
+\begin{DoxyCompactList}\small\item\em common struct for 4-\/byte (32-\/bit) length transaction fields \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_t_tx_field_max32_b}{T\+Tx\+Field\+Max32B}} \mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}}
+\begin{DoxyCompactList}\small\item\em common struct for 32-\/byte (256-\/bit) length transaction fields \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_t_tx_field_sig}{T\+Tx\+Field\+Sig}} \mbox{\hyperlink{boattypes_8h_a23685ecc8096f312ef5572783b8cb8f0}{Tx\+Field\+Sig}}
+\begin{DoxyCompactList}\small\item\em E\+C\+D\+SA signature struct. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_t_rawtx_fields}{T\+Rawtx\+Fields}} \mbox{\hyperlink{boattypes_8h_a2442bb21280490410148fca8d88a0caa}{Rawtx\+Fields}}
+\begin{DoxyCompactList}\small\item\em R\+AW transaction fields. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_t_tx_info}{T\+Tx\+Info}} \mbox{\hyperlink{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}{Tx\+Info}}
+\begin{DoxyCompactList}\small\item\em Transaction information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define Basic Boatwallet types and include external header files. 
+
+\mbox{\hyperlink{boattypes_8h}{boattypes.\+h}} defines types used in boatwallet. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{boattypes_8h_a9d0c3b27e61a3ba2f28d739d7096dd37}\label{boattypes_8h_a9d0c3b27e61a3ba2f28d739d7096dd37}} 
+\index{boattypes.\+h@{boattypes.\+h}!B\+O\+A\+T\+\_\+\+F\+A\+L\+SE@{B\+O\+A\+T\+\_\+\+F\+A\+L\+SE}}
+\index{B\+O\+A\+T\+\_\+\+F\+A\+L\+SE@{B\+O\+A\+T\+\_\+\+F\+A\+L\+SE}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+F\+A\+L\+SE}{BOAT\_FALSE}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+F\+A\+L\+SE~0}
+
+\mbox{\Hypertarget{boattypes_8h_ad9e91b0209ffb1e542a550b611a9b1c5}\label{boattypes_8h_ad9e91b0209ffb1e542a550b611a9b1c5}} 
+\index{boattypes.\+h@{boattypes.\+h}!B\+O\+A\+T\+\_\+\+IN@{B\+O\+A\+T\+\_\+\+IN}}
+\index{B\+O\+A\+T\+\_\+\+IN@{B\+O\+A\+T\+\_\+\+IN}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+IN}{BOAT\_IN}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+IN}
+
+\mbox{\Hypertarget{boattypes_8h_aba881d3fd2f4a3f7d23235a353716879}\label{boattypes_8h_aba881d3fd2f4a3f7d23235a353716879}} 
+\index{boattypes.\+h@{boattypes.\+h}!B\+O\+A\+T\+\_\+\+I\+N\+O\+UT@{B\+O\+A\+T\+\_\+\+I\+N\+O\+UT}}
+\index{B\+O\+A\+T\+\_\+\+I\+N\+O\+UT@{B\+O\+A\+T\+\_\+\+I\+N\+O\+UT}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+I\+N\+O\+UT}{BOAT\_INOUT}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+I\+N\+O\+UT}
+
+\mbox{\Hypertarget{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}\label{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}} 
+\index{boattypes.\+h@{boattypes.\+h}!B\+O\+A\+T\+\_\+\+O\+UT@{B\+O\+A\+T\+\_\+\+O\+UT}}
+\index{B\+O\+A\+T\+\_\+\+O\+UT@{B\+O\+A\+T\+\_\+\+O\+UT}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+O\+UT}{BOAT\_OUT}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+O\+UT}
+
+\mbox{\Hypertarget{boattypes_8h_a6828cf24d37e8eb064952cfffe2cd7ab}\label{boattypes_8h_a6828cf24d37e8eb064952cfffe2cd7ab}} 
+\index{boattypes.\+h@{boattypes.\+h}!B\+O\+A\+T\+\_\+\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN@{B\+O\+A\+T\+\_\+\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN}}
+\index{B\+O\+A\+T\+\_\+\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN@{B\+O\+A\+T\+\_\+\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN}{BOAT\_REASONABLE\_MAX\_LEN}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN~8192u}
+
+Define a resonable max length in bytes for general checking for memory allocation related validation. The lower end the embedded system is, the smaller the length is. \mbox{\Hypertarget{boattypes_8h_aa1fe139ad2e159bf904e207eccd5fdaf}\label{boattypes_8h_aa1fe139ad2e159bf904e207eccd5fdaf}} 
+\index{boattypes.\+h@{boattypes.\+h}!B\+O\+A\+T\+\_\+\+T\+R\+UE@{B\+O\+A\+T\+\_\+\+T\+R\+UE}}
+\index{B\+O\+A\+T\+\_\+\+T\+R\+UE@{B\+O\+A\+T\+\_\+\+T\+R\+UE}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+T\+R\+UE}{BOAT\_TRUE}}
+{\footnotesize\ttfamily \#define B\+O\+A\+T\+\_\+\+T\+R\+UE~1}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{boattypes_8h_a88968c7beb093674f9b4da03f30b1c21}\label{boattypes_8h_a88968c7beb093674f9b4da03f30b1c21}} 
+\index{boattypes.\+h@{boattypes.\+h}!Account\+Info@{Account\+Info}}
+\index{Account\+Info@{Account\+Info}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{Account\+Info}{AccountInfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_t_account_info}{T\+Account\+Info}} \mbox{\hyperlink{boattypes_8h_a88968c7beb093674f9b4da03f30b1c21}{Account\+Info}}}
+
+
+
+Account information. 
+
+An account\textquotesingle{}s only identifier is its private key. An address is calculated from the public key and the public key is calculated from the private key. \mbox{\Hypertarget{boattypes_8h_a032dd611b487ea287252cd8bea128df9}\label{boattypes_8h_a032dd611b487ea287252cd8bea128df9}} 
+\index{boattypes.\+h@{boattypes.\+h}!B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT@{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}}
+\index{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT@{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}{BOAT\_RESULT}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{boattypes_8h_a5df4393f4806ad434ebdccdecd6fc697}{S\+I\+N\+T32}} \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}}}
+
+\mbox{\Hypertarget{boattypes_8h_a18be901fd00e05c6acdbdbab722c6c58}\label{boattypes_8h_a18be901fd00e05c6acdbdbab722c6c58}} 
+\index{boattypes.\+h@{boattypes.\+h}!Boat\+Address@{Boat\+Address}}
+\index{Boat\+Address@{Boat\+Address}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Address}{BoatAddress}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} Boat\+Address\mbox{[}20\mbox{]}}
+
+\mbox{\Hypertarget{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}\label{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}} 
+\index{boattypes.\+h@{boattypes.\+h}!B\+O\+A\+T\+B\+O\+OL@{B\+O\+A\+T\+B\+O\+OL}}
+\index{B\+O\+A\+T\+B\+O\+OL@{B\+O\+A\+T\+B\+O\+OL}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{B\+O\+A\+T\+B\+O\+OL}{BOATBOOL}}
+{\footnotesize\ttfamily typedef bool \mbox{\hyperlink{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}{B\+O\+A\+T\+B\+O\+OL}}}
+
+\mbox{\Hypertarget{boattypes_8h_a6d00a783e10dc144bb85768896480377}\label{boattypes_8h_a6d00a783e10dc144bb85768896480377}} 
+\index{boattypes.\+h@{boattypes.\+h}!Boat\+Wallet\+Info@{Boat\+Wallet\+Info}}
+\index{Boat\+Wallet\+Info@{Boat\+Wallet\+Info}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Info}{BoatWalletInfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_t_boat_wallet_info}{T\+Boat\+Wallet\+Info}} \mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}}}
+
+
+
+Wallet information. 
+
+Wallet information consists of account and block chain network information. Currently only one account per wallet is supported. \mbox{\Hypertarget{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}\label{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}} 
+\index{boattypes.\+h@{boattypes.\+h}!C\+H\+AR@{C\+H\+AR}}
+\index{C\+H\+AR@{C\+H\+AR}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+AR}{CHAR}}
+{\footnotesize\ttfamily typedef char \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}}}
+
+\mbox{\Hypertarget{boattypes_8h_ab4d27316866d80cf2c913e1369f45729}\label{boattypes_8h_ab4d27316866d80cf2c913e1369f45729}} 
+\index{boattypes.\+h@{boattypes.\+h}!Network\+Info@{Network\+Info}}
+\index{Network\+Info@{Network\+Info}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{Network\+Info}{NetworkInfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_t_network_info}{T\+Network\+Info}} \mbox{\hyperlink{boattypes_8h_ab4d27316866d80cf2c913e1369f45729}{Network\+Info}}}
+
+
+
+Blockchain network information. 
+
+E\+I\+P-\/155 (\href{https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md}{\tt https\+://github.\+com/ethereum/\+E\+I\+Ps/blob/master/\+E\+I\+P\+S/eip-\/155.\+md}) requires chain ID of the network being part of the transaction before it\textquotesingle{}s signed. If the network is N\+OT E\+I\+P-\/155 compatible, $<$eip155\+\_\+compatibility$>$ must be F\+A\+L\+SE and $<$chain\+\_\+id$>$ is ignored. Otherwise the chain ID must be set.~\newline
+$<$node\+\_\+url\+\_\+ptr$>$ must include the protocol descriptor, IP address or U\+RL name and port. For example, \href{http://a.b.com:8545}{\tt http\+://a.\+b.\+com\+:8545} \mbox{\Hypertarget{boattypes_8h_a2442bb21280490410148fca8d88a0caa}\label{boattypes_8h_a2442bb21280490410148fca8d88a0caa}} 
+\index{boattypes.\+h@{boattypes.\+h}!Rawtx\+Fields@{Rawtx\+Fields}}
+\index{Rawtx\+Fields@{Rawtx\+Fields}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{Rawtx\+Fields}{RawtxFields}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_t_rawtx_fields}{T\+Rawtx\+Fields}} \mbox{\hyperlink{boattypes_8h_a2442bb21280490410148fca8d88a0caa}{Rawtx\+Fields}}}
+
+
+
+R\+AW transaction fields. 
+
+\mbox{\Hypertarget{boattypes_8h_a431347dac407b6445c36d8bca5348a50}\label{boattypes_8h_a431347dac407b6445c36d8bca5348a50}} 
+\index{boattypes.\+h@{boattypes.\+h}!S\+I\+N\+T16@{S\+I\+N\+T16}}
+\index{S\+I\+N\+T16@{S\+I\+N\+T16}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+N\+T16}{SINT16}}
+{\footnotesize\ttfamily typedef signed short \mbox{\hyperlink{boattypes_8h_a431347dac407b6445c36d8bca5348a50}{S\+I\+N\+T16}}}
+
+\mbox{\Hypertarget{boattypes_8h_a5df4393f4806ad434ebdccdecd6fc697}\label{boattypes_8h_a5df4393f4806ad434ebdccdecd6fc697}} 
+\index{boattypes.\+h@{boattypes.\+h}!S\+I\+N\+T32@{S\+I\+N\+T32}}
+\index{S\+I\+N\+T32@{S\+I\+N\+T32}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+N\+T32}{SINT32}}
+{\footnotesize\ttfamily typedef signed int \mbox{\hyperlink{boattypes_8h_a5df4393f4806ad434ebdccdecd6fc697}{S\+I\+N\+T32}}}
+
+\mbox{\Hypertarget{boattypes_8h_a08273c58d4fe92cc22f95b7b50baf47d}\label{boattypes_8h_a08273c58d4fe92cc22f95b7b50baf47d}} 
+\index{boattypes.\+h@{boattypes.\+h}!S\+I\+N\+T64@{S\+I\+N\+T64}}
+\index{S\+I\+N\+T64@{S\+I\+N\+T64}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+N\+T64}{SINT64}}
+{\footnotesize\ttfamily typedef signed long long int \mbox{\hyperlink{boattypes_8h_a08273c58d4fe92cc22f95b7b50baf47d}{S\+I\+N\+T64}}}
+
+\mbox{\Hypertarget{boattypes_8h_a94d2d807f400cd04e10fa0ec0269947b}\label{boattypes_8h_a94d2d807f400cd04e10fa0ec0269947b}} 
+\index{boattypes.\+h@{boattypes.\+h}!S\+I\+N\+T8@{S\+I\+N\+T8}}
+\index{S\+I\+N\+T8@{S\+I\+N\+T8}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+N\+T8}{SINT8}}
+{\footnotesize\ttfamily typedef signed char \mbox{\hyperlink{boattypes_8h_a94d2d807f400cd04e10fa0ec0269947b}{S\+I\+N\+T8}}}
+
+\mbox{\Hypertarget{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}\label{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}} 
+\index{boattypes.\+h@{boattypes.\+h}!Tx\+Field\+Max32B@{Tx\+Field\+Max32B}}
+\index{Tx\+Field\+Max32B@{Tx\+Field\+Max32B}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{Tx\+Field\+Max32B}{TxFieldMax32B}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_t_tx_field_max32_b}{T\+Tx\+Field\+Max32B}} \mbox{\hyperlink{boattypes_8h_af8a3635bb5261915dff042bd32f3466b}{Tx\+Field\+Max32B}}}
+
+
+
+common struct for 32-\/byte (256-\/bit) length transaction fields 
+
+\mbox{\Hypertarget{boattypes_8h_ab7fd9a1499bdebac4af3d80e7f7e64d5}\label{boattypes_8h_ab7fd9a1499bdebac4af3d80e7f7e64d5}} 
+\index{boattypes.\+h@{boattypes.\+h}!Tx\+Field\+Max4B@{Tx\+Field\+Max4B}}
+\index{Tx\+Field\+Max4B@{Tx\+Field\+Max4B}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{Tx\+Field\+Max4B}{TxFieldMax4B}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_t_tx_field_max4_b}{T\+Tx\+Field\+Max4B}} \mbox{\hyperlink{boattypes_8h_ab7fd9a1499bdebac4af3d80e7f7e64d5}{Tx\+Field\+Max4B}}}
+
+
+
+common struct for 4-\/byte (32-\/bit) length transaction fields 
+
+\mbox{\Hypertarget{boattypes_8h_a23685ecc8096f312ef5572783b8cb8f0}\label{boattypes_8h_a23685ecc8096f312ef5572783b8cb8f0}} 
+\index{boattypes.\+h@{boattypes.\+h}!Tx\+Field\+Sig@{Tx\+Field\+Sig}}
+\index{Tx\+Field\+Sig@{Tx\+Field\+Sig}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{Tx\+Field\+Sig}{TxFieldSig}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_t_tx_field_sig}{T\+Tx\+Field\+Sig}} \mbox{\hyperlink{boattypes_8h_a23685ecc8096f312ef5572783b8cb8f0}{Tx\+Field\+Sig}}}
+
+
+
+E\+C\+D\+SA signature struct. 
+
+\mbox{\Hypertarget{boattypes_8h_a3d1c482c13f3489376022445ceb3007e}\label{boattypes_8h_a3d1c482c13f3489376022445ceb3007e}} 
+\index{boattypes.\+h@{boattypes.\+h}!Tx\+Field\+Variable@{Tx\+Field\+Variable}}
+\index{Tx\+Field\+Variable@{Tx\+Field\+Variable}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{Tx\+Field\+Variable}{TxFieldVariable}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_t_tx_field_variable}{T\+Tx\+Field\+Variable}} \mbox{\hyperlink{boattypes_8h_a3d1c482c13f3489376022445ceb3007e}{Tx\+Field\+Variable}}}
+
+
+
+common struct for variable length transaction fields 
+
+\mbox{\Hypertarget{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}\label{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}} 
+\index{boattypes.\+h@{boattypes.\+h}!Tx\+Info@{Tx\+Info}}
+\index{Tx\+Info@{Tx\+Info}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{Tx\+Info}{TxInfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_t_tx_info}{T\+Tx\+Info}} \mbox{\hyperlink{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}{Tx\+Info}}}
+
+
+
+Transaction information. 
+
+\mbox{\Hypertarget{boattypes_8h_a09f1a1fb2293e33483cc8d44aefb1eb1}\label{boattypes_8h_a09f1a1fb2293e33483cc8d44aefb1eb1}} 
+\index{boattypes.\+h@{boattypes.\+h}!U\+I\+N\+T16@{U\+I\+N\+T16}}
+\index{U\+I\+N\+T16@{U\+I\+N\+T16}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{U\+I\+N\+T16}{UINT16}}
+{\footnotesize\ttfamily typedef unsigned short \mbox{\hyperlink{boattypes_8h_a09f1a1fb2293e33483cc8d44aefb1eb1}{U\+I\+N\+T16}}}
+
+\mbox{\Hypertarget{boattypes_8h_a4b048871701f41c0adde96f5dd74fbb5}\label{boattypes_8h_a4b048871701f41c0adde96f5dd74fbb5}} 
+\index{boattypes.\+h@{boattypes.\+h}!U\+I\+N\+T256\+A\+R\+R\+AY@{U\+I\+N\+T256\+A\+R\+R\+AY}}
+\index{U\+I\+N\+T256\+A\+R\+R\+AY@{U\+I\+N\+T256\+A\+R\+R\+AY}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{U\+I\+N\+T256\+A\+R\+R\+AY}{UINT256ARRAY}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} U\+I\+N\+T256\+A\+R\+R\+AY\mbox{[}32\mbox{]}}
+
+\mbox{\Hypertarget{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}\label{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}} 
+\index{boattypes.\+h@{boattypes.\+h}!U\+I\+N\+T32@{U\+I\+N\+T32}}
+\index{U\+I\+N\+T32@{U\+I\+N\+T32}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{U\+I\+N\+T32}{UINT32}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}
+
+\mbox{\Hypertarget{boattypes_8h_aaaeacfdfbfc1dcaae18cf20e63015e71}\label{boattypes_8h_aaaeacfdfbfc1dcaae18cf20e63015e71}} 
+\index{boattypes.\+h@{boattypes.\+h}!U\+I\+N\+T64@{U\+I\+N\+T64}}
+\index{U\+I\+N\+T64@{U\+I\+N\+T64}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{U\+I\+N\+T64}{UINT64}}
+{\footnotesize\ttfamily typedef unsigned long long int \mbox{\hyperlink{boattypes_8h_aaaeacfdfbfc1dcaae18cf20e63015e71}{U\+I\+N\+T64}}}
+
+\mbox{\Hypertarget{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}\label{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}} 
+\index{boattypes.\+h@{boattypes.\+h}!U\+I\+N\+T8@{U\+I\+N\+T8}}
+\index{U\+I\+N\+T8@{U\+I\+N\+T8}!boattypes.\+h@{boattypes.\+h}}
+\subsubsection{\texorpdfstring{U\+I\+N\+T8}{UINT8}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}}}
+

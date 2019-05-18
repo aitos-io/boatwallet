@@ -1,0 +1,65 @@
+\hypertarget{struct_t_network_info}{}\section{T\+Network\+Info Struct Reference}
+\label{struct_t_network_info}\index{T\+Network\+Info@{T\+Network\+Info}}
+
+
+Blockchain network information.  
+
+
+
+
+{\ttfamily \#include $<$boattypes.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{struct_t_network_info_a01b042ef5fc9d24a77755f82ac8a75eb}{chain\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Chain ID (in host endian) of the blockchain network if the network is E\+I\+P-\/155 compatible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} \mbox{\hyperlink{struct_t_network_info_acc303011417574fe14d58783e3a36348}{eip155\+\_\+compatibility}}
+\begin{DoxyCompactList}\small\item\em Network E\+I\+P-\/155 compatibility. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$ \mbox{\hyperlink{struct_t_network_info_af9c1bd4a0bd9c92244377526eb17a176}{node\+\_\+url\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em U\+RL of the blockchain node, e.\+g. \char`\"{}http\+://a.\+b.\+com\+:8545\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Blockchain network information. 
+
+E\+I\+P-\/155 (\href{https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md}{\tt https\+://github.\+com/ethereum/\+E\+I\+Ps/blob/master/\+E\+I\+P\+S/eip-\/155.\+md}) requires chain ID of the network being part of the transaction before it\textquotesingle{}s signed. If the network is N\+OT E\+I\+P-\/155 compatible, $<$eip155\+\_\+compatibility$>$ must be F\+A\+L\+SE and $<$chain\+\_\+id$>$ is ignored. Otherwise the chain ID must be set.~\newline
+$<$node\+\_\+url\+\_\+ptr$>$ must include the protocol descriptor, IP address or U\+RL name and port. For example, \href{http://a.b.com:8545}{\tt http\+://a.\+b.\+com\+:8545} 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_t_network_info_a01b042ef5fc9d24a77755f82ac8a75eb}\label{struct_t_network_info_a01b042ef5fc9d24a77755f82ac8a75eb}} 
+\index{T\+Network\+Info@{T\+Network\+Info}!chain\+\_\+id@{chain\+\_\+id}}
+\index{chain\+\_\+id@{chain\+\_\+id}!T\+Network\+Info@{T\+Network\+Info}}
+\subsubsection{\texorpdfstring{chain\+\_\+id}{chain\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} chain\+\_\+id}
+
+
+
+Chain ID (in host endian) of the blockchain network if the network is E\+I\+P-\/155 compatible. 
+
+\mbox{\Hypertarget{struct_t_network_info_acc303011417574fe14d58783e3a36348}\label{struct_t_network_info_acc303011417574fe14d58783e3a36348}} 
+\index{T\+Network\+Info@{T\+Network\+Info}!eip155\+\_\+compatibility@{eip155\+\_\+compatibility}}
+\index{eip155\+\_\+compatibility@{eip155\+\_\+compatibility}!T\+Network\+Info@{T\+Network\+Info}}
+\subsubsection{\texorpdfstring{eip155\+\_\+compatibility}{eip155\_compatibility}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} eip155\+\_\+compatibility}
+
+
+
+Network E\+I\+P-\/155 compatibility. 
+
+If the network is E\+I\+P-\/155 compabible $<$eip155\+\_\+compatibility$>$ must be set to T\+R\+UE and $<$chain\+\_\+id$>$ must be set.~\newline
+Otherwise set it to F\+A\+L\+SE and $<$chain\+\_\+id$>$ is ignored. \mbox{\Hypertarget{struct_t_network_info_af9c1bd4a0bd9c92244377526eb17a176}\label{struct_t_network_info_af9c1bd4a0bd9c92244377526eb17a176}} 
+\index{T\+Network\+Info@{T\+Network\+Info}!node\+\_\+url\+\_\+ptr@{node\+\_\+url\+\_\+ptr}}
+\index{node\+\_\+url\+\_\+ptr@{node\+\_\+url\+\_\+ptr}!T\+Network\+Info@{T\+Network\+Info}}
+\subsubsection{\texorpdfstring{node\+\_\+url\+\_\+ptr}{node\_url\_ptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}}$\ast$ node\+\_\+url\+\_\+ptr}
+
+
+
+U\+RL of the blockchain node, e.\+g. \char`\"{}http\+://a.\+b.\+com\+:8545\char`\"{}. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h}{boattypes.\+h}}\end{DoxyCompactItemize}

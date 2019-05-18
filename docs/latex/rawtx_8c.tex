@@ -1,0 +1,293 @@
+\hypertarget{rawtx_8c}{}\section{rawtx.\+c File Reference}
+\label{rawtx_8c}\index{rawtx.\+c@{rawtx.\+c}}
+
+
+Perform R\+AW transaction.  
+
+
+{\ttfamily \#include \char`\"{}wallet/boattypes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utilities/utility.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/boatwallet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}web3/web3intf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/rawtx.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rawtx_8c_a752aa2ff60fb540002f2e0a2cc8cff84}{R\+L\+P\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+H\+E\+A\+D\+ER}}~9
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$ \mbox{\hyperlink{rawtx_8c_a65f6e1d12338665ac6bb53d9e27efc77}{Rlp\+Field\+Encode}} (\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$rlp\+\_\+output\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$field\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} field\+\_\+len, \mbox{\hyperlink{rawtx_8h_a1561215e29be84d582feeddb230df672}{Rlp\+Field\+Type}} field\+\_\+type, \mbox{\hyperlink{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}{B\+O\+A\+T\+B\+O\+OL}} prefix\+\_\+header\+\_\+to\+\_\+field)
+\begin{DoxyCompactList}\small\item\em Encode a field as per R\+LP encoding rules. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{rawtx_8c_ace854672494118228f050e124ef6c8e1}{Tx\+Rlp\+Stream\+Size\+Estimate}} (\mbox{\hyperlink{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}{Tx\+Info}} $\ast$tx\+\_\+info\+\_\+ctx\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em This function estimates the encoded R\+LP stream\textquotesingle{}s size for a transaction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{rawtx_8c_a165bcf01e2d217ae91827066e28c1ccc}{Rawtx\+Perform}} (\mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} $\ast$boat\+\_\+wallet\+\_\+info\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_aba881d3fd2f4a3f7d23235a353716879}{B\+O\+A\+T\+\_\+\+I\+N\+O\+UT}} \mbox{\hyperlink{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}{Tx\+Info}} $\ast$tx\+\_\+info\+\_\+ctx\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Construct a raw transacton and encodes it as per R\+LP rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Perform R\+AW transaction. 
+
+\mbox{\hyperlink{rawtx_8c}{rawtx.\+c}} contains functions to construct a raw transaction, serialize it with R\+LP, perform it and wait for its receipt. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rawtx_8c_a752aa2ff60fb540002f2e0a2cc8cff84}\label{rawtx_8c_a752aa2ff60fb540002f2e0a2cc8cff84}} 
+\index{rawtx.\+c@{rawtx.\+c}!R\+L\+P\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+H\+E\+A\+D\+ER@{R\+L\+P\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+H\+E\+A\+D\+ER}}
+\index{R\+L\+P\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+H\+E\+A\+D\+ER@{R\+L\+P\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+H\+E\+A\+D\+ER}!rawtx.\+c@{rawtx.\+c}}
+\subsubsection{\texorpdfstring{R\+L\+P\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+H\+E\+A\+D\+ER}{RLP\_STREAM\_RESERVE\_HEADER}}
+{\footnotesize\ttfamily \#define R\+L\+P\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+H\+E\+A\+D\+ER~9}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rawtx_8c_a165bcf01e2d217ae91827066e28c1ccc}\label{rawtx_8c_a165bcf01e2d217ae91827066e28c1ccc}} 
+\index{rawtx.\+c@{rawtx.\+c}!Rawtx\+Perform@{Rawtx\+Perform}}
+\index{Rawtx\+Perform@{Rawtx\+Perform}!rawtx.\+c@{rawtx.\+c}}
+\subsubsection{\texorpdfstring{Rawtx\+Perform()}{RawtxPerform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} Rawtx\+Perform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} $\ast$}]{boat\+\_\+wallet\+\_\+info\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_aba881d3fd2f4a3f7d23235a353716879}{B\+O\+A\+T\+\_\+\+I\+N\+O\+UT}} \mbox{\hyperlink{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}{Tx\+Info}} $\ast$}]{tx\+\_\+info\+\_\+ctx\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Construct a raw transacton and encodes it as per R\+LP rules. 
+
+
+
+ Function\+: \mbox{\hyperlink{rawtx_8c_a165bcf01e2d217ae91827066e28c1ccc}{Rawtx\+Perform()}} \begin{DoxyVerb}This function constructs a raw transacton and encodes it as per RLP rules.
+
+AN INTRODUCTION OF HOW RAW TRANSACTION IS CONSTRUCTED
+
+[FIELDS IN A RAW TRANSACTION]
+
+A RAW transaction consists of following 9 fields:
+    1. nonce;
+    2. gasprice;
+    3. gaslimit;
+    4. recipient;
+    5. value(optional);
+    6. data(optional);
+    7. v;
+    8. signature.r;
+    9. signature.s;
+
+These transaction fields are encoded as elements of a LIST in above order
+as per RLP encoding rules. "LIST" is a type of RLP field.
+
+
+EXCEPTION:
+
+For Ethereum any fields (except <recipient>) having a value of zero are
+treated as NULL stream in RLP encoding instead of 1-byte-size stream whose
+value is 0. For example, nonce = 0 is encoded as 0x80 which represents NULL
+instead of 0x00 which represents a 1-byte-size stream whose value is 0.
+
+
+[HOW TO CONSTRUCT A RAW TRANSACTION]
+
+A RAW transaction is constructed in 4 steps in different ways according to
+the blockchain network's EIP-155 compatibility. 
+
+See following article for details about EIP-155: 
+https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md
+
+
+CASE 1: If the blockchain network does NOT support EIP-155:
+
+    Step 1: Encode a LIST containing only the first 6 fields.
+    Step 2: Calculate SHA3 hash of the encoded stream in Step 1.
+    Step 3: Sign the hash in Step 2. This generates r, s and parity (0 or 1) for recovery identifier.
+    Step 4: Encode a LIST containing all 9 fields, where
+            First 6 fields are same as what they are;
+            v = parity + 27, where parity is given in Step 3;
+            r and s are given in Step 3.
+
+
+CASE 2: If the blockchain network DOES support EIP-155:
+
+    Step 1: Encode all 9 fields (a LIST containing all 9 fields), where
+            First 6 fields are same as what they are;
+            v = Chain ID;
+            r = 0;
+            s = 0;
+
+            NOTE: zero value fields other than <recipient> are encoded as NULL stream.
+
+    Step 2: Same as CASE 1.
+    Step 3: Same as CASE 1.
+
+    Step 4: Encode a LIST containing all 9 fields, where
+            First 6 fields are same as what they are;
+            v = Chain ID * 2 + parity + 35, where parity is given in Step 3;
+            r and s are given in Step 3.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if successful. Otherwise it returns B\+O\+A\+T\+\_\+\+E\+R\+R\+OR.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em boat\+\_\+wallet\+\_\+info\+\_\+ptr} & A pointer to wallet infor structure.\\
+\hline
+\mbox{\tt in}  & {\em tx\+\_\+info\+\_\+ctx\+\_\+ptr} & A pointer to the context of the transaction. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rawtx_8c_a65f6e1d12338665ac6bb53d9e27efc77}\label{rawtx_8c_a65f6e1d12338665ac6bb53d9e27efc77}} 
+\index{rawtx.\+c@{rawtx.\+c}!Rlp\+Field\+Encode@{Rlp\+Field\+Encode}}
+\index{Rlp\+Field\+Encode@{Rlp\+Field\+Encode}!rawtx.\+c@{rawtx.\+c}}
+\subsubsection{\texorpdfstring{Rlp\+Field\+Encode()}{RlpFieldEncode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}}$\ast$ Rlp\+Field\+Encode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a25bdee88a6bea456316f8cb7fed42138}{B\+O\+A\+T\+\_\+\+O\+UT}} \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{rlp\+\_\+output\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$}]{field\+\_\+ptr,  }\item[{\mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{field\+\_\+len,  }\item[{\mbox{\hyperlink{rawtx_8h_a1561215e29be84d582feeddb230df672}{Rlp\+Field\+Type}}}]{field\+\_\+type,  }\item[{\mbox{\hyperlink{boattypes_8h_aefdb61570c9b3bd96efaac05b5d0f127}{B\+O\+A\+T\+B\+O\+OL}}}]{prefix\+\_\+header\+\_\+to\+\_\+field }\end{DoxyParamCaption})}
+
+
+
+Encode a field as per R\+LP encoding rules. 
+
+
+
+ Function\+: \mbox{\hyperlink{rawtx_8c_a65f6e1d12338665ac6bb53d9e27efc77}{Rlp\+Field\+Encode()}} \begin{DoxyVerb}This function encodes a field as per RLP encoding rules.
+
+The output encoded stream's length varies between <field_len> and
+<field_len> + 9 bytes.
+
+There are 3 possible types of RLP encoding structure as per RLP rules:
+1. encoded = <field>, if field_len is 1
+2. encoded = <1 byte prefix>|<field>, if field_len is in range [0,55] except 1
+3. encoded = <1 byte prefix>|<field_len>|<field>, if field_len >= 56
+where "|" means concatenaion.
+
+NOTE: In Case 3, <field_len> is represented in bigendian with leading zeros
+      trimed. For example, 0x00000123 is represented as {0x01,0x23} in
+      memory from low byte address to high byte address and sizeof(field_len)
+      is 2 bytes.
+
+The maximum sizeof(field_len) RLP rules allowing is 8 bytes, which means the
+maximum length of a field is 2^64 - 1 bytes. Thus in maximum case the total
+length of the encoded output stream is (9 + field_len), including:
+<1 byte prefix> + <8 bytes field_len> + <field_len bytes of field data>.
+
+Yet because the length of a field is reasonably up to some kilo-bytes, thus
+sizeof(field_len) is typically 1 or 2 bytes.
+
+For simplicity, it's safe to allocate at least (9 + field_len) bytes to
+hold the output encoded result.
+
+
+
+RESTRICTION:
+Though RLP rules allow field length to be up to 2^64 - 1 bytes, this function
+restricts field length to no more than BOAT_REASONABLE_MAX_LEN bytes.
+
+
+RESTRICTION:
+This function doesn't support nested structure. To encode a nested
+structure, the caller should split it into multiple steps.
+
+
+Especially for a basic LIST structure such as [str0, str1], which is a LIST
+nesting 2 string elements, there is a way to improve performance.
+
+Basically the caller should split it into 3 steps:
+    Step 1. encoded_a = encode(str1);
+    Step 2. encoded_b = encode(str2);
+    Step 3. encoded_result = encode([encoded_a | encoded_b]);
+
+To reduce the memory usage and avoid unnecessary memory copy, it's desired
+to place encoded_a and encoded_b continuously in memory and encode only the
+LIST header in Step 3 and prefix it to encoded_a|encoded_b. The caller
+should reserve at least 9 bytes for the LIST header. Thus the typical
+process looks like:
+
+    Step 0   Reserve 9 bytes at the beginning of the RLP output buffer.
+             |  9 bytes  |
+
+    Step 1.1 Calculate RLP header of str1 and save it after the 9 reserved
+             bytes.
+             |  9 bytes  | header1 |
+
+    Step 1.2 Copy str1 to RLP output buffer following its header.
+             |  9 bytes  | header1 | str1 |
+
+    Step 2   Repeat similar steps for str2 and save it in RLP output buffer
+             following str1.
+             |  9 bytes  | header1 |str1 | header2 | str2 |
+
+    Step 3   Encode LIST header and save it in RLP output buffer before
+             header1. RLP stream encoded in Step 1 and 2 are not copied.
+             |LIST header| header1 |str1 | header2 | str2 |
+
+This function takes an argument <prefix_header_to_field> to control the
+behavior. If <prefix_header_to_field> is BOAT_TRUE, the header of <field_ptr>
+is encoded and prefixed to <field_ptr>. The caller should MAKE SURE there
+are at least 9 bytes reserved before the address specified by <field_ptr>.
+
+To avoid any accidently misuse of <prefix_header_to_field>, if it's set
+BOAT_TRUE, <rlp_output_ptr> MUST be NULL.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+If $<$prefix\+\_\+header\+\_\+to\+\_\+field$>$ is B\+O\+A\+T\+\_\+\+F\+A\+L\+SE\+:~\newline
+ This function returns the address of the byte immediately after the last encoded R\+LP byte if the encoding is successful.~\newline
+~\newline
+ If $<$prefix\+\_\+header\+\_\+to\+\_\+field$>$ is B\+O\+A\+T\+\_\+\+T\+R\+UE\+:~\newline
+ This function returns the address of the first byte of the encoded header if the encoding is successful.~\newline
+~\newline
+ If encoding fails, it returns N\+U\+LL.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em rlp\+\_\+output\+\_\+ptr} & The beginning address of the space to store encoded R\+LP stream. The caller should allocate enough space according to above description. If $<$prefix\+\_\+header\+\_\+to\+\_\+field$>$ is B\+O\+A\+T\+\_\+\+T\+R\+UE, this argument M\+U\+ST be N\+U\+LL.\\
+\hline
+\mbox{\tt in}  & {\em field\+\_\+ptr} & The address of the field to encode.\\
+\hline
+\mbox{\tt in}  & {\em field\+\_\+len} & The length of $<$field\+\_\+ptr$>$ in bytes.\\
+\hline
+\mbox{\tt in}  & {\em field\+\_\+type} & Either R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG or R\+L\+P\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+ST.\\
+\hline
+\mbox{\tt in}  & {\em prefix\+\_\+header\+\_\+to\+\_\+field} & B\+O\+A\+T\+\_\+\+T\+U\+RE\+: Only encode header of the field and prefix the header to $<$field\+\_\+ptr$>$. To avoid accidently setting it B\+O\+A\+T\+\_\+\+T\+R\+UE, $<$rlp\+\_\+output\+\_\+ptr$>$ M\+U\+ST be N\+U\+LL in this case. It\textquotesingle{}s used for encoding nested L\+I\+ST.~\newline
+ B\+O\+A\+T\+\_\+\+F\+A\+L\+SE\+: Normally encode header and field content. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rawtx_8c_ace854672494118228f050e124ef6c8e1}\label{rawtx_8c_ace854672494118228f050e124ef6c8e1}} 
+\index{rawtx.\+c@{rawtx.\+c}!Tx\+Rlp\+Stream\+Size\+Estimate@{Tx\+Rlp\+Stream\+Size\+Estimate}}
+\index{Tx\+Rlp\+Stream\+Size\+Estimate@{Tx\+Rlp\+Stream\+Size\+Estimate}!rawtx.\+c@{rawtx.\+c}}
+\subsubsection{\texorpdfstring{Tx\+Rlp\+Stream\+Size\+Estimate()}{TxRlpStreamSizeEstimate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} Tx\+Rlp\+Stream\+Size\+Estimate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{boattypes_8h_a8cfb9fbf3607cf4a6e91f36e5796b743}{Tx\+Info}} $\ast$}]{tx\+\_\+info\+\_\+ctx\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+This function estimates the encoded R\+LP stream\textquotesingle{}s size for a transaction. 
+
+
+
+ Function\+: \mbox{\hyperlink{rawtx_8c_ace854672494118228f050e124ef6c8e1}{Tx\+Rlp\+Stream\+Size\+Estimate()}} \begin{DoxyVerb}This function estimates the encoded RLP stream's size for a transaction.
+It's safe to allocate a buffer of this size to hold RLP stream.
+
+As per RLP encoding rules an encoded field consists of a header up to 9
+bytes and the field content itself. Thus the maximum possible size of an
+encoded field is <field_len> + 9 bytes.
+
+A raw transaction consisits 9 fields which are packed in a LIST and thus
+the estimated maximum size is: 
+
+    9 bytes + (9 bytes * 9 fields) + sum of all fields' length
+
+    where the first 9 bytes is the maximum size of the header of the LIST
+    and the following (9 bytes * 9 fields) is the maximum sum of the 9
+    fields' header size.
+
+Because field v,r,s are calculated during constructing the transaction,
+their exact lengthes are unknown before the transaction is signed. Thus
+their lengthes are estimated using their maximum possible length.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns the estimated maximum size of the encoded R\+LP stream of the specified transactions.~\newline
+ If any error is encountered, it returns 0.
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tx\+\_\+info\+\_\+ctx\+\_\+ptr} & A pointer to the transaction context. \\
+\hline
+\end{DoxyParams}

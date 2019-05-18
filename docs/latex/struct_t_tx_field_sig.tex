@@ -1,0 +1,97 @@
+\hypertarget{struct_t_tx_field_sig}{}\section{T\+Tx\+Field\+Sig Struct Reference}
+\label{struct_t_tx_field_sig}\index{T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}}
+
+
+E\+C\+D\+SA signature struct.  
+
+
+
+
+{\ttfamily \#include $<$boattypes.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{UINT8}} \mbox{\hyperlink{struct_t_tx_field_sig_acb08684041d47cfe393d93c526cf2b2b}{r32B}} \mbox{[}32\mbox{]}\\
+\>\>\>{\em r part of the signature }\\
+\>\>\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{UINT8}} \mbox{\hyperlink{struct_t_tx_field_sig_a2ca2eee9b55a6b19f664e33950a3c305}{s32B}} \mbox{[}32\mbox{]}\\
+\>\>\>{\em s part of the signature }\\
+\>\} \\
+\>\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{UINT8}} \mbox{\hyperlink{struct_t_tx_field_sig_a6ed37aa000b28da3bee862b39e3e86a4}{sig64B}} \mbox{[}64\mbox{]}\\
+\>\>\>{\em consecutive signature composed of r+s }\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} \mbox{\hyperlink{struct_t_tx_field_sig_ac004600ddcf7a30d14806ef814ee7893}{r\+\_\+len}}
+\begin{DoxyCompactList}\small\item\em Effective length of r, either 0 for unsigned tx and 32 for signed tx. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} \mbox{\hyperlink{struct_t_tx_field_sig_a36dbce8d788801d4e5542477c95172bb}{s\+\_\+len}}
+\begin{DoxyCompactList}\small\item\em Effective length of s, either 0 for unsigned tx and 32 for signed tx. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\+C\+D\+SA signature struct. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_t_tx_field_sig_a76096ebc656ff5d7afa9aae3e11a03e4}\label{struct_t_tx_field_sig_a76096ebc656ff5d7afa9aae3e11a03e4}} 
+\subsubsection{\texorpdfstring{"@1}{@1}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{struct_t_tx_field_sig_acb08684041d47cfe393d93c526cf2b2b}\label{struct_t_tx_field_sig_acb08684041d47cfe393d93c526cf2b2b}} 
+\index{T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}!r32B@{r32B}}
+\index{r32B@{r32B}!T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}}
+\subsubsection{\texorpdfstring{r32B}{r32B}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} r32B\mbox{[}32\mbox{]}}
+
+
+
+r part of the signature 
+
+\mbox{\Hypertarget{struct_t_tx_field_sig_ac004600ddcf7a30d14806ef814ee7893}\label{struct_t_tx_field_sig_ac004600ddcf7a30d14806ef814ee7893}} 
+\index{T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}!r\+\_\+len@{r\+\_\+len}}
+\index{r\+\_\+len@{r\+\_\+len}!T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}}
+\subsubsection{\texorpdfstring{r\+\_\+len}{r\_len}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} r\+\_\+len}
+
+
+
+Effective length of r, either 0 for unsigned tx and 32 for signed tx. 
+
+\mbox{\Hypertarget{struct_t_tx_field_sig_a2ca2eee9b55a6b19f664e33950a3c305}\label{struct_t_tx_field_sig_a2ca2eee9b55a6b19f664e33950a3c305}} 
+\index{T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}!s32B@{s32B}}
+\index{s32B@{s32B}!T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}}
+\subsubsection{\texorpdfstring{s32B}{s32B}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} s32B\mbox{[}32\mbox{]}}
+
+
+
+s part of the signature 
+
+\mbox{\Hypertarget{struct_t_tx_field_sig_a36dbce8d788801d4e5542477c95172bb}\label{struct_t_tx_field_sig_a36dbce8d788801d4e5542477c95172bb}} 
+\index{T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}!s\+\_\+len@{s\+\_\+len}}
+\index{s\+\_\+len@{s\+\_\+len}!T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}}
+\subsubsection{\texorpdfstring{s\+\_\+len}{s\_len}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} s\+\_\+len}
+
+
+
+Effective length of s, either 0 for unsigned tx and 32 for signed tx. 
+
+\mbox{\Hypertarget{struct_t_tx_field_sig_a6ed37aa000b28da3bee862b39e3e86a4}\label{struct_t_tx_field_sig_a6ed37aa000b28da3bee862b39e3e86a4}} 
+\index{T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}!sig64B@{sig64B}}
+\index{sig64B@{sig64B}!T\+Tx\+Field\+Sig@{T\+Tx\+Field\+Sig}}
+\subsubsection{\texorpdfstring{sig64B}{sig64B}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} sig64B\mbox{[}64\mbox{]}}
+
+
+
+consecutive signature composed of r+s 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{boattypes_8h}{boattypes.\+h}}\end{DoxyCompactItemize}
