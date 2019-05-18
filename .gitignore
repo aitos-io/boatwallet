@@ -1,3 +1,10 @@
+# build directories
+/lib
+/build
+
+# Keystore files
+*.sav
+
 # Prerequisites
 *.d
 
