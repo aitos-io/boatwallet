@@ -14,14 +14,16 @@ typically runs a lightweight linux on its application processor or an RTOS on a
 processor shared with communication protocol, and high level languages are
 seldom supported.
 
-BoAT SDK is instead designed for IoT devices running linux. It's written in C
-and easy to integrate into traditional lightweight IoT application. It depends
-on very few third-party libraries. It doesn't require any third-party package
-being imported on-line at runtime. It's important for cellular IoT devices
-because cellular operator usually charges by traffic volume.
+BoAT SDK is instead designed for IoT devices running linux or RTOS. It's written
+in C and easy to integrate into traditional lightweight IoT application. It
+depends on very few third-party libraries. It doesn't require any third-party
+package being imported on-line at runtime. It's important for cellular IoT
+devices because cellular operator usually charges by traffic volume.
 
 
 ## Dependency
+
+Current BoAT SDK is only available for linux. An RTOS version is in plan.
 
 1. gcc is required. On Windows Cygwin is required. For cross-compiling, an
 appropriate gcc tool chain meeting the target is required.
