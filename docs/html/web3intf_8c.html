@@ -128,6 +128,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a68e5b31310d0023ebf4b4403e87fe4b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="boattypes_8h.html#aebb9e13210d88d43e32e735ada43a425">CHAR</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web3intf_8c.html#a68e5b31310d0023ebf4b4403e87fe4b7">web3_eth_gasPrice</a> (const char *node_url_str)</td></tr>
 <tr class="memdesc:a68e5b31310d0023ebf4b4403e87fe4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform eth_gasPrice RPC method and get the current price per gas in wei of the specified network.  <a href="#a68e5b31310d0023ebf4b4403e87fe4b7">More...</a><br /></td></tr>
 <tr class="separator:a68e5b31310d0023ebf4b4403e87fe4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d417a933aa22d1d1034feda5fa23e98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="boattypes_8h.html#aebb9e13210d88d43e32e735ada43a425">CHAR</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web3intf_8c.html#a5d417a933aa22d1d1034feda5fa23e98">web3_eth_getBalance</a> (const char *node_url_str, const <a class="el" href="web3intf_8h.html#ac2dc027bd673cfe38ee124d17eb9cdc9">Param_eth_getBalance</a> *param_ptr)</td></tr>
+<tr class="memdesc:a5d417a933aa22d1d1034feda5fa23e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform eth_getBalance RPC method and get the balance of the specified account.  <a href="#a5d417a933aa22d1d1034feda5fa23e98">More...</a><br /></td></tr>
+<tr class="separator:a5d417a933aa22d1d1034feda5fa23e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae65319be9cc0257c333a14ed4ab504cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="boattypes_8h.html#aebb9e13210d88d43e32e735ada43a425">CHAR</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web3intf_8c.html#ae65319be9cc0257c333a14ed4ab504cf">web3_eth_sendRawTransaction</a> (const char *node_url_str, const <a class="el" href="web3intf_8h.html#afa9fbcf8be2b8e8901a1725cf91d0287">Param_eth_sendRawTransaction</a> *param_ptr)</td></tr>
 <tr class="memdesc:ae65319be9cc0257c333a14ed4ab504cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform eth_sendRawTransaction RPC method.  <a href="#ae65319be9cc0257c333a14ed4ab504cf">More...</a><br /></td></tr>
 <tr class="separator:ae65319be9cc0257c333a14ed4ab504cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,6 +331,75 @@ for later use.
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">node_url_str</td><td>A string indicating the URL of blockchain node. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5d417a933aa22d1d1034feda5fa23e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d417a933aa22d1d1034feda5fa23e98">&#9670;&nbsp;</a></span>web3_eth_getBalance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="boattypes_8h.html#aebb9e13210d88d43e32e735ada43a425">CHAR</a>* web3_eth_getBalance </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>node_url_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="web3intf_8h.html#ac2dc027bd673cfe38ee124d17eb9cdc9">Param_eth_getBalance</a> *&#160;</td>
+          <td class="paramname"><em>param_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform eth_getBalance RPC method and get the balance of the specified account. </p>
+<hr/>
+<p> Function: <a class="el" href="web3intf_8c.html#a5d417a933aa22d1d1034feda5fa23e98" title="Perform eth_getBalance RPC method and get the balance of the specified account. ">web3_eth_getBalance()</a> </p><pre class="fragment">This function calls RPC method eth_getBalance and returns a string
+representing the balance of the specified address.
+
+The typical RPC REQUEST is similar to:
+{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xc94770007dda54cF92009BFF0dE90c06F603a09f", "latest"],"id":1}
+
+The typical RPC RESPONSE from blockchain node is similar to:
+{"id":1,"jsonrpc": "2.0","result": "0x0234c8a3397aab58"}
+
+
+This function takes 2 arguments. The first is the URL to the blockchian
+node. Protocol and port must be explicitly specified in URL, such as
+"http://127.0.0.1:7545". The second argument is a struct containing all
+RPC call parameters as specified by ethereum.
+
+See following wiki for details about RPC parameters and return value:
+https://github.com/ethereum/wiki/wiki/JSON-RPC#json-rpc-api
+
+This function returns a string representing the item "result" of the
+RESPONSE from the RPC call. The buffer storing the string is maintained by
+web3intf and the caller shall NOT modify it, free it or save the address
+for later use.
+</pre><dl class="section return"><dt>Returns</dt><dd>This function returns a string representing the balance (Unit: wei, i.e.<br />
+ 1e-18 ETH) of the address specified in &lt;param_ptr&gt;.<br />
+ For example, an address that has a balance of 1024 wei will return "0x400".<br />
+ Note the leading zeros are trimmed as specified in ethereum RPC interface.<br />
+ If any error occurs or RPC call timeouts, it returns NULL.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node_url_str</td><td>A string indicating the URL of blockchain node.</td></tr>
+    <tr><td class="paramname">param_ptr</td><td>The parameters of the eth_getTransactionCount RPC method.<br />
+ address_str:<br />
+ DATA, 20 Bytes - address to check for balance.<br />
+ block_num_str:<br />
+ QUANTITY|TAG - a string of integer block number, or "latest", "earliest" or "pending" </td></tr>
   </table>
   </dd>
 </dl>

@@ -236,32 +236,5 @@ BOAT_RESULT random_stream(UINT8 *buf, UINT16 len)
 	return BOAT_SUCCESS;
 }
 
-#if 0
-int main(void)
-{
-    unsigned int rand32;
-    unsigned long long rand64;
-    unsigned char *rand256_ptr;
-    int i;
-    
-    rand_seed_init();
-    
-    rand32 = random32();
-    rand64 = random64();
-    rand256_ptr = random256();
-    
-    #ifdef DEBUG_LOG
-        printf("random32(): %08x.\n", rand32);
-        printf("random64(): %016lx.\n", rand64);
-        printf("random256():\n");
-        for( i = 0; i < 32; i++ )
-        {
-            printf("%02x", rand256_ptr[i]);
-        }
-        putchar('\n');
-    #endif
-    
-}
-#endif
 
 #endif // else of #if BOAT_USE_OPENSSL == 1

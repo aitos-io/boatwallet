@@ -6,6 +6,7 @@ var searchData=
   ['tnetworkinfo',['TNetworkInfo',['../struct_t_network_info.html',1,'']]],
   ['to',['to',['../struct_t_param__eth__call.html#addbf2c889591864d4b2334493e6a3041',1,'TParam_eth_call']]],
   ['tparam_5feth_5fcall',['TParam_eth_call',['../struct_t_param__eth__call.html',1,'']]],
+  ['tparam_5feth_5fgetbalance',['TParam_eth_getBalance',['../struct_t_param__eth__get_balance.html',1,'']]],
   ['tparam_5feth_5fgetstorageat',['TParam_eth_getStorageAt',['../struct_t_param__eth__get_storage_at.html',1,'']]],
   ['tparam_5feth_5fgettransactioncount',['TParam_eth_getTransactionCount',['../struct_t_param__eth__get_transaction_count.html',1,'']]],
   ['tparam_5feth_5fgettransactionreceipt',['TParam_eth_getTransactionReceipt',['../struct_t_param__eth__get_transaction_receipt.html',1,'']]],

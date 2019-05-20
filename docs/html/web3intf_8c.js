@@ -4,6 +4,7 @@ var web3intf_8c =
     [ "WEB3_RESULT_STRING_BUF_MAX_SIZE", "web3intf_8c.html#a958d511d48bc2c163e511c43b8c5e695", null ],
     [ "web3_eth_call", "web3intf_8c.html#a7116548e501f02dd2d2cda471a1dae4f", null ],
     [ "web3_eth_gasPrice", "web3intf_8c.html#a68e5b31310d0023ebf4b4403e87fe4b7", null ],
+    [ "web3_eth_getBalance", "web3intf_8c.html#a5d417a933aa22d1d1034feda5fa23e98", null ],
     [ "web3_eth_getStorageAt", "web3intf_8c.html#a5bded37fe47d7967324a7c453752a58f", null ],
     [ "web3_eth_getTransactionCount", "web3intf_8c.html#a6561f38f788b3ebe93c66a1db255377a", null ],
     [ "web3_eth_getTransactionReceiptStatus", "web3intf_8c.html#a114d1baf518f248dfad3d64ccca67f81", null ],

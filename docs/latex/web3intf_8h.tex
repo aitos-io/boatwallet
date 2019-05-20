@@ -10,6 +10,8 @@ Web3 interface header file.
 \item 
 struct \mbox{\hyperlink{struct_t_param__eth__get_transaction_count}{T\+Param\+\_\+eth\+\_\+get\+Transaction\+Count}}
 \begin{DoxyCompactList}\small\item\em Parameter for \mbox{\hyperlink{web3intf_8c_a6561f38f788b3ebe93c66a1db255377a}{web3\+\_\+eth\+\_\+get\+Transaction\+Count()}} \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_param__eth__get_balance}{T\+Param\+\_\+eth\+\_\+get\+Balance}}
+\begin{DoxyCompactList}\small\item\em Parameter for \mbox{\hyperlink{web3intf_8c_a5d417a933aa22d1d1034feda5fa23e98}{web3\+\_\+eth\+\_\+get\+Balance()}} \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct_t_param__eth__send_raw_transaction}{T\+Param\+\_\+eth\+\_\+send\+Raw\+Transaction}}
 \begin{DoxyCompactList}\small\item\em Parameter for \mbox{\hyperlink{web3intf_8c_ae65319be9cc0257c333a14ed4ab504cf}{web3\+\_\+eth\+\_\+send\+Raw\+Transaction()}} \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct_t_param__eth__get_storage_at}{T\+Param\+\_\+eth\+\_\+get\+Storage\+At}}
@@ -23,6 +25,8 @@ struct \mbox{\hyperlink{struct_t_param__eth__call}{T\+Param\+\_\+eth\+\_\+call}}
 \item 
 typedef struct \mbox{\hyperlink{struct_t_param__eth__get_transaction_count}{T\+Param\+\_\+eth\+\_\+get\+Transaction\+Count}} \mbox{\hyperlink{web3intf_8h_af60968cddc872b9f87fbfa4f177c7cc6}{Param\+\_\+eth\+\_\+get\+Transaction\+Count}}
 \begin{DoxyCompactList}\small\item\em Parameter for \mbox{\hyperlink{web3intf_8c_a6561f38f788b3ebe93c66a1db255377a}{web3\+\_\+eth\+\_\+get\+Transaction\+Count()}} \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_t_param__eth__get_balance}{T\+Param\+\_\+eth\+\_\+get\+Balance}} \mbox{\hyperlink{web3intf_8h_ac2dc027bd673cfe38ee124d17eb9cdc9}{Param\+\_\+eth\+\_\+get\+Balance}}
+\begin{DoxyCompactList}\small\item\em Parameter for \mbox{\hyperlink{web3intf_8c_a5d417a933aa22d1d1034feda5fa23e98}{web3\+\_\+eth\+\_\+get\+Balance()}} \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{struct_t_param__eth__send_raw_transaction}{T\+Param\+\_\+eth\+\_\+send\+Raw\+Transaction}} \mbox{\hyperlink{web3intf_8h_afa9fbcf8be2b8e8901a1725cf91d0287}{Param\+\_\+eth\+\_\+send\+Raw\+Transaction}}
 \begin{DoxyCompactList}\small\item\em Parameter for \mbox{\hyperlink{web3intf_8c_ae65319be9cc0257c333a14ed4ab504cf}{web3\+\_\+eth\+\_\+send\+Raw\+Transaction()}} \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{struct_t_param__eth__get_storage_at}{T\+Param\+\_\+eth\+\_\+get\+Storage\+At}} \mbox{\hyperlink{web3intf_8h_a60193c7d198da76496d0c20065cc1a45}{Param\+\_\+eth\+\_\+get\+Storage\+At}}
@@ -38,6 +42,8 @@ typedef struct \mbox{\hyperlink{struct_t_param__eth__call}{T\+Param\+\_\+eth\+\_
 \begin{DoxyCompactList}\small\item\em Initialize web3 interface. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$ \mbox{\hyperlink{web3intf_8h_a6561f38f788b3ebe93c66a1db255377a}{web3\+\_\+eth\+\_\+get\+Transaction\+Count}} (const char $\ast$node\+\_\+url\+\_\+str, const \mbox{\hyperlink{web3intf_8h_af60968cddc872b9f87fbfa4f177c7cc6}{Param\+\_\+eth\+\_\+get\+Transaction\+Count}} $\ast$param\+\_\+ptr)
 \begin{DoxyCompactList}\small\item\em Perform eth\+\_\+get\+Transaction\+Count R\+PC method and get the transaction count of the specified account. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$ \mbox{\hyperlink{web3intf_8h_a5d417a933aa22d1d1034feda5fa23e98}{web3\+\_\+eth\+\_\+get\+Balance}} (const char $\ast$node\+\_\+url\+\_\+str, const \mbox{\hyperlink{web3intf_8h_ac2dc027bd673cfe38ee124d17eb9cdc9}{Param\+\_\+eth\+\_\+get\+Balance}} $\ast$param\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Perform eth\+\_\+get\+Balance R\+PC method and get the balance of the specified account. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$ \mbox{\hyperlink{web3intf_8h_ae65319be9cc0257c333a14ed4ab504cf}{web3\+\_\+eth\+\_\+send\+Raw\+Transaction}} (const char $\ast$node\+\_\+url\+\_\+str, const \mbox{\hyperlink{web3intf_8h_afa9fbcf8be2b8e8901a1725cf91d0287}{Param\+\_\+eth\+\_\+send\+Raw\+Transaction}} $\ast$param\+\_\+ptr)
 \begin{DoxyCompactList}\small\item\em Perform eth\+\_\+send\+Raw\+Transaction R\+PC method. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$ \mbox{\hyperlink{web3intf_8h_a68e5b31310d0023ebf4b4403e87fe4b7}{web3\+\_\+eth\+\_\+gas\+Price}} (const char $\ast$node\+\_\+url\+\_\+str)
@@ -65,6 +71,16 @@ Web3 interface header file.
 
 
 Parameter for \mbox{\hyperlink{web3intf_8c_a7116548e501f02dd2d2cda471a1dae4f}{web3\+\_\+eth\+\_\+call()}} 
+
+\mbox{\Hypertarget{web3intf_8h_ac2dc027bd673cfe38ee124d17eb9cdc9}\label{web3intf_8h_ac2dc027bd673cfe38ee124d17eb9cdc9}} 
+\index{web3intf.\+h@{web3intf.\+h}!Param\+\_\+eth\+\_\+get\+Balance@{Param\+\_\+eth\+\_\+get\+Balance}}
+\index{Param\+\_\+eth\+\_\+get\+Balance@{Param\+\_\+eth\+\_\+get\+Balance}!web3intf.\+h@{web3intf.\+h}}
+\subsubsection{\texorpdfstring{Param\+\_\+eth\+\_\+get\+Balance}{Param\_eth\_getBalance}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_t_param__eth__get_balance}{T\+Param\+\_\+eth\+\_\+get\+Balance}} \mbox{\hyperlink{web3intf_8h_ac2dc027bd673cfe38ee124d17eb9cdc9}{Param\+\_\+eth\+\_\+get\+Balance}}}
+
+
+
+Parameter for \mbox{\hyperlink{web3intf_8c_a5d417a933aa22d1d1034feda5fa23e98}{web3\+\_\+eth\+\_\+get\+Balance()}} 
 
 \mbox{\Hypertarget{web3intf_8h_a60193c7d198da76496d0c20065cc1a45}\label{web3intf_8h_a60193c7d198da76496d0c20065cc1a45}} 
 \index{web3intf.\+h@{web3intf.\+h}!Param\+\_\+eth\+\_\+get\+Storage\+At@{Param\+\_\+eth\+\_\+get\+Storage\+At}}
@@ -235,6 +251,61 @@ This function returns a string representing the current price per gas in~\newlin
 
 \begin{DoxyParams}{Parameters}
 {\em node\+\_\+url\+\_\+str} & A string indicating the U\+RL of blockchain node. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{web3intf_8h_a5d417a933aa22d1d1034feda5fa23e98}\label{web3intf_8h_a5d417a933aa22d1d1034feda5fa23e98}} 
+\index{web3intf.\+h@{web3intf.\+h}!web3\+\_\+eth\+\_\+get\+Balance@{web3\+\_\+eth\+\_\+get\+Balance}}
+\index{web3\+\_\+eth\+\_\+get\+Balance@{web3\+\_\+eth\+\_\+get\+Balance}!web3intf.\+h@{web3intf.\+h}}
+\subsubsection{\texorpdfstring{web3\+\_\+eth\+\_\+get\+Balance()}{web3\_eth\_getBalance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}}$\ast$ web3\+\_\+eth\+\_\+get\+Balance (\begin{DoxyParamCaption}\item[{const char $\ast$}]{node\+\_\+url\+\_\+str,  }\item[{const \mbox{\hyperlink{web3intf_8h_ac2dc027bd673cfe38ee124d17eb9cdc9}{Param\+\_\+eth\+\_\+get\+Balance}} $\ast$}]{param\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Perform eth\+\_\+get\+Balance R\+PC method and get the balance of the specified account. 
+
+
+
+ Function\+: \mbox{\hyperlink{web3intf_8c_a5d417a933aa22d1d1034feda5fa23e98}{web3\+\_\+eth\+\_\+get\+Balance()}} \begin{DoxyVerb}This function calls RPC method eth_getBalance and returns a string
+representing the balance of the specified address.
+
+The typical RPC REQUEST is similar to:
+{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xc94770007dda54cF92009BFF0dE90c06F603a09f", "latest"],"id":1}
+
+The typical RPC RESPONSE from blockchain node is similar to:
+{"id":1,"jsonrpc": "2.0","result": "0x0234c8a3397aab58"}
+
+
+This function takes 2 arguments. The first is the URL to the blockchian
+node. Protocol and port must be explicitly specified in URL, such as
+"http://127.0.0.1:7545". The second argument is a struct containing all
+RPC call parameters as specified by ethereum.
+
+See following wiki for details about RPC parameters and return value:
+https://github.com/ethereum/wiki/wiki/JSON-RPC#json-rpc-api
+
+This function returns a string representing the item "result" of the
+RESPONSE from the RPC call. The buffer storing the string is maintained by
+web3intf and the caller shall NOT modify it, free it or save the address
+for later use.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns a string representing the balance (Unit\+: wei, i.\+e.~\newline
+ 1e-\/18 E\+TH) of the address specified in $<$param\+\_\+ptr$>$.~\newline
+ For example, an address that has a balance of 1024 wei will return \char`\"{}0x400\char`\"{}.~\newline
+ Note the leading zeros are trimmed as specified in ethereum R\+PC interface.~\newline
+ If any error occurs or R\+PC call timeouts, it returns N\+U\+LL.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+url\+\_\+str} & A string indicating the U\+RL of blockchain node.\\
+\hline
+{\em param\+\_\+ptr} & The parameters of the eth\+\_\+get\+Transaction\+Count R\+PC method.~\newline
+ address\+\_\+str\+:~\newline
+ D\+A\+TA, 20 Bytes -\/ address to check for balance.~\newline
+ block\+\_\+num\+\_\+str\+:~\newline
+ Q\+U\+A\+N\+T\+I\+T\+Y$\vert$\+T\+AG -\/ a string of integer block number, or \char`\"{}latest\char`\"{}, \char`\"{}earliest\char`\"{} or \char`\"{}pending\char`\"{} \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{web3intf_8h_a5bded37fe47d7967324a7c453752a58f}\label{web3intf_8h_a5bded37fe47d7967324a7c453752a58f}} 

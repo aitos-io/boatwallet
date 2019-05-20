@@ -29,6 +29,8 @@ void \mbox{\hyperlink{boatwallet_8h_ab64cef2f05546127127c0748fe1bb8db}{Boat\+Wal
 \begin{DoxyCompactList}\small\item\em Generate Private Key. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_a94e1701018d7c436e8e7c94f513ad71d}{Boat\+Wallet\+Check\+Privkey}} (const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} priv\+\_\+key\+\_\+array\mbox{[}32\mbox{]})
 \begin{DoxyCompactList}\small\item\em Check validity of given private key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$ \mbox{\hyperlink{boatwallet_8h_a3fc2cea27e4ed604751cbc11b9577336}{Boat\+Wallet\+Get\+Balance}} (void)
+\begin{DoxyCompactList}\small\item\em Get Balance of the wallet account. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_ab8abfc551f5336818b5165c7d873ba72}{Boat\+Wallet\+Save\+Wallet\+Ex}} (const \mbox{\hyperlink{boattypes_8h_a6d00a783e10dc144bb85768896480377}{Boat\+Wallet\+Info}} $\ast$wallet\+\_\+info\+\_\+ptr, const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$passwd\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} passwd\+\_\+len, const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$file\+\_\+path\+\_\+str)
 \begin{DoxyCompactList}\small\item\em Save specified wallet information to keystore file with A\+ES encryption. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{boattypes_8h_a032dd611b487ea287252cd8bea128df9}{B\+O\+A\+T\+\_\+\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{boatwallet_8h_aed72da36dfd21eef62b3db5c60c74b72}{Boat\+Wallet\+Save\+Wallet}} (const \mbox{\hyperlink{boattypes_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8}} $\ast$passwd\+\_\+ptr, \mbox{\hyperlink{boattypes_8h_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} passwd\+\_\+len, const \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}} $\ast$file\+\_\+path\+\_\+str)
@@ -435,6 +437,37 @@ This function returns B\+O\+A\+T\+\_\+\+S\+U\+C\+C\+E\+SS if private key is succ
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\tt out}  & {\em priv\+\_\+key\+\_\+array} & A 32-\/byte buffer to hold the generated private key. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{boatwallet_8h_a3fc2cea27e4ed604751cbc11b9577336}\label{boatwallet_8h_a3fc2cea27e4ed604751cbc11b9577336}} 
+\index{boatwallet.\+h@{boatwallet.\+h}!Boat\+Wallet\+Get\+Balance@{Boat\+Wallet\+Get\+Balance}}
+\index{Boat\+Wallet\+Get\+Balance@{Boat\+Wallet\+Get\+Balance}!boatwallet.\+h@{boatwallet.\+h}}
+\subsubsection{\texorpdfstring{Boat\+Wallet\+Get\+Balance()}{BoatWalletGetBalance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{boattypes_8h_aebb9e13210d88d43e32e735ada43a425}{C\+H\+AR}}$\ast$ Boat\+Wallet\+Get\+Balance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Balance of the wallet account. 
+
+
+
+ Function\+: \mbox{\hyperlink{boatwallet_8c_a3fc2cea27e4ed604751cbc11b9577336}{Boat\+Wallet\+Get\+Balance()}} \begin{DoxyVerb}This function gets the balance of the wallet account from network.
+
+If the account is not avaialable (i.e. the address of the wallet account
+never appears as a recipient in any successful non-zero-value transaction),
+the balance returned is 0. It's not possible to distinguish an unavailable
+account from a zero-balance account.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+This function returns a H\+EX string representing the balance (Unit\+: wei,~\newline
+ i.\+e. 1e-\/18 E\+TH) of the account.~\newline
+ If any error occurs, it returns N\+U\+LL.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em This} & function doesn\textquotesingle{}t take any argument. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{boatwallet_8h_a300836e4dbdd8f2f1095eb81c3c5df8a}\label{boatwallet_8h_a300836e4dbdd8f2f1095eb81c3c5df8a}} 

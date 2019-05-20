@@ -12,6 +12,7 @@ var boatwallet_8c =
     [ "BoatWalletCheckPrivkey", "boatwallet_8c.html#a94e1701018d7c436e8e7c94f513ad71d", null ],
     [ "BoatWalletDeInit", "boatwallet_8c.html#ab64cef2f05546127127c0748fe1bb8db", null ],
     [ "BoatWalletGeneratePrivkey", "boatwallet_8c.html#a0fa905e6ed835414803b0bafa9c70a7f", null ],
+    [ "BoatWalletGetBalance", "boatwallet_8c.html#a3fc2cea27e4ed604751cbc11b9577336", null ],
     [ "BoatWalletInit", "boatwallet_8c.html#a300836e4dbdd8f2f1095eb81c3c5df8a", null ],
     [ "BoatWalletLoadWallet", "boatwallet_8c.html#aa6c26cfba6f4d24e38886b8c97caf953", null ],
     [ "BoatWalletLoadWalletEx", "boatwallet_8c.html#aefce86dec7e8105d27a2e77d3e8e03fd", null ],

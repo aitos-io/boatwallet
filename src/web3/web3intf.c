@@ -182,8 +182,6 @@ Function: web3_init()
 *******************************************************************************/
 BOAT_RESULT web3_init(void)
 {
-    unsigned int some_stack_address;
-    
     g_web3_message_id = random32();
     
     return BOAT_SUCCESS;

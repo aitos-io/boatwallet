@@ -5,6 +5,7 @@ var annotated_dup =
     [ "TCurlPortStringWithLen", "struct_t_curl_port_string_with_len.html", "struct_t_curl_port_string_with_len" ],
     [ "TNetworkInfo", "struct_t_network_info.html", "struct_t_network_info" ],
     [ "TParam_eth_call", "struct_t_param__eth__call.html", "struct_t_param__eth__call" ],
+    [ "TParam_eth_getBalance", "struct_t_param__eth__get_balance.html", "struct_t_param__eth__get_balance" ],
     [ "TParam_eth_getStorageAt", "struct_t_param__eth__get_storage_at.html", "struct_t_param__eth__get_storage_at" ],
     [ "TParam_eth_getTransactionCount", "struct_t_param__eth__get_transaction_count.html", "struct_t_param__eth__get_transaction_count" ],
     [ "TParam_eth_getTransactionReceipt", "struct_t_param__eth__get_transaction_receipt.html", "struct_t_param__eth__get_transaction_receipt" ],

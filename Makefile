@@ -92,15 +92,6 @@ export LINK_FLAGS
 
 
 
-#Targets
-#make all: build libboatwallet.a as well as 3rd party libraries
-#make boatwalletlib: Same as make all
-#make demoapp: build demo executable
-#make clean: clean libboatwallet.a and its objects
-#make cleandemo: clean demo executable and objects
-#make clean3rd: clean 3rd party libraries and objects
-#make distclean: clean above 3 ones
-
 all: createdir boatwalletlib hwdeplib thirdlibs demoapp
 
 createdir:
