@@ -72,7 +72,7 @@ else
 endif
 
 # Hardware Target
-HW_TARGET = qc9x07
+HW_TARGET = default
 CC_INC += -I$(BASE_DIR)/hwdep/$(HW_TARGET)
 
 # Combine CFLAGS
