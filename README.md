@@ -66,18 +66,26 @@ boatwallet
 
 ## How to build
 ### To build Boat Wallet libraries with demo application
+，，，
 $make
+，，，
 
 ### To build Boat Wallet libraries only
+，，，
 $make boatwalletlib
 $make hwdeplib
 $make thirdlibs
+，，，
 
 ### To clean everything
+，，，
 $make distclean
+，，，
 
 ### To clean everything except third-party libraries
+，，，
 $make clean
+，，，
 
 
 ## Run the demo application
@@ -85,10 +93,11 @@ $make clean
 ### Run the demo
 To run the demo application, either an Ethereum simulator (e.g. Ganache) or a
 real node of an Ethereum compatible blockchain network must be available.
-
+，，，
 $./build/boatwallet_demo http://IPAddress:Port
 or
 $./build/boatwallet_demo https://IPAddress:Port
+，，，
 
 The parameter following the application executable name is the URL to the
 blockchain node's RPC interface. The exact Protocol (http or https), IP address
@@ -104,8 +113,9 @@ Ethereum network. Ganache is available in both graphics version and command line
 version.
 
 To connect a local Ganache Ethereum Simulator, it typically looks like:
+，，，
 $./build/boatwallet_demo http://127.0.0.1:7545
-
+，，，
 
 If you're connecting to a real Ethereum compatible blockchain node, please make
 sure you know the appropriate parameters (such as gasLimit) of the network and
