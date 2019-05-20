@@ -21,7 +21,7 @@ package being imported on-line at runtime. It's important for cellular IoT
 devices because cellular operator usually charges by traffic volume.
 
 
-## Dependency
+## Dependencies
 
 Current BoAT SDK is only available for linux. An RTOS version is in plan.
 
@@ -168,6 +168,7 @@ boatwallet/lib/libecdsa.a
 boatwallet/lib/libcJSON.a
 boatwallet/lib/libhwdep.a
 -lcurl
+-lcrypto
 ```
 
 
