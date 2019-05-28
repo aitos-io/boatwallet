@@ -24,13 +24,20 @@ SOFTWARE.
 #include <string.h>
 #include <signal.h>
 
+
+// Uncomment following line if it's on target board
+// #define ON_TARGET
+
+#ifdef ON_TARGET
+
+// APIs defined on target board
 extern int DemoEnableGPS(void);
 extern int DemoDisableGPS(void);
 extern char * DemoGetGPSLocation(void);
 
-#define NO_ON_TARGET
+#else
 
-#ifndef ON_TARGET
+// If not on target, simulate +CGPSINFO
 int DemoEnableGPS(void) { return 0; }
 int DemoDisableGPS(void) { return 0; }
 char * DemoGetGPSLocation(void)
@@ -51,7 +58,48 @@ char * DemoGetGPSLocation(void)
 
 static int exit_signal = 0;
 
+// Before test this case, deploy following smart contract and replace
+// contract_address with the actual deployed contract address.
+// See Truffle Suite's documents for how to deploy a smart contract.
+CHAR *contract_address = "0xcfeb869f69431e42cdb54a4f4f105c19c080a601";
 
+// Smart Contract GpsTraceContract (in solidity)
+/*
+pragma solidity >=0.4.16 <0.6.0;
+
+contract GpsTraceContract {
+    address public organizer;
+
+    bytes32[] eventList;
+
+    constructor () public {
+        organizer = msg.sender;
+    }
+    
+    function saveList(bytes32 newEvent) public {
+        eventList.push(newEvent);
+    }
+    
+    function readListLength() public view returns (uint length_) {
+        // ...
+        length_ = eventList.length;
+    }
+
+    function readListByIndex(uint index) public view returns (bytes32 event_) { 
+        // ...
+        if(eventList.length > index) {
+            event_ = eventList[index];
+        }
+    }
+
+
+    function destroy() public {
+        if (msg.sender == organizer) { 
+            selfdestruct(organizer);
+        }
+    }
+}
+*/
 
 BOAT_RESULT CallSaveListSol(CHAR * contract_addr_str, CHAR * string_to_save)
 {
@@ -541,30 +589,6 @@ BOAT_RESULT ParseCGPSINFO(const CHAR *cgpsinfo_str, BOAT_OUT Cgpsinfo *parsed_gp
 
 
 
-
-BOAT_RESULT EthGetStorageAt(CHAR * contract_addr_str)
-{
-    CHAR *storage_content_str;
-    Param_eth_getStorageAt param_eth_getStorageAt;
-
-    if( contract_addr_str == NULL )
-    {
-        return BOAT_ERROR;
-    }
-    
-    param_eth_getStorageAt.address_str = contract_addr_str;
-    param_eth_getStorageAt.position_str = "0x0";
-    param_eth_getStorageAt.block_num_str = "latest";
-    
-    storage_content_str = web3_eth_getStorageAt(g_boat_wallet_info.network_info.node_url_ptr,
-                                                &param_eth_getStorageAt);
-
-    BoatLog(BOAT_LOG_NORMAL, "Storage Content: %s\n", storage_content_str);
-
-    return BOAT_SUCCESS;
-}
-
-
 //CTRL-C:exit main process.
 static void handle_signal(int signum)
 {
@@ -580,7 +604,6 @@ BOAT_RESULT CaseGpsTraceMain(void)
     UINT32 n;
     CHAR *gps_location_ptr;
     CHAR truncated_gps_location_str[32];
-    CHAR *contract_address = "0xcfeb869f69431e42cdb54a4f4f105c19c080a601";
     
 
     //signal-CTRL-C:exit main process.
