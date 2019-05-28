@@ -50,8 +50,7 @@ ifeq ($(TARGETTYPE), "ARM")
     THIRD_LIBS =  $(LIB_DIR)/libecdsa.a \
                   $(LIB_DIR)/libcJSON.a \
                   $(LIB_DIR)/libcurl.so \
-                  $(LIB_DIR)/demo_gps_lib.a \
-                  $(LIB_DIR)/libcore.a
+                  # $(LIB_DIR)/demo_gps_lib.a $(LIB_DIR)/libcore.a # Only for GPS demo on target
     STD_LIBS = -lcrypto
     LINK_FLAGS = -Wl,-Map,$(BUILD_DIR)/boat.map   #-Wl,-L$(LIB_DIR)
 else ifeq ($(TARGETTYPE), "LINUX")

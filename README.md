@@ -105,9 +105,9 @@ $make clean
 To run the demo application, either an Ethereum simulator (e.g. Ganache) or a
 real node of an Ethereum compatible blockchain network must be available.
 ```
-$./build/boatwallet_demo http://IPAddress:Port
+$./build/boatdemo http://IPAddress:Port
 or
-$./build/boatwallet_demo https://IPAddress:Port
+$./build/boatdemo https://IPAddress:Port
 ```
 
 The parameter following the application executable name is the URL to the
@@ -125,7 +125,7 @@ version.
 
 To connect a local Ganache Ethereum Simulator, it typically looks like:
 ```
-$./build/boatwallet_demo http://127.0.0.1:7545
+$./build/boatdemo http://127.0.0.1:7545
 ```
 
 If you're connecting to a real Ethereum compatible blockchain node, please make
