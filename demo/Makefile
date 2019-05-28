@@ -6,7 +6,7 @@ OBJECTS = $(patsubst %.c,$(OBJECTS_DIR)/%.o,$(SOURCES))
 
 
 all: $(OBJECTS_DIR) $(OBJECTS)
-	$(CC) $(CFLAGS) $(LINK_FLAGS) -o $(BUILD_DIR)/boatwallet_demo $(OBJECTS) \
+	$(CC) $(CFLAGS) $(LINK_FLAGS) -o $(BUILD_DIR)/boatdemo $(OBJECTS) \
 		$(LIB_DIR)/libboatwallet.a \
 		$(THIRD_LIBS) \
 		$(LIB_DIR)/libhwdep.a \
@@ -21,4 +21,4 @@ $(OBJECTS_DIR)/%.o:%.c
 
 clean:
 	-rm -f $(OBJECTS)
-	-rm -f $(BUILD_DIR)/boatwallet_demo
+	-rm -f $(BUILD_DIR)/boatdemo

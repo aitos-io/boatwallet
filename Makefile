@@ -49,21 +49,23 @@ ifeq ($(TARGETTYPE), "ARM")
     CC_INC += -I$(THIRD_SRC_DIR)  # for $(THIRD_SRC_DIR)/curl
     THIRD_LIBS =  $(LIB_DIR)/libecdsa.a \
                   $(LIB_DIR)/libcJSON.a \
-                  $(LIB_DIR)/libcurl.so
+                  $(LIB_DIR)/libcurl.so \
+                  $(LIB_DIR)/demo_gps_lib.a \
+                  $(LIB_DIR)/libcore.a
     STD_LIBS = -lcrypto
-    LINK_FLAGS = -Wl,-Map,$(BUILD_DIR)/boatwallet.map   #-Wl,-L$(LIB_DIR)
+    LINK_FLAGS = -Wl,-Map,$(BUILD_DIR)/boat.map   #-Wl,-L$(LIB_DIR)
 else ifeq ($(TARGETTYPE), "LINUX")
     TARGET_SPEC_CFLAGS =
     THIRD_LIBS =  $(LIB_DIR)/libecdsa.a \
                   $(LIB_DIR)/libcJSON.a
     STD_LIBS = -lcurl -lcrypto
-    LINK_FLAGS = -Wl,-Map,$(BUILD_DIR)/boatwallet.map
+    LINK_FLAGS = -Wl,-Map,$(BUILD_DIR)/boat.map
 else ifeq ($(TARGETTYPE), "CYGWIN")
     TARGET_SPEC_CFLAGS =
     THIRD_LIBS =  $(LIB_DIR)/libecdsa.a \
                   $(LIB_DIR)/libcJSON.a
     STD_LIBS = -lcurl -lcrypto
-    LINK_FLAGS = -Wl,-Map,$(BUILD_DIR)/boatwallet.map
+    LINK_FLAGS = -Wl,-Map,$(BUILD_DIR)/boat.map
 else
     TARGET_SPEC_CFLAGS =
     THIRD_LIBS = 
