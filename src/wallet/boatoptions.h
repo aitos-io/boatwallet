@@ -51,9 +51,6 @@ boatoptions.h defines options for compiling.
 #define BOAT_USE_OPENSSL 1
 
 
-// Co-Sign OPTION: Use Co-sign algorithm instead of local sign
-#define BOAT_USE_COSIGN 0
-
 
 // RPC USE OPTION: One and only one RPC_USE option shall be set to 1
 #define RPC_USE_LIBCURL 1
