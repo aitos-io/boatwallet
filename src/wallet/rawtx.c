@@ -731,6 +731,23 @@ BOAT_RESULT RawtxPerform(BoatWalletInfo *boat_wallet_info_ptr, BOAT_INOUT TxInfo
     message_len += (UINT32)(rlp_stream_start_position_ptr + RLP_STREAM_RESERVE_HEADER - rlp_stream_current_position_ptr);
 
 
+
+    // Print transaction recipient to log
+
+    if( 0 == UtilityBin2Hex(
+        rlp_stream_hex_str,
+        tx_info_ctx_ptr->rawtx_fields.recipient,
+        20,
+        BIN2HEX_LEFTTRIM_UFMTDATA,
+        BIN2HEX_PREFIX_0x_YES,
+        BOAT_FALSE
+        ))
+    {
+        strcpy(rlp_stream_hex_str, "NULL");
+    }
+
+    BoatLog(BOAT_LOG_NORMAL, "Transaction to: %s", rlp_stream_hex_str);
+
 #ifdef DEBUG_LOG
 
     // To save memory, re-use rlp_stream_hex_str to print debug information

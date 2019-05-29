@@ -259,7 +259,7 @@ CHAR *web3_eth_getTransactionCount(
     
     if( node_url_str == NULL || param_ptr == NULL)
     {
-        BoatLog(BOAT_LOG_CRITICAL, "Arguments cannot be NULL.");
+        BoatLog(BOAT_LOG_NORMAL, "Arguments cannot be NULL.");
         boat_throw(BOAT_ERROR_NULL_POINTER, web3_eth_getTransactionCount_cleanup);
     }
     
@@ -281,7 +281,7 @@ CHAR *web3_eth_getTransactionCount(
         boat_throw(BOAT_ERROR_RLP_ENCODING_FAIL, web3_eth_getTransactionCount_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "REQUEST: %s", g_web3_json_string_buf);
+    BoatLog(BOAT_LOG_VERBOSE, "REQUEST: %s", g_web3_json_string_buf);
 
     // POST the REQUEST through curl
 
@@ -303,7 +303,7 @@ CHAR *web3_eth_getTransactionCount(
         boat_throw(result, web3_eth_getTransactionCount_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "RESPONSE: %s", rpc_response_str);
+    BoatLog(BOAT_LOG_VERBOSE, "RESPONSE: %s", rpc_response_str);
 
     // Parse RESPONSE and get web3_result item "result"
     result = web3_JSON_parse_item(rpc_response_str, "result");
@@ -391,7 +391,7 @@ CHAR *web3_eth_gasPrice(const char *node_url_str)
     
     if( node_url_str == NULL)
     {
-        BoatLog(BOAT_LOG_CRITICAL, "Arguments cannot be NULL.");
+        BoatLog(BOAT_LOG_NORMAL, "Arguments cannot be NULL.");
         boat_throw(BOAT_ERROR_NULL_POINTER, web3_eth_gasPrice_cleanup);
     }
     
@@ -411,7 +411,7 @@ CHAR *web3_eth_gasPrice(const char *node_url_str)
         boat_throw(BOAT_ERROR_RLP_ENCODING_FAIL, web3_eth_gasPrice_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "REQUEST: %s", g_web3_json_string_buf);
+    BoatLog(BOAT_LOG_VERBOSE, "REQUEST: %s", g_web3_json_string_buf);
 
     // POST the REQUEST through curl
 
@@ -433,7 +433,7 @@ CHAR *web3_eth_gasPrice(const char *node_url_str)
         boat_throw(result, web3_eth_gasPrice_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "RESPONSE: %s", rpc_response_str);
+    BoatLog(BOAT_LOG_VERBOSE, "RESPONSE: %s", rpc_response_str);
 
     // Parse RESPONSE and get web3_result item "result"
     result = web3_JSON_parse_item(rpc_response_str, "result");
@@ -525,7 +525,7 @@ CHAR *web3_eth_getBalance(
     
     if( node_url_str == NULL || param_ptr == NULL)
     {
-        BoatLog(BOAT_LOG_CRITICAL, "Arguments cannot be NULL.");
+        BoatLog(BOAT_LOG_NORMAL, "Arguments cannot be NULL.");
         boat_throw(BOAT_ERROR_NULL_POINTER, web3_eth_getBalance_cleanup);
     }
     
@@ -547,7 +547,7 @@ CHAR *web3_eth_getBalance(
         boat_throw(BOAT_ERROR_RLP_ENCODING_FAIL, web3_eth_getBalance_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "REQUEST: %s", g_web3_json_string_buf);
+    BoatLog(BOAT_LOG_VERBOSE, "REQUEST: %s", g_web3_json_string_buf);
 
     // POST the REQUEST through curl
 
@@ -569,7 +569,7 @@ CHAR *web3_eth_getBalance(
         boat_throw(result, web3_eth_getBalance_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "RESPONSE: %s", rpc_response_str);
+    BoatLog(BOAT_LOG_VERBOSE, "RESPONSE: %s", rpc_response_str);
 
     // Parse RESPONSE and get web3_result item "result"
     result = web3_JSON_parse_item(rpc_response_str, "result");
@@ -660,7 +660,7 @@ CHAR *web3_eth_sendRawTransaction(
     
     if( node_url_str == NULL || param_ptr == NULL)
     {
-        BoatLog(BOAT_LOG_CRITICAL, "Arguments cannot be NULL.");
+        BoatLog(BOAT_LOG_NORMAL, "Arguments cannot be NULL.");
         boat_throw(BOAT_ERROR_NULL_POINTER, web3_eth_sendRawTransaction_cleanup);
     }
     
@@ -681,7 +681,7 @@ CHAR *web3_eth_sendRawTransaction(
         boat_throw(BOAT_ERROR_RLP_ENCODING_FAIL, web3_eth_sendRawTransaction_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "REQUEST: %s", g_web3_json_string_buf);
+    BoatLog(BOAT_LOG_VERBOSE, "REQUEST: %s", g_web3_json_string_buf);
 
     // POST the REQUEST through curl
 
@@ -703,7 +703,7 @@ CHAR *web3_eth_sendRawTransaction(
         boat_throw(result, web3_eth_sendRawTransaction_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "RESPONSE: %s", rpc_response_str);
+    BoatLog(BOAT_LOG_VERBOSE, "RESPONSE: %s", rpc_response_str);
     
     // Parse RESPONSE and get web3_result item "result"
     result = web3_JSON_parse_item(rpc_response_str, "result");
@@ -808,7 +808,7 @@ CHAR *web3_eth_getStorageAt(
     
     if( node_url_str == NULL || param_ptr == NULL)
     {
-        BoatLog(BOAT_LOG_CRITICAL, "Arguments cannot be NULL.");
+        BoatLog(BOAT_LOG_NORMAL, "Arguments cannot be NULL.");
         boat_throw(BOAT_ERROR_NULL_POINTER, web3_eth_getStorageAt_cleanup);
     }
     
@@ -831,7 +831,7 @@ CHAR *web3_eth_getStorageAt(
         boat_throw(BOAT_ERROR_RLP_ENCODING_FAIL, web3_eth_getStorageAt_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "REQUEST: %s", g_web3_json_string_buf);
+    BoatLog(BOAT_LOG_VERBOSE, "REQUEST: %s", g_web3_json_string_buf);
     
     // POST the REQUEST through curl
 
@@ -853,7 +853,7 @@ CHAR *web3_eth_getStorageAt(
         boat_throw(result, web3_eth_getStorageAt_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "RESPONSE: %s", rpc_response_str);
+    BoatLog(BOAT_LOG_VERBOSE, "RESPONSE: %s", rpc_response_str);
 
     // Parse RESPONSE and get web3_result item "result"
     result = web3_JSON_parse_item(rpc_response_str, "result");
@@ -967,7 +967,7 @@ CHAR *web3_eth_getTransactionReceiptStatus(
     
     if( node_url_str == NULL || param_ptr == NULL)
     {
-        BoatLog(BOAT_LOG_CRITICAL, "Arguments cannot be NULL.");
+        BoatLog(BOAT_LOG_NORMAL, "Arguments cannot be NULL.");
         boat_throw(BOAT_ERROR_NULL_POINTER, web3_eth_getTransactionReceiptStatus_cleanup);
     }
     
@@ -988,7 +988,7 @@ CHAR *web3_eth_getTransactionReceiptStatus(
         boat_throw(BOAT_ERROR_RLP_ENCODING_FAIL, web3_eth_getTransactionReceiptStatus_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "REQUEST: %s", g_web3_json_string_buf);
+    BoatLog(BOAT_LOG_VERBOSE, "REQUEST: %s", g_web3_json_string_buf);
 
     // POST the REQUEST through curl
 
@@ -1010,7 +1010,7 @@ CHAR *web3_eth_getTransactionReceiptStatus(
         boat_throw(result, web3_eth_getTransactionReceiptStatus_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "RESPONSE: %s", rpc_response_str);
+    BoatLog(BOAT_LOG_VERBOSE, "RESPONSE: %s", rpc_response_str);
 
     // Obtain RESPONSE object from it's JSON String
     rpc_response_json_ptr = cJSON_Parse(rpc_response_str);
@@ -1168,7 +1168,7 @@ CHAR *web3_eth_call(
     
     if( node_url_str == NULL || param_ptr == NULL)
     {
-        BoatLog(BOAT_LOG_CRITICAL, "Arguments cannot be NULL.");
+        BoatLog(BOAT_LOG_NORMAL, "Arguments cannot be NULL.");
         boat_throw(BOAT_ERROR_NULL_POINTER, web3_eth_call_cleanup);
     }
     
@@ -1193,7 +1193,7 @@ CHAR *web3_eth_call(
         boat_throw(BOAT_ERROR_RLP_ENCODING_FAIL, web3_eth_call_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "REQUEST: %s", g_web3_json_string_buf);
+    BoatLog(BOAT_LOG_VERBOSE, "REQUEST: %s", g_web3_json_string_buf);
 
     // POST the REQUEST through curl
 
@@ -1215,7 +1215,7 @@ CHAR *web3_eth_call(
         boat_throw(result, web3_eth_call_cleanup);
     }
 
-    BoatLog(BOAT_LOG_NORMAL, "RESPONSE: %s", rpc_response_str);
+    BoatLog(BOAT_LOG_VERBOSE, "RESPONSE: %s", rpc_response_str);
     
     // Parse RESPONSE and get web3_result item "result"
     result = web3_JSON_parse_item(rpc_response_str, "result");
