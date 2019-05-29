@@ -57,7 +57,7 @@ BOAT_RESULT SetCommonParam(CHAR *node_url_ptr)
     UtilityHex2Bin(
                     priv_key_array,
                     32,
-                    "0x6cbed15c793ce57650b9877cf6fa156fbef513c4e6134f022a85b1ffdd59b2a1",
+                    "0xe55464c12b9e034ab00f7dddeb01874edcf514b3cd77a9ad0ad8796b4d3b1fdb",
                     TRIMBIN_TRIM_NO,
                     BOAT_FALSE
                   );

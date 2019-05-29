@@ -612,9 +612,6 @@ BOAT_RESULT CaseGpsTraceMain(void)
 
     DemoEnableGPS();
    
-
-    BoatLog(BOAT_LOG_NORMAL, "====== Testing CaseGpsTrace ======");
-
     // Capture 10 location records
     for( n = 0; n < 10; n++ )
     {

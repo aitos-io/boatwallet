@@ -56,11 +56,7 @@ BOAT_RESULT EtherTransfer(void)
     UtilityHex2Bin(
                     recipient,
                     20,
-                    "0x22d491bde2303f2f43325b2108d26f1eaba1e32b",
-                    //"0x23966d599fe894d362a15c95f72eef2425c7fb0f",
-                    //"0x19c91A4649654265823512a457D2c16981bB64F5",
-                    //"0xe8b05f9d0ddf9e9ea83b4b7db832909108e9f8cf",
-                    //"0x0c3e03942c186670c5187b15b4d0314b03a153b3",
+                    "0x19c91A4649654265823512a457D2c16981bB64F5",
                     TRIMBIN_TRIM_NO,
                     BOAT_TRUE
                   );
