@@ -132,6 +132,8 @@ UINT32 Utilityhtonl(UINT32 from_host_integer);
 
 UINT32 Utilityntohl(UINT32 from_host_integer);
 
+double UtilityWeiStrToEthDouble(const CHAR *wei_str);
+
 void *BoatMalloc(UINT32 size);
 void BoatFree(void *mem_ptr);
 

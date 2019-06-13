@@ -770,6 +770,115 @@ UINT32 Utilityntohl(UINT32 from_big_integer)
 
 
 /*!*****************************************************************************
+@brief Convert a string representing wei in HEX to ether in double float
+
+Function: UtilityWeiStrToEthDouble()
+
+    This function converts a string representing wei in HEX to ether in double
+    float.
+
+    1 ether is 1e18 wei. Note that in Ethereum an integer type is up to 256 bits
+    while most C compilers natively support up to 64-bit integer. A 64-bit
+    unsigned interger can represent up to 2^64 - 1, which is roughly 1.845e19.
+    Thus it's not possible to convert more than 1.845e19 wei (i.e. 18.45 ether)
+    to native integer type.
+
+    Converting integer type wei to double float type ether loses pricision.
+    Fortunately the unit of ether is usually for friendly human-reading only
+    and slight pricision loss is not a problem.
+    
+
+
+@return
+    This function returns the converted ether in double float.
+    
+
+@param[in] wei_str
+        The HEX-represented string of wei, either in "0xabcd..." or "abcd..." format.
+
+*******************************************************************************/
+double UtilityWeiStrToEthDouble(const CHAR *wei_str)
+{
+    UINT32 wei_bin_len;
+    UINT8 wei_bin[(strlen(wei_str)+1)/2];
+    UINT64 wei_int64;
+    UINT8 *wei_int64_addr_ptr;
+    UINT32 shift_bits;
+    double scale_double;
+    double wei_double;
+    double ether_double;
+    UINT32 i;
+
+    // Conver wei from HEX to binary with leading zeros trimmed
+    wei_bin_len = UtilityHex2Bin(
+                        wei_bin,
+                        sizeof(wei_bin),
+                        wei_str,
+                        TRIMBIN_LEFTTRIM,
+                        BOAT_FALSE
+                      );
+
+    // Above binary representation of wei is in bigendian and it's possibly
+    // larger than UINT64 (8 bytes).
+    // To convert it to littleendian, every byte in wei_bin is copied to wei_int64
+    // reversely.
+    //
+    // If wei_bin is more than 8 bytes, only most significant 8 bytes are copied,
+    // as if the integer were right shifted by some bits until its value is
+    // no more than UINT64. After it's converted to double, 2^shift_bits is
+    // multiplied by to recover its value.
+    //
+    // If wei_bin is no more than 8 bytes, only effective bytes are copied to
+    // wei_int64.
+        
+    wei_int64 = 0;
+    wei_int64_addr_ptr = (UINT8*)&wei_int64;
+
+    if( wei_bin_len > sizeof(UINT64) )
+    {
+        // If wei_bin is more than 8 bytes, copy 8 bytes only
+        for( i = 0; i< sizeof(UINT64); i++ )
+        {
+            // bigendian to littleendian
+            wei_int64_addr_ptr[i] =  wei_bin[sizeof(UINT64) - 1 - i];
+        }
+        
+        shift_bits = (wei_bin_len - sizeof(UINT64))*8;
+    }
+    else
+    {
+        // If wei_bin is no more than 8 bytes, copy effective bytes
+        for( i = 0; i< wei_bin_len; i++ )
+        {
+            // bigendian to littleendian
+            wei_int64_addr_ptr[i] =  wei_bin[wei_bin_len - 1 - i];
+        }
+        shift_bits = 0;
+    }
+    
+    // Convert UINT64 to double
+    wei_double = (double)wei_int64;
+
+    // Recover shifted bits if any.
+    // DO NOT calculate 2^shift_bits by (0x1 << shift_bits), because shift_bits
+    // may be more than 64 bits. Calculate it in double instead.
+    scale_double = 1.0;
+    
+    for( i = 0; i < shift_bits; i++ )
+    {
+        scale_double *= 2.0;
+    }
+    
+    // Convert wei to ether by division by 1e18
+    ether_double = wei_double * scale_double / 1e18;
+
+    BoatLog(BOAT_LOG_VERBOSE, "%s wei converted to %f ether", wei_str, ether_double);
+    
+    return ether_double;
+}
+
+
+/*!*****************************************************************************
 @brief Wrapper function for memory allocation
 
 Function: BoatMalloc()
