@@ -390,7 +390,7 @@ BOAT_RESULT CurlPortRequestSync(const CHAR *request_str,
     curl_easy_setopt(curl_ctx_ptr, CURLOPT_CONNECTTIMEOUT_MS, 10000L);
 
     // Set HTTP HEADER Options
-    curl_opt_list_ptr = curl_slist_append(curl_opt_list_ptr,"Content-Type:application/x-www-form-urlencoded;charset=UTF-8");
+    curl_opt_list_ptr = curl_slist_append(curl_opt_list_ptr,"Content-Type:application/json;charset=UTF-8");
     if( curl_opt_list_ptr == NULL ) boat_throw(BOAT_ERROR_EXT_MODULE_OPERATION_FAIL, CurlPortRequestSync_cleanup);
     
     curl_opt_list_ptr = curl_slist_append(curl_opt_list_ptr,"Accept:application/json, text/javascript, */*;q=0.01");
