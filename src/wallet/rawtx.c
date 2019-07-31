@@ -665,11 +665,39 @@ BOAT_RESULT RawtxPerform(BoatWalletInfo *boat_wallet_info_ptr, BOAT_INOUT TxInfo
                        NULL  //int (*is_canonical)(uint8_t by, uint8_t sig[64]))
                        );
 
-    tx_info_ctx_ptr->rawtx_fields.sig.r_len = 32;
-    tx_info_ctx_ptr->rawtx_fields.sig.s_len = 32;
 
+    // Trim r
+    UINT8 trimed_r[32];
+    
+    tx_info_ctx_ptr->rawtx_fields.sig.r_len =
+         UtilityTrimBin(
+                trimed_r,
+                tx_info_ctx_ptr->rawtx_fields.sig.r32B,
+                32,
+                TRIMBIN_LEFTTRIM,
+                BOAT_TRUE
+                );
 
+    memcpy(tx_info_ctx_ptr->rawtx_fields.sig.r32B,
+           trimed_r,
+           tx_info_ctx_ptr->rawtx_fields.sig.r_len);
 
+    // Trim s
+    UINT8 trimed_s[32];
+    
+    tx_info_ctx_ptr->rawtx_fields.sig.s_len =
+         UtilityTrimBin(
+                trimed_s,
+                tx_info_ctx_ptr->rawtx_fields.sig.s32B,
+                32,
+                TRIMBIN_LEFTTRIM,
+                BOAT_TRUE
+                );
+
+    memcpy(tx_info_ctx_ptr->rawtx_fields.sig.s32B,
+           trimed_s,
+           tx_info_ctx_ptr->rawtx_fields.sig.s_len);
+    
     /**************************************************************************
     * STEP 4: Encode full RAW transaction with updated v/r/s                  *
     *         (See above description for details)                             *
