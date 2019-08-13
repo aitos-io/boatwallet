@@ -244,15 +244,20 @@ UINT8 *RlpFieldEncode(
         {
             if( prefix_header_to_field == BOAT_FALSE )
             {
-                // <prefix>
-                rlp_output_ptr[offset++] = prefix_base + field_len + 55;
-
-                // <field_len>
+                UINT8 trimmed_field_len[8];
+                
+                // Calculate trimmed size of <field_len>
                 trimmed_sizeof_field_len = UtilityUint32ToBigend(
-                                                            rlp_output_ptr + offset,
+                                                            trimmed_field_len,
                                                             field_len,
                                                             TRIMBIN_LEFTTRIM
                                                          );
+
+                // <prefix>
+                rlp_output_ptr[offset++] = prefix_base + trimmed_sizeof_field_len + 55;
+
+                // <field_len>
+                memcpy(rlp_output_ptr + offset, trimmed_field_len, trimmed_sizeof_field_len);
                 offset += trimmed_sizeof_field_len;
                 
                 // <field>
