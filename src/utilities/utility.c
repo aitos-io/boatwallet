@@ -175,7 +175,7 @@ Function: UtilityBin2Hex()
     terminator. It equals to strlen of the string.\n
     If <to_str> is NULL, this function does nothing and returns 0.\n
     If <from_len> is 0 or <from_ptr> is NULL, and <to_str> is NOT NULL, this\n
-    function writes a '\0' to <to_str>, i.e. a NULL string and returns 1.
+    function writes a '\0' to <to_str>, i.e. a NULL string and returns 0.
     
 
 @param[out] to_str
@@ -237,7 +237,7 @@ UINT32 UtilityBin2Hex(
     if( from_ptr == NULL || from_len == 0 )
     {
         to_str[0] = '\0';
-        return 1;
+        return 0;
     }
 
     to_offset = 0;
