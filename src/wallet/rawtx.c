@@ -898,7 +898,7 @@ BOAT_RESULT RawtxPerform(BoatWalletInfo *boat_wallet_info_ptr, BOAT_INOUT TxInfo
                             tx_info_ctx_ptr->tx_hash.field,
                             32,
                             tx_hash_str,
-                            TRIMBIN_LEFTTRIM,
+                            TRIMBIN_TRIM_NO,
                             BOAT_FALSE
                            );
 
