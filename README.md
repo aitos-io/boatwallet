@@ -183,4 +183,5 @@ Note that documents in github may be somewhat older than the code. You can use
 Doxygen to manually generate fresh new documents with configuration file
 boatwallet/docs/boatwallet.doxy.
 
+## THANKS
 Thank you very much.
